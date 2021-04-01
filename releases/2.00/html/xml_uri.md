@@ -3,8 +3,6 @@
   <GeometryExpression>
     http://geohash.org/gcpuzgnzvxkp
   </GeometryExpression>
-  <GeometryDataType>
-    GeoHash
-  </GeometryDataType>
+  <GeometryDataType id="ogc:GeoHash"/>
 </Geometry>
 ```
