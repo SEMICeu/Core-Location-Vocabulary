@@ -9,5 +9,5 @@
                                        <gml:coordinates>
 	                                     -0.001475, 51.477811
                                        </gml:coordinates>
-			                         </gml:Point>"^^<geosparql:gmlLiteral> ]" .
+			                         </gml:Point>"^^<geosparql:gmlLiteral> ] .
 ```
