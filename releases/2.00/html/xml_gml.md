@@ -5,6 +5,6 @@
       <gml:coordinates>-0.001475, 51.477811</gml:coordinates>
     </gml:Point>
   </GeometryExpression>
-  <GeometryDataType id="ogc:GMLLiteral"/>
+  <GeometryDataType id="http://www.opengis.net/ont/geosparql#gmlLiteral"/>
 </Geometry>
 ```
