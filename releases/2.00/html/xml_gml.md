@@ -5,8 +5,6 @@
       <gml:coordinates>-0.001475, 51.477811</gml:coordinates>
     </gml:Point>
   </GeometryExpression>
-  <GeometryDataType>
-    ogc:GMLLiteral
-  </GeometryDataType>
+  <GeometryDataType id="ogc:GMLLiteral"/>
 </Geometry>
 ```
