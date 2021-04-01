@@ -912,32 +912,33 @@ Where a country has changed its name or no longer exists (such as Czechoslovakia
                           
                         </td>
                         <td property="rdfs:comment">Associates any Resource with the corresponding Geometry.</td>
-                        <td property="skos:scopeNote"><p>Depending on how a geometry is encoded, the range of this property may be one of the following:
-<ul>
-  <li>- a literal (e.g., WKT - string literal -, GML, KML - XML literal)</li>
-  <li>- a geometry class, as those defined in the OGC's GeoSPARQL specification, in the W3C's Basic Geo (WGS84 lat/long) vocabulary, and at schema.org;</li>
-  <li>- geocoded URIs, as geo or GeoHash URIs, treated as URI references.</li>
-</ul>
-
-<p>
-For interoperability reasons, it is recommended using one of the following:
-<ul>
-  <li>- Any geometry:
-    <ul>
-      <li>  - WKT, GML, and RDF+WKT/GML, as per the GeoSPARQL specification.</li>
-      <li>  - KML (Keyhole Markup Language) - note that KML supports the following geometries only: point, line string, linear ring, and polygon.
-      <li>  - RDF as per the schema.org vocabulary (see classes schema:GeoCoordinates and schema:GeoShape).
-    </ul>
-  </li>
-  <li>- Points: one of the above, or:
-    <ul>
-      <li>  - RDF as per the W3C Basic Geo (WGS84 lat/long) vocabulary.</li>
-      <li>  - GeoHash URIs.</li>
-      <li>  - geo URIs.</li>
-    </ul>
-  </li>
-</ul>
-</p></td>
+                        <td property="skos:scopeNote"><td>
+              <p>Depending on how a geometry is encoded, the range of this property may be one of the following:</p>
+              <ul>
+                <li>- a literal (e.g., WKT - string literal -, GML, KML - XML literal)</li>
+                <li>- a geometry class, as those defined in the OGC's <a href="http://www.opengeospatial.org/standards/geosparql">GeoSPARQL specification</a>, in the W3C's <a href="http://www.w3.org/2003/01/geo/wgs84_pos#">Basic Geo (WGS84 lat/long) vocabulary</a>, and at <a href="http://schema.org/">schema.org</a>;</li>
+                <li>- geocoded URIs, as <a href="http://tools.ietf.org/rfc/rfc5870"><code>geo</code></a> or <a href="http://geohash.org/">GeoHash</a> URIs, treated as URI references.</li>
+              </ul>
+              <p>For interoperability reasons, it is recommended using one of the following:</p>
+              <ul>
+                <li>
+                  <p>- Any geometry:</p>
+                  <ul>
+                    <li>- WKT, GML, and RDF+WKT/GML, as per the <a href="http://www.opengeospatial.org/standards/geosparql">GeoSPARQL specification</a>.</li>
+                    <li>- <a href="http://www.opengeospatial.org/standards/kml">KML (Keyhole Markup Language)</a> - note that KML supports the following geometries only: point, line string, linear ring, and polygon.</li>
+                    <li>- RDF as per the <a href="http://schema.org/">schema.org</a> vocabulary (see classes <a href="http://schema.org/GeoCoordinates">schema:GeoCoordinates</a> and <a href="http://schema.org/GeoShape">schema:GeoShape</a>).</li>
+                  </ul>
+                </li>
+                <li>
+                  <p>- Points: one of the above, or:</p>
+                  <ul>
+                    <li>- RDF as per the <a href="http://www.w3.org/2003/01/geo/wgs84_pos#">W3C Basic Geo (WGS84 lat/long) vocabulary</a>.</li>
+                    <li>- <a href="http://geohash.org/">GeoHash</a> URIs.</li>
+                    <li>- <a href="http://tools.ietf.org/rfc/rfc5870"><code>geo</code></a> URIs.</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
                         <td></td>
                       </tr>
                     
