@@ -95,12 +95,12 @@
     },
     "Geometry.latitude": {
       "@container": "@set",
-      "@id": "http://schema.org/latitude",
+      "@id": "http://data.europa.eu/m8g/latitude",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "Geometry.longitude": {
       "@container": "@set",
-      "@id": "http://schema.org/longitude",
+      "@id": "http://data.europa.eu/m8g/longitude",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "Geometry.wkt": {
