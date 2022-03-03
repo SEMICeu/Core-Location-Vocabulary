@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns="https://data.europa.eu/m8g/xml/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://data.europa.eu/m8g/xml/" version="2.0.0" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:cv="https://data.europa.eu/m8g/xml/">
+  <xs:element name="AdministrativeUnit" type="AdministrativeUnitType"/>
+  <xs:element name="Location" type="LocationType"/>
+  <xs:element name="Resource" type="ResourceType"/>
+  <xs:element name="Address" type="AddressType"/>
+  <xs:element name="Geometry" type="GeometryType"/>
+  <xs:complexType name="AdministrativeUnitType">
+    <xs:sequence>
+      <xs:element name="code" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="level" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LocationType">
+    <xs:sequence>
+      <xs:element name="geographicIdentifier" type="http://www.w3.org/2001/XMLSchema#anyURI" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="geographicName" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ResourceType">
+    <xs:sequence>
+      <xs:element name="address" ref="Address" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="geometry" ref="Geometry" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="location" ref="Location" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="registeredAddress" ref="Address" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddressType">
+    <xs:sequence>
+      <xs:element name="additionalAdministrativeUnit" ref="AdministrativeUnit" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="addressArea" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="addressId" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="administrativeUnitLevel1 (country)" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="administrativeUnitLevel2 (country/region/state)" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="fullAddress" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="locatorDesignator" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="locatorName" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="postOfficeBox" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="postCode" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="postName (city)" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="thoroughfare" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GeometryType">
+    <xs:sequence>
+      <xs:element name="coordinates" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="crs" type="http://www.w3.org/2001/XMLSchema#anyURI" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="geometryType" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="gml" type="http://www.w3.org/2000/01/rdf-schema#Literal" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="latitude" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="longitude" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="wkt" type="http://www.w3.org/2000/01/rdf-schema#Literal" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
