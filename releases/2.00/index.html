@@ -209,7 +209,7 @@
               <div class="head" role="metainfo" id="metainfo">
               <dl>
               <dt>Source</dt><dd><a href="https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/2.00">https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/2.00</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/819a857aff7d46251d24172ceca58356b3302927/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/819a857aff7d46251d24172ceca58356b3302927/CHANGELOG</a></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/5882cb414e0f25a77efeee5a01989ac1c8b9eecd/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/5882cb414e0f25a77efeee5a01989ac1c8b9eecd/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues">https://github.com/SEMICeu/Core-Location-Vocabulary/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="Core-Location-Vocabulary">Core-Location-Vocabulary</a></dd>-->
 
@@ -327,17 +327,17 @@
                     <dt>Description</dt><dd>A spatial object that in a human-readable way identifies a fixed location.</dd>
                     
                     <dt>Usage</dt><dd>An "address representation" as conceptually defined by the <a href="https://inspire-regadmin.jrc.ec.europa.eu/dataspecification/ScopeObjectDetail.action?objectDetailId=9353">INSPIRE Address Representation data type</a>: "Representation of an address spatial object for use in external application schemas that need to include the basic, address information in a readable way.".
-
+<br/><br/>
 The representation of Addresses varies widely from one country's postal system to another. Even within countries, there are almost always examples of Addresses that do not conform to the stated national standard. However, <a href="https://www.iso.org/standard/61710.html">ISO 19160-1</a> provides a method through which different Addresses can be converted from one conceptual model to another.
-
+<br/><br/>
 This specification was heavily based on the INSPIRE Address Representation data type. It is noteworthy that if an Address is provided using the detailed breakdown suggested by the properties for this class, then it will be INSPIRE-conformant. To this very granular set of properties, we add two further properties:
-
+<br/><br/>
 - full address (the complete address as a formatted string)
 - addressID (a unique identifier for the address)
 The first of these allows publishers to simply provide the complete Address as one string, with or without formatting. This is analogous to <a href="http://www.w3.org/2006/vcard/ns#label">vCard's label property</a>.
-
+<br/><br/>
 The addressID is part of the INSPIRE guidelines and provides a hook that can be used to link the Address to an alternative representation, such as vCard or OASIS xAL.
-
+<br/><br/>
 This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Address">Core Location Vocabulary</a></dd>
                     
 		    
@@ -428,11 +428,11 @@ This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabular
                         </td>
                         <td property="rdfs:comment">A globally unique identifier for each instance of an Address.</td>
                         <td property="skos:scopeNote">The concept of adding a globally unique identifier for each instance of an address is a crucial part of the INSPIRE data spec. A number of EU countries have already implemented an ID (a UUID) in their Address Register/gazetteer, among them Denmark. OASIS xAL also includes an address identifier. It is the address Identifier that allows an address to be represented in a format other than INSPIRE whilst remaining conformant to the Core Vocabulary.
-
+<br/><br/>
 The INSPIRE method of representing addresses is very detailed, designed primarily for use in databases of addresses. Whilst data that is published in full conformance with the INSPIRE data structure can be made available using the Core  Location Vocabulary the reverse is not true since the Core Vocabulary allows much greater flexibility.
-
+<br/><br/>
 Many datasets that include address data as one piece of information about something else are likely to have that data in simpler formats. These might be tailored to the specific need of the dataset, follow a national norm, or make use of a standard like vCard.
-
+<br/><br/>
 To provide maximum flexibility in the Core Vocabulary, whilst remaining interoperable with INSPIRE Address Guidelines (which EU Member States are obliged to use), the  Core Location Vocabulary provides the extra property of full address and makes use of INSPIRE's addressID.</td>
                         <td></td>
                       </tr>
@@ -529,7 +529,7 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                         </td>
                         <td property="rdfs:comment">Proper noun(s) applied to the real world entity identified by the locator.</td>
                         <td property="skos:scopeNote">The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building.
-
+<br/><br/>
 The key difference between a locator and a locator name is that the latter is a proper name and is unlikely to include digits. For example, "Shumann, Berlaymont" is a meeting room within the European Commission headquarters for which locator name is more appropriate than locator.</td>
                         <td></td>
                       </tr>
@@ -913,7 +913,7 @@ The key difference between a locator and a locator name is that the latter is a 
                         <td property="rdfs:comment">A reference in the form of a Uniform Resource Identifier to the Location.</td>
                         <td property="skos:scopeNote">GeoNames.org provides stable, widely recognised identifiers for more than 10 million geographical names that can be used as links to further information. For example, http://sws.geonames.org/593116/ identifies the Lithuanian capital Vilnius. Unfortunately these URIs cannot easily be automatically deduced since the URI scheme uses simple numeric codes. Finding a GeoNames identifier for a Location is almost always a manual process. Where such identifiers are known or can be found, however, it is recommended that they be used.
 Where the Location Class is used to identify a country, if the geonames URI is not known, the recommendation is to use DBpedia URIs of the form http://dbpedia.org/resource/ISO\_3166-1:XX where XX is the ISO 3166 two character code for the country.
-
+<br/><br/>
 The EU's Publication Office diverges from ISO 3166-1 and uses EL and UK for Greece and the United Kingdom respectively. DBpedia sticks to the ISO codes and so the correct URIs for these countries are:
 - http://dbpedia.org/resource/ISO\_3166-1:GR
 - http://dbpedia.org/resource/ISO\_3166-1:GB
@@ -937,13 +937,13 @@ even when the geographic name is given as EL or UK.</td>
                         </td>
                         <td property="rdfs:comment">A textual description for a Location.</td>
                         <td property="skos:scopeNote">The <a href="https://inspire.ec.europa.eu/Themes/132/2892">INSPIRE Data Specification on Geographical Names</a> provides a detailed model for describing a 'named place', including methods for providing multiple names in multiple scripts. INSPIRE's definition is the following: Names of areas, regions, localities, cities, suburbs, towns or settlements, or any geographical or topographical feature of public or historical interest. This is beyond what is necessary for the Core Location Vocabulary but, importantly, the concept of a geographic name used here is consistent.
-
+<br/><br/>
 A geographic name is a proper noun applied to a spatial object. Taking the example used in the INSPIRE document (page 15), the following are all valid geographic names for the Greek capital:
-- "A?n?a"@gr-Grek (the Greek endonym written in the Greek script)
+- "&Alpha;&theta;?&nu;&alpha;"@gr-Grek (the Greek endonym written in the Greek script)
 - "Athína"@gr-Latn (the standard Romanisation of the endonym)
 - "Athens"@en (the English language exonym)
 INSPIRE has a detailed (XML-based) method of providing metadata about a geographic name and in XML-data sets that may be the most appropriate method to follow. When using the Core Location Vocabulary in data sets that are not focussed on environmental/geographical data (the use case for INSPIRE), the Code datatype or a simple language identifier may be used to provide such metadata.
-
+<br/><br/>
 The country codes defined in <a href="https://www.iso.org/iso-3166-country-codes.html">ISO 3166</a> may be used as geographic names and these are generally preferred over either the long form or short form of a country's name (as they are less error prone). The Publications Office of the European Union recommends the use of ISO 3166-1 codes for countries in all cases except two:
 - use 'UK' in preference to the ISO 3166 code GB for the United Kingdom;
 - use 'EL' in preference to the ISO 3166 code GR for Greece.
@@ -964,9 +964,9 @@ Where a country has changed its name or no longer exists (such as Czechoslovakia
                     <dt>Description</dt><dd>Anything that can be described</dd>
                     
                     <dt>Usage</dt><dd>Resource is an abstract, technical class used to describe anything in RDF, see <a href="https://www.w3.org/TR/rdf-schema/#ch_resource">RDF Schema Resource</a> for more details.
-
+<br/><br/>
 For example, in the context of Core Vocabularies, classes like Person or Legal Entity are resources.
-
+<br/><br/>
 In other data modelling languages, this classshould be mapped to their corresponding generic element.</dd>
                     
 		    
@@ -1075,8 +1075,7 @@ For interoperability reasons, it is recommended using one of the following:
                           
                         </td>
                         <td property="rdfs:comment">The location relationship associates any Resource with the Location class.</td>
-                        <td property="skos:scopeNote">Asserting the location relationship implies only that the domain has some connection to a Location in time or space. It does not imply that the 
-Resource is necessarily at that Location at the time when the assertion is made.</td>
+                        <td property="skos:scopeNote">Asserting the location relationship implies only that the domain has some connection to a Location in time or space. It does not imply that the Resource is necessarily at that Location at the time when the assertion is made.</td>
                         <td></td>
                       </tr>
                     
@@ -1189,9 +1188,11 @@ A changelog describing the (major) changes to the previous version (1.0.0) of th
                   <div class="side-navigation__content js-scrollspy">
                       <div class="side-navigation__group">
                           <ul>
+						  <!--
                               <li class="side-navigation__item">
                                   <a href="#introduction">Introduction</a>
                               </li>
+						-->
                               <li class="side-navigation__item">
                                   <a href="#summary">Summary</a>
                               </li>
