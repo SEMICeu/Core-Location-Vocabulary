@@ -209,7 +209,7 @@
               <div class="head" role="metainfo" id="metainfo">
               <dl>
               <dt>Source</dt><dd><a href="https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/2.00">https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/2.00</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/aca0e822a2f60cb4f7d1138443333d87afcfe743/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/aca0e822a2f60cb4f7d1138443333d87afcfe743/CHANGELOG</a></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/f61b724c759f190a4771aaf85a9171c21f67c4e9/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/f61b724c759f190a4771aaf85a9171c21f67c4e9/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues">https://github.com/SEMICeu/Core-Location-Vocabulary/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="Core-Location-Vocabulary">Core-Location-Vocabulary</a></dd>-->
 
@@ -344,9 +344,9 @@ This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabular
                     <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
-                      <a href="#Address%3Aadditional%20administrative%20unit">additional administrative unit</a>, 
                       <a href="#Address%3Aaddress%20area">address area</a>, 
                       <a href="#Address%3Aaddress%20ID">address ID</a>, 
+                      <a href="#Address%3Aadministrative%20unit">administrative unit</a>, 
                       <a href="#Address%3Aadministrative%20unit%20level%201%20(country)">administrative unit level 1 (country)</a>, 
                       <a href="#Address%3Aadministrative%20unit%20level%202%20(country%2Fregion%2Fstate)">administrative unit level 2 (country/region/state)</a>, 
                       <a href="#Address%3Afull%20address">full address</a>, 
@@ -373,25 +373,6 @@ This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabular
                     </thead>
 
                     <tbody class="supertype">
-                    
-                      <tr id="Address%3Aadditional%20administrative%20unit" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/additionalAdminUnit">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/additionalAdminUnit" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/additionalAdminUnit" data-placement="right">
-                            additional administrative unit</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Administrative Unit" data-placement="right">Administrative Unit</a>
-			    
-                          
-                        </td>
-                        <td property="rdfs:comment">a custom administrative unit in addition to the adminUnitL1 and adminUnitL2</td>
-                        <td property="skos:scopeNote"></td>
-                        <td></td>
-                      </tr>
                     
                       <tr id="Address%3Aaddress%20area" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#addressArea">
                         <td>
@@ -437,6 +418,25 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                         <td></td>
                       </tr>
                     
+                      <tr id="Address%3Aadministrative%20unit" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/additionalAdminUnit">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/additionalAdminUnit" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/additionalAdminUnit" data-placement="right">
+                            administrative unit</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Administrative Unit" data-placement="right">Administrative Unit</a>
+			    
+                          
+                        </td>
+                        <td property="rdfs:comment">The adminUnit relationship link an Address with the Admin Unit class.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
                       <tr id="Address%3Aadministrative%20unit%20level%201%20(country)" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#adminUnitL1">
                         <td>
                           <code property="rdfs:label">
@@ -471,7 +471,7 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                           
                         </td>
                         <td property="rdfs:comment">The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities.</td>
-                        <td property="skos:scopeNote">Some recommended codelists from the EU Publications Office and Eurostat include: <a href="https://op.europa.eu/fr/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu">Administrative Territorial Units (ATU)</a>, <a href="https://ec.europa.eu/eurostat/web/nuts/background">NUTS</a> and <a href="https://ec.europa.eu/eurostat/web/nuts/local-administrative-units">Local Administrative Units (LAU)</a>. The first arrondissement of Paris is for example expressed as "http://publications.europa.eu/resource/authority/atu/FRA\_AR\_PAR01" in the ATU controlled vocabulary.</td>
+                        <td property="skos:scopeNote">Values could be a region or province, more granular than level 1.</td>
                         <td></td>
                       </tr>
                     
@@ -620,7 +620,7 @@ The key difference between a locator and a locator name is that the latter is a 
               <h3 class="h3" id="Administrative Unit"><a href="http://data.europa.eu/m8g/AdminUnit" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/AdminUnit" data-placement="right">Administrative Unit</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Description</dt><dd>A custom administrative unit in addition to adminUnitL1 and adminUnitL2.</dd>
+                    <dt>Description</dt><dd>A detailed administrative unit organized in a hierarchy.</dd>
                     
 		    
                     <dt>Properties</dt>
@@ -660,7 +660,7 @@ The key difference between a locator and a locator name is that the latter is a 
                             
                           
                         </td>
-                        <td property="rdfs:comment">The classification of the administrative unit</td>
+                        <td property="rdfs:comment">The classification of the administrative unit.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -679,8 +679,8 @@ The key difference between a locator and a locator name is that the latter is a 
                             
                           
                         </td>
-                        <td property="rdfs:comment">The level of the administrative unit (below L2).</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">The level of the administrative unit in the hierarchy.</td>
+                        <td property="skos:scopeNote">Some recommended codelists from the EU Publications Office and Eurostat include: <a href="https://op.europa.eu/fr/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu">Administrative Territorial Units (ATU)</a>, <a href="https://ec.europa.eu/eurostat/web/nuts/background">NUTS</a> and <a href="https://ec.europa.eu/eurostat/web/nuts/local-administrative-units">Local Administrative Units (LAU)</a>. The first arrondissement of Paris is for example expressed as "http://publications.europa.eu/resource/authority/atu/FRA\_AR\_PAR01" in the ATU controlled vocabulary.</td>
                         <td></td>
                       </tr>
                     
@@ -1093,8 +1093,9 @@ For interoperability reasons, it is recommended using one of the following:
 			    
                           
                         </td>
-                        <td property="rdfs:comment">The address at which the resource is legally registered.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">The registered address relationship link a Resource with the legally registered Address.</td>
+                        <td property="skos:scopeNote">It is the address to which formal communications can be sent, such as the postal address.
+</td>
                         <td></td>
                       </tr>
                     

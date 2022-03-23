@@ -14,11 +14,6 @@
 <https://semiceu.github.io//shacl/core-location-ap-SHACL_en#AddressShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <http://data.europa.eu/m8g/AdminUnit>;
-    shacl:description "a custom administrative unit in addition to the adminUnitL1 and adminUnitL2"@en;
-    shacl:name "additional administrative unit"@en;
-    shacl:path <http://data.europa.eu/m8g/additionalAdminUnit>
-  ], [
     shacl:datatype rdf:langString;
     shacl:description "The name of a geographic area that groups Addresses."@en;
     shacl:name "address area"@en;
@@ -28,6 +23,11 @@
     shacl:description "A globally unique identifier for each instance of an Address."@en;
     shacl:name "address ID"@en;
     shacl:path <http://www.w3.org/ns/locn#addressID>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/AdminUnit>;
+    shacl:description "The adminUnit relationship link an Address with the Admin Unit class."@en;
+    shacl:name "administrative unit"@en;
+    shacl:path <http://data.europa.eu/m8g/additionalAdminUnit>
   ], [
     shacl:class skos:Concept;
     shacl:description "The name of the uppermost level of the address, almost always a country."@en;
@@ -80,12 +80,12 @@
   shacl:closed false;
   shacl:property [
     shacl:class skos:Concept;
-    shacl:description "The classification of the administrative unit"@en;
+    shacl:description "The classification of the administrative unit."@en;
     shacl:name "code"@en;
     shacl:path <http://data.europa.eu/m8g/code>
   ], [
     shacl:class skos:Concept;
-    shacl:description "The level of the administrative unit (below L2)."@en;
+    shacl:description "The level of the administrative unit in the hierarchy."@en;
     shacl:name "level"@en;
     shacl:path <http://data.europa.eu/m8g/level>
   ];
@@ -166,7 +166,7 @@ linked to its address using this property)."""@en;
     shacl:path <http://data.europa.eu/m8g/location>
   ], [
     shacl:class <http://www.w3.org/ns/locn#Address>;
-    shacl:description "The address at which the resource is legally registered."@en;
+    shacl:description "The registered address relationship link a Resource with the legally registered Address."@en;
     shacl:name "registered address"@en;
     shacl:path <http://www.w3.org/ns/legal#registeredAddress>
   ];

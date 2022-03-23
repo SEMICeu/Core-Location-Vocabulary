@@ -1,11 +1,6 @@
 {
   "@context": {
     "Address": "http://www.w3.org/ns/locn#Address",
-    "Address.additionalAdministrativeUnit": {
-      "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/additionalAdminUnit",
-      "@type": "@id"
-    },
     "Address.addressArea": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/locn#addressArea",
@@ -15,6 +10,11 @@
       "@container": "@set",
       "@id": "http://www.w3.org/ns/locn#addressID",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Address.administrativeUnit": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/additionalAdminUnit",
+      "@type": "@id"
     },
     "Address.administrativeUnitLevel1 (country)": {
       "@container": "@set",
