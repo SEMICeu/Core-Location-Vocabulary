@@ -1,10 +1,10 @@
-# Transition from Core Location v1.0.0 to v2.0.0
+# Core Location Changelog
 
 ## Introduction
 
 This document describes the (major) changes to [the current version 1.0.0](https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/1.00) of the Core Location Vocabulary for which a new version is being proposed ([version 2.0.0](https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/)). The list of changes results in the new version to be considered as a major release.
 
-## Detailed changes
+## Detailed changes from v1.0.0 to v2.0.0
 
 The table below gives an overview of the classes (and their definitions) within both data models. Classes that are related are juxta-positioned.
 
@@ -35,3 +35,21 @@ The table below gives an overview of the classes (and their definitions) within 
 | P3 | **Address.locatorDesignator:** A number or a sequence of characters that uniquely identifies the locator within the relevant scope(s). The full identification of the locator could include one or more locator designators. | A number or a sequence of characters which allows a user or an application to interpret, parse and format the locator within the relevant scope. A locator may include more locator designators. | Update from INSPIRE. | Change |
 | P4 | **Address.adminUnitL1:** The uppermost administrative unit for the address, almost always a country. | The name or names of a unit of administration where a Member State has and/or exercises jurisdictional rights, for local, regional and national governance. Level 1 refers to the uppermost administrative unit for the address, almost always a country. | Update from INSPIRE. | Change |
 | P5 | **Address.adminUnitL2:** The region of the address, usually a county, state or other such area that typically encompasses several localities. | The name or names of a unit of administration where a Member State has and/or exercises jurisdictional rights, for local, regional and national governance. Level 2 referst to the region of the address, usually a county, state or other such area that typically encompasses several localities. | Update from INSPIRE. | Change |
+
+## Changes since April 2021 
+
+### Terms
+
+| Nr | Core Location Vocabulary v2.0.0 2021 | Core Location Vocabulary v2.0.0 2022 | Rationale                                             | GitHub/Change                                                                                                                  |
+| -- | ------------------------------------ | ------------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| C1 | \-                                   | AdminUnit                            | A granular administrative unit                        | [https://github.com/SEMICeu/Core-Location-Vocabulary/issues/21](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/21) |
+| R1 | Location.geometry:Geometry           | Resource.geometry:Geometry           | Improved reusability of geometry                      |                                                                                                                                |
+| R2 | Location.address:Address             | Resource.address:Address             | Improved reusability of address                       |                                                                                                                                |
+| R3 | \-                                   | Resource.registeredAddress:Address   | moved from Core Person                                |                                                                                                                                |
+| R4 | \-                                   | Address.adminUnit:AdminUnit          | An address can refer to an administrative unit        |                                                                                                                                |
+| P1 | \-                                   | AdminUnit.code                       | The classification of the administrative unit         |                                                                                                                                |
+| P2 | \-                                   | AdminUnit.level                      | The level of the administrative unit in the hierarchy |
+
+### Definitions
+
+Changes in definitions are registered in this [this file](Changelog_definitions.md.md)
