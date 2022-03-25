@@ -150,8 +150,7 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://www.w3.org/ns/locn#Address>;
-    shacl:description """The address relationship associates any Resource with the Address class (i.e. anything can be
-linked to its address using this property)."""@en;
+    shacl:description "Associates any Resource with the corresponding Address"@en;
     shacl:name "address"@en;
     shacl:path <http://data.europa.eu/m8g/address>
   ], [
@@ -161,12 +160,12 @@ linked to its address using this property)."""@en;
     shacl:path <http://www.w3.org/ns/locn#geometry>
   ], [
     shacl:class dc:Location;
-    shacl:description "The location relationship associates any Resource with the Location class."@en;
+    shacl:description "Associates any Resource with the corresponding Location."@en;
     shacl:name "location"@en;
     shacl:path <http://data.europa.eu/m8g/location>
   ], [
     shacl:class <http://www.w3.org/ns/locn#Address>;
-    shacl:description "The registered address relationship link a Resource with the legally registered Address."@en;
+    shacl:description "Associates any Resource with the corresponding registered Address."@en;
     shacl:name "registered address"@en;
     shacl:path <http://www.w3.org/ns/legal#registeredAddress>
   ];
