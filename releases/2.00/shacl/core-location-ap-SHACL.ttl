@@ -25,7 +25,7 @@
     shacl:path <http://www.w3.org/ns/locn#addressID>
   ], [
     shacl:class <http://data.europa.eu/m8g/AdminUnit>;
-    shacl:description "The adminUnit relationship link an Address with the Admin Unit class."@en;
+    shacl:description "The adminUnit relationship links an Address with the Admin Unit class."@en;
     shacl:name "administrative unit"@en;
     shacl:path <http://data.europa.eu/m8g/additionalAdminUnit>
   ], [
@@ -150,7 +150,7 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://www.w3.org/ns/locn#Address>;
-    shacl:description "Associates any Resource with the corresponding Address"@en;
+    shacl:description "Associates any Resource with the corresponding Address."@en;
     shacl:name "address"@en;
     shacl:path <http://data.europa.eu/m8g/address>
   ], [
@@ -165,7 +165,7 @@
     shacl:path <http://data.europa.eu/m8g/location>
   ], [
     shacl:class <http://www.w3.org/ns/locn#Address>;
-    shacl:description "Associates any Resource with the corresponding registered Address."@en;
+    shacl:description "The registered address relationship links a Resource with the legally registered Address."@en;
     shacl:name "registered address"@en;
     shacl:path <http://www.w3.org/ns/legal#registeredAddress>
   ];
