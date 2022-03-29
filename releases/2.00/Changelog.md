@@ -47,10 +47,10 @@ The table below gives an overview of the classes (and their definitions) within 
 | R2 | Location.address:Address             | Resource.address:Address             | Improved reusability of address                       |                                                                                                                                |
 | R3 | \-                                   | Resource.registeredAddress:Address   | moved from Core Person                                |                                                                                                                                |
 | R4 | \-                                   | Address.adminUnit:AdminUnit          | An address can refer to an administrative unit        |                                                                                                                                |
-| P1 | \-                                   | AdminUnit.code                       | The classification of the administrative unit         |                                                                                                                                |
-| P2 | \-                                   | AdminUnit.level                      | The level of the administrative unit in the hierarchy |                                                                                                                                |
-| D1 | Address:AdminUnitL1:Code             | Address:AdminUnitL1:Text             | In compliance with W3C location                       |                                                                                                                                |
-| D2 | Address:AdminUnitL2:Code             | Address:AdminUnitL1:Text             | In compliance with W3C location                       |
+| P1 | \-                                   | AdminUnit.code                       | The classification of the administrative unit         | [https://github.com/SEMICeu/Core-Location-Vocabulary/issues/21](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/21) |
+| P2 | \-                                   | AdminUnit.level                      | The level of the administrative unit in the hierarchy | [https://github.com/SEMICeu/Core-Location-Vocabulary/issues/21](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/21) |
+| D1 | Address:AdminUnitL1:Code             | Address:AdminUnitL1:Text             | In compliance with W3C location                       | [https://github.com/SEMICeu/Core-Location-Vocabulary/issues/21](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/21) |
+| D2 | Address:AdminUnitL2:Code             | Address:AdminUnitL1:Text             | In compliance with W3C location                       | [https://github.com/SEMICeu/Core-Location-Vocabulary/issues/21](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/21)
 
 ### Definitions
 
