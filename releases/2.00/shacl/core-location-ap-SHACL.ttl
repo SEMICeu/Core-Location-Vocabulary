@@ -27,7 +27,7 @@
     shacl:class <http://data.europa.eu/m8g/AdminUnit>;
     shacl:description "The adminUnit relationship links an Address with the Admin Unit class."@en;
     shacl:name "administrative unit"@en;
-    shacl:path <http://data.europa.eu/m8g/additionalAdminUnit>
+    shacl:path <http://data.europa.eu/m8g/adminUnit>
   ], [
     shacl:datatype rdf:langString;
     shacl:description "The name of the uppermost level of the address, almost always a country."@en;

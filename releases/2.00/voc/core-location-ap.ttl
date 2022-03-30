@@ -27,7 +27,7 @@
   rdfs:range skos:Concept .
 
 <http://data.europa.eu/m8g/coordinates> a owl:DatatypeProperty;
-  <http://purl.org/vocab/vann/usageNote> "Can be expressed as longitude, latitude, elevation"@en;
+  <http://purl.org/vocab/vann/usageNote> "Can be expressed as longitude, latitude, elevation."@en;
   rdfs:domain <http://www.w3.org/ns/locn#Geometry>;
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
   rdfs:range xsd:string .
@@ -50,6 +50,7 @@
   rdfs:range xsd:string .
 
 <http://data.europa.eu/m8g/level> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Some recommended codelists from the EU Publications Office and Eurostat include: <a href=\"https://op.europa.eu/fr/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu\">Administrative Territorial Units (ATU)</a>, <a href=\"https://ec.europa.eu/eurostat/web/nuts/background\">NUTS</a> and <a href=\"https://ec.europa.eu/eurostat/web/nuts/local-administrative-units\">Local Administrative Units (LAU)</a>. The first arrondissement of Paris is for example expressed as \"http://publications.europa.eu/resource/authority/atu/FRA\\_AR\\_PAR01\" in the ATU controlled vocabulary."@en;
   rdfs:domain <http://data.europa.eu/m8g/AdminUnit>;
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
   rdfs:range skos:Concept .
@@ -65,8 +66,8 @@
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
   rdfs:range xsd:string .
 
-<http://data.europa.eu/m8g/additionalAdminUnit> a rdf:Property;
-  rdfs:label "additional administrative unit"@en .
+<http://data.europa.eu/m8g/adminUnit> a rdf:Property;
+  rdfs:label "administrative unit"@en .
 
 <http://www.opengis.net/ont/geosparql#asGML> a rdf:Property;
   rdfs:label "gml"@en .
@@ -141,7 +142,7 @@
     <http://www.w3.org/ns/locn#addressArea>,
     <http://www.opengis.net/ont/geosparql#asWKT>,
     <http://www.opengis.net/ont/geosparql#asGML>,
-    <http://data.europa.eu/m8g/additionalAdminUnit>;
+    <http://data.europa.eu/m8g/adminUnit>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     foaf:firstName "Bert";

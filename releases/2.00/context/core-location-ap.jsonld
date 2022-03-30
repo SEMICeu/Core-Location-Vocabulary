@@ -13,7 +13,7 @@
     },
     "Address.administrativeUnit": {
       "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/additionalAdminUnit",
+      "@id": "http://data.europa.eu/m8g/adminUnit",
       "@type": "@id"
     },
     "Address.administrativeUnitLevel1 (country)": {
