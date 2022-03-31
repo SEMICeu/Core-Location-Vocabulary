@@ -109,6 +109,7 @@
   rdfs:label "thoroughfare"@en .
 
 <http://data.europa.eu/m8g/AdminUnit> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "This class should be used whenever a classification mechanism is in place, in alternative to the properties adminUnitL1 and adminUnitL2 of the Address class which allow free text."@en;
   rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 
 <http://data.europa.eu/m8g> a owl:Ontology;
