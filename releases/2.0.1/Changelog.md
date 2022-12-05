@@ -52,7 +52,7 @@ The table below gives an overview of the classes (and their definitions) within 
 | D1 | Address:AdminUnitL1:Code             | Address:AdminUnitL1:Text             | In compliance with W3C location                                       | [https://github.com/SEMICeu/Core-Location-Vocabulary/issues/12](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/12) |
 | D2 | Address:AdminUnitL2:Code             | Address:AdminUnitL1:Text             | In compliance with W3C location                                       | [https://github.com/SEMICeu/Core-Location-Vocabulary/issues/12](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/12)
 
-## Changes since December 20202
+## Changes since December 2022
 
 ### Terms
 
