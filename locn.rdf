@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+  xmlns:cc="http://creativecommons.org/ns#" 
+  xmlns:dcat="http://www.w3.org/ns/dcat#" 
+  xmlns:dcterms="http://purl.org/dc/terms/" 
+  xmlns:foaf="http://xmlns.com/foaf/0.1/" 
+  xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" 
+  xmlns:gsp="http://www.opengis.net/ont/geosparql#" 
+  xmlns:locn="http://www.w3.org/ns/locn#" 
+  xmlns:owl="http://www.w3.org/2002/07/owl#" 
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:rec="http://www.w3.org/2001/02pd/rec54#" 
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+  xmlns:schema="http://schema.org/" 
+  xmlns:sf="http://www.opengis.net/ont/sf#" 
+  xmlns:sioc="http://rdfs.org/sioc/ns#" 
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#" 
+  xmlns:vann="http://purl.org/vocab/vann/" 
+  xmlns:voaf="http://purl.org/vocommons/voaf#" 
+  xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#" 
+  xmlns:wdrs="http://www.w3.org/2007/05/powder-s#" 
+>
+  <owl:Ontology rdf:about="http://www.w3.org/ns/locn">
+    <dcterms:title xml:lang="en">ISA Programme Location Core Vocabulary</dcterms:title>
+    <rdfs:label xml:lang="en">ISA Programme Location Core Vocabulary</rdfs:label>
+    <rdfs:comment xml:lang="en">This is a new version of the final draft published by the European Commission in May 2012, revised according to the results of the ISA Core Location Pilot (see Section Change History for the list of changes). It is currently under the control of the Locations and Addresses Community Group, but is not under active development or review. Comments and queries should be sent to that group via public-locadd@w3.org. Terms defined here may be deprecated by that or future groups but will not disappear or their definition change.</rdfs:comment>
+    <owl:versionInfo xml:lang="en">First version in w3.org/ns space</owl:versionInfo>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-11-25</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-03-23</dcterms:modified>
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <voaf:reliesOn rdf:resource="http://purl.org/dc/terms/"/>
+    <voaf:reliesOn rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <voaf:classNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</voaf:classNumber>
+    <voaf:propertyNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">16</voaf:propertyNumber>
+    <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/ns/locn#</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locn</vann:preferredNamespacePrefix>
+    <dcterms:hasFormat>
+      <rdf:Description rdf:about="http://www.w3.org/ns/locn.rdf">
+        <rdfs:label xml:lang="en">RDF/XML version of the ISA Programme Location Core Vocabulary</rdfs:label>
+        <dcterms:format rdf:resource="http://www.w3.org/ns/formats/data/RDF_XML"/>
+        <dcat:mediaType rdf:datatype="http://purl.org/dc/terms/IMT">application/rdf+xml</dcat:mediaType>
+      </rdf:Description>
+    </dcterms:hasFormat>
+    <dcterms:hasFormat>
+      <rdf:Description rdf:about="http://www.w3.org/ns/locn.ttl">
+        <rdfs:label xml:lang="en">Turtle version of the ISA Programme Location Core Vocabulary</rdfs:label>
+        <dcterms:format rdf:resource="http://www.w3.org/ns/formats/data/Turtle"/>
+        <dcat:mediaType rdf:datatype="http://purl.org/dc/terms/IMT">text/turtle</dcat:mediaType>
+      </rdf:Description>
+    </dcterms:hasFormat>
+    <dcterms:hasFormat>
+      <rdf:Description rdf:about="http://www.w3.org/ns/locn.html">
+        <rdfs:label xml:lang="en">HTML version of the ISA Programme Location Core Vocabulary</rdfs:label>
+        <dcat:mediaType rdf:datatype="http://purl.org/dc/terms/IMT">text/html</dcat:mediaType>
+      </rdf:Description>
+    </dcterms:hasFormat>
+    <rec:editor rdf:parseType="Resource">
+      <rdfs:seeAlso rdf:resource="http://andrea-perego.name/foaf/#me"/>
+      <foaf:name>Andrea Perego</foaf:name>
+      <foaf:homepage rdf:resource="http://about.me/andrea.perego"/>
+      <schema:affiliation rdf:parseType="Resource">
+        <foaf:name xml:lang="en">European Commission - Joint Research Centre (JRC)</foaf:name>
+        <foaf:homepage rdf:resource="https://ec.europa.eu/jrc/"/>
+      </schema:affiliation>
+    </rec:editor>
+    <rec:editor rdf:parseType="Resource">
+      <foaf:name>Michael Lutz</foaf:name>
+      <schema:affiliation rdf:parseType="Resource">
+        <foaf:name xml:lang="en">European Commission - Joint Research Centre (JRC)</foaf:name>
+        <foaf:homepage rdf:resource="https://ec.europa.eu/jrc/"/>
+      </schema:affiliation>
+    </rec:editor>
+    <rec:editor rdf:parseType="Resource">
+      <rdfs:seeAlso rdf:resource="http://philarcher.org/foaf.rdf#me"/>
+      <foaf:name>Phil Archer</foaf:name>
+      <foaf:homepage rdf:resource="http://philarcher.org/"/>
+      <schema:affiliation rdf:parseType="Resource">
+        <foaf:name>W3C/ERCIM</foaf:name>
+        <foaf:homepage rdf:resource="http://www.w3.org/"/>
+      </schema:affiliation>
+    </rec:editor>
+    <foaf:maker rdf:parseType="Resource">
+      <foaf:name>EU ISA Programme Core Vocabularies Working Group (Location Task Force)</foaf:name>
+      <foaf:homepage rdf:resource="https://joinup.ec.europa.eu/node/42444"/>
+    </foaf:maker>
+    <dcterms:mediator rdf:parseType="Resource">
+      <foaf:name>Locations and Addresses Community Group</foaf:name>
+      <foaf:homepage rdf:resource="http://www.w3.org/community/locadd/"/>
+      <foaf:mbox rdf:resource="mailto:public-locadd@w3.org"/>
+    </dcterms:mediator>
+    <dcterms:abstract xml:lang="en">The ISA Programme Location Core Vocabulary provides a minimum set of classes and properties for describing any place in terms of its name, address or geometry. The vocabulary is specifically designed to aid the publication of data that is interoperable with EU INSPIRE Directive. It is closely integrated with the Business and Person Core Vocabularies of the EU ISA Programme, now available in W3C space as, respectively, the Registered Organization vocabulary and ISA Person Core Vocabulary.</dcterms:abstract>
+    <foaf:depiction>
+      <rdf:Description rdf:about="locn.svg">
+        <rdfs:label>Class and property diagram of the LOCN vocabulary</rdfs:label>
+      </rdf:Description>
+    </foaf:depiction>
+    <wdrs:describedby>
+      <rdf:Description rdf:about="https://joinup.ec.europa.eu/node/55858">
+        <dcterms:title>Core Vocabularies Specification</dcterms:title>
+      </rdf:Description>
+    </wdrs:describedby>
+    <dcterms:conformsTo>
+      <rdf:Description rdf:about="https://joinup.ec.europa.eu/node/43160">
+        <dcterms:title>Process and Methodology for Developing Core Vocabularies</dcterms:title>
+      </rdf:Description>
+    </dcterms:conformsTo>
+    <dcterms:rights xml:lang="en">Copyright © European Union, 2012-2015.</dcterms:rights>
+    <dcterms:license>
+      <rdf:Description rdf:about="https://joinup.ec.europa.eu/category/licence/isa-open-metadata-licence-v11">
+        <dcterms:title>ISA Open Metadata Licence v1.1</dcterms:title>
+        <cc:attributionName xml:lang="en">European Commission</cc:attributionName>
+        <cc:attributionURL rdf:resource="http://ec.europa.eu/"/>
+      </rdf:Description>
+    </dcterms:license>
+    <cc:attributionName xml:lang="en">European Commission</cc:attributionName>
+    <cc:attributionURL rdf:resource="http://ec.europa.eu/"/>    
+    <vann:changes xml:lang="en">
+2015-03-23: Updates in the namespace document and in the RDF/XML and Turtle schemas:
+- Fixed copyright notice.
+- Added class and property diagram.
+- Updated GeoSPARQL (a) namespace URIs  and (b) datatype names in the examples of property locn:geometry, based on version 1.0 of the GeoSPARQL specification, and added a note in the examples.
+  - prefix ogc (http://www.opengis.net/rdf#) replaced with gsp (http://www.opengis.net/ont/geosparql#) and sf (http://www.opengis.net/ont/sf#)
+  - ogc:WKTLiteral → gsp:wktLiteral
+  - ogc:GMLLiteral → gsp:gmlLiteral
+- Added namespace declarations for all namespace prefixes used in LOCN namespace document, even though they are not used in class/property definitions.
+- Corrected the endonym of the Greek capital written in the Greek script in the definition of class locn:geographicName (Aθnνa → Αθήνα).
+- Fixed links and typos, minor revisions made to the textual descriptions.
+2013-12-21: (PhilA) Update in RDF/XML and Turtle schemas:
+- Updated voaf namespace.
+- Corrected links to different distributions of the schema.
+- Removed xml:base and used http://www/w3/org/ns/locn as the schema URI cf. original which used the namespace URI (with the final # character).
+2013-11-25: Changes since final draft version released by the EU ISA Programme Core Vocabularies Working Group (Location Task Force)
+- Revised usage note of class locn:Geometry. The text describing its recommended usage has been moved to usage note of property locn:geometry.
+- Dropped domain/range restriction for locn:geographicName.
+- Dropped domain/range restriction for locn:locatorDesignator. Free text definition updated accordingly.
+- Dropped domain/range restriction for locn:locatorName. Free text definition updated accordingly.
+- Corrected free text definition of property locn:geometry (its domain is "any resource", and not a "location").
+- Revised usage note of property locn:geometry to include text about recommended usage, formerly included in the usage note of class locn:Geometry.
+- Revised usage note and examples of property locn:geometry to include support to geocoded URIs (e.g., geo URIs, GeoHash URIs).
+- Added term status. All terms have been set to "testing", with the exception of class locn:Geometry and properties rdfs:seeAlso (geographic identifier) and locn:addressId.
+- Renamed subject in Turtle examples (ex:a → :Resource).
+- Fixed links and typos, minor revisions made to the textual descriptions.
+    </vann:changes>
+  </owl:Ontology>  
+  <rdf:Description rdf:about="http://purl.org/dc/terms/Location">
+    <rdfs:label xml:lang="en">Location</rdfs:label>
+    <rdfs:comment xml:lang="en">dcterms:Location class fully represents the ISA Programme Location Core Vocabulary class of Location.</rdfs:comment>
+    <vann:usageNote xml:lang="en">This is the key class for the ISA Programme Location Core Vocabulary and represents any location, irrespective of size or other restriction.</vann:usageNote>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dcterms:Location</dcterms:identifier>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </rdf:Description>
+  <rdf:Property rdf:about="http://www.w3.org/ns/locn#location">
+    <rdfs:label xml:lang="en">location</rdfs:label>
+    <rdfs:comment xml:lang="en">The location property links any resource to the Location Class. Asserting the location relationship implies only that the domain has some connection to a Location in time or space. It does not imply that the resource is necessarily at that location at the time when the assertion is made.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/Location"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locn:location</dcterms:identifier>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/ns/locn#geographicName">
+    <rdfs:label xml:lang="en">geographic name</rdfs:label>
+    <rdfs:comment xml:lang="en">
+A geographic name is a proper noun applied to a spatial object. Taking the example used in the relevant INSPIRE data specification (page 18), the following are all valid geographic names for the Greek capital:
+- Αθήνα (the Greek endonym written in the Greek script)
+- Athína (the standard Romanisation of the endonym)
+- Athens (the English language exonym)
+For INSPIRE-conformant data, provide the metadata for the geographic name using a skos:Concept as a datatype.
+</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+    <wdrs:describedby rdf:resource="https://joinup.ec.europa.eu/node/55858"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locn:geographicName</dcterms:identifier>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </rdf:Property>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso">
+    <rdfs:label xml:lang="en">geographic identifier</rdfs:label>
+    <rdfs:comment xml:lang="en">rdfs:seeAlso fully represents the ISA Programme Location Core Vocabulary concept of a geographic identifier.</rdfs:comment>
+    <vann:usageNote xml:lang="en">Used in the ISA Programme Location Core Vocabulary to provide a URI that identifies the location. This should be expressed using the rdfs:seeAlso property unless the identifier is already the subject of the description. Examples include URIs from GeoNames.org and DBpedia such as http://dbpedia.org/resource/ISO_3166-2:XX where XX is the ISO 3166 two character code for a country.</vann:usageNote>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdfs:seeAlso</dcterms:identifier>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+  </rdf:Description>
+  <rdf:Property rdf:about="http://www.w3.org/ns/locn#geometry">
+    <rdfs:label xml:lang="en">geometry</rdfs:label>
+    <rdfs:comment xml:lang="en">Associates any resource with the corresponding geometry.</rdfs:comment>
+    <vann:usageNote xml:lang="en">
+Depending on how a geometry is encoded, the range of this property may be one of the following:
+- a literal (e.g., WKT - string literal -, GML, KML - XML literal)
+- a geometry class, as those defined in the OGC's GeoSPARQL specification, in the W3C's Basic Geo (WGS84 lat/long) vocabulary, and at schema.org;
+- geocoded URIs, as geo or GeoHash URIs, treated as URI references.
+For interoperability reasons, it is recommended using one of the following:
+- Any geometry:
+  - WKT, GML, and RDF+WKT/GML, as per the GeoSPARQL specification.
+  - KML (Keyhole Markup Language) - note that KML supports the following geometries only: point, line string, linear ring, and polygon.
+  - RDF as per the schema.org vocabulary (see classes schema:GeoCoordinates and schema:GeoShape).
+- Points: one of the above, or:
+  - RDF as per the W3C Basic Geo (WGS84 lat/long) vocabulary.
+  - GeoHash URIs.
+  - geo URIs.
+    </vann:usageNote>
+    <vann:example xml:lang="en">
+The following are examples of equivalent statements using different geometry encodings. In the examples, prefix gsp is used for namespace URI http://www.opengis.net/ont/geosparql#, whereas prefix sf is used for namespace URI http://www.opengis.net/ont/sf#.
+- WKT (GeoSPARQL)
+:Resource locn:geometry
+  "&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; Point(-0.001475 51.477811)"^^gsp:wktLiteral .
+- GML
+:Resource locn:geometry
+  "&lt;gml:Point srsName='http://www.opengis.net/def/crs/OGC/1.3/CRS84'&gt;
+  &lt;gml:coordinates&gt;-0.001475, 51.477811&lt;/gml:coordinates&gt;&lt;/gml:Point&gt;"^^gsp:gmlLiteral .
+- RDF+WKT (GeoSPARQL)
+:Resource locn:geometry
+  [ a sf:Point; gsp:asWKT "&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; Point(-0.001475 51.477811)"^^gsp:wktLiteral ] .
+- RDF+GML (GeoSPARQL)
+:Resource locn:geometry
+  [ a sf:Point; gsp:asGML
+     "&lt;gml:Point srsName='http://www.opengis.net/def/crs/OGC/1.3/CRS84'&gt;
+      &lt;gml:coordinates&gt;-0.001475, 51.477811&lt;/gml:coordinates&gt;&lt;/gml:Point&gt;"^^gsp:gmlLiteral ] .
+- RDF (WGS84 lat/long)
+:Resource locn:geometry [ a geo:Point; geo:lat "51.477811"; geo:long "-0.001475" ] .
+- RDF (schema.org)
+:Resource locn:geometry [ a schema:GeoCoordinates; schema:latitude "51.477811"; schema:longitude "-0.001475" ] .
+- geo URI
+:Resource locn:geometry &lt;geo:51.477811,-0.001475;u=0;crs=wgs84&gt; .
+- GeoHash URI
+:Resource locn:geometry &lt;http://geohash.org/gcpuzgnzvxkp&gt; .
+    </vann:example>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+    <wdrs:describedby rdf:resource="https://joinup.ec.europa.eu/node/55858"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/locn#Geometry"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locn:geometry</dcterms:identifier>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/ns/locn#address">
+    <rdfs:label xml:lang="en">address</rdfs:label>
+    <rdfs:comment xml:lang="en">The locn:address property relationship associates any resource with the locn:Address class </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/locn#Address"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locn:address</dcterms:identifier>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://www.w3.org/ns/locn#Address">
+    <rdfs:label xml:lang="en">Address</rdfs:label>
+    <rdfs:comment xml:lang="en">An "address representation" as conceptually defined by the INSPIRE Address Representation data type. The locn:addressId property may be used to link this locn:Address to other representations.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+    <wdrs:describedby rdf:resource="https://joinup.ec.europa.eu/node/55858"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locn:Address</dcterms:identifier>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://www.w3.org/ns/locn#fullAddress">
+    <rdfs:label xml:lang="en">full address</rdfs:label>
+    <rdfs:comment xml:lang="en">The complete address written as a string, with or without formatting. The domain of locn:fullAddress is locn:Address.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locn:fullAddress</dcterms:identifier>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/ns/locn#poBox">
+    <rdfs:label xml:lang="en">PO box</rdfs:label>
+    <rdfs:comment xml:lang="en">The Post Office Box number. The domain of locn:poBox is locn:Address.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locn:poBox</dcterms:identifier>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/ns/locn#thoroughfare">
+    <rdfs:label xml:lang="en">thoroughfare</rdfs:label>
+    <rdfs:comment xml:lang="en">An address component that represents the name of a passage or way through from one location to another. A thoroughfare is not necessarily a road, it might be a waterway or some other feature. The domain of locn:thoroughfare is locn:Address.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locn:thoroughfare</dcterms:identifier>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/ns/locn#locatorDesignator">
+    <rdfs:label xml:lang="en">locator designator</rdfs:label>
+    <rdfs:comment xml:lang="en">A number or a sequence of characters that uniquely identifies the locator within the relevant scope(s). The full identification of the locator could include one or more locator designators.
+    </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locn:locatorDesignator</dcterms:identifier>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/ns/locn#locatorName">
+    <rdfs:label xml:lang="en">locator name</rdfs:label>
+    <rdfs:comment xml:lang="en">Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building. 
+    </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locn:locatorName</dcterms:identifier>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/ns/locn#addressArea">
+    <rdfs:label xml:lang="en">address area</rdfs:label>
+    <rdfs:comment xml:lang="en">The name or names of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit. This would typically be part of a city, a neighbourhood or village. The domain of locn:addressArea is locn:Address.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locn:addressArea</dcterms:identifier>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/ns/locn#postName">
+    <rdfs:label xml:lang="en">post name</rdfs:label>
+    <rdfs:comment xml:lang="en">The key postal division of the address, usually the city. (INSPIRE's definition is "One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."). The domain of locn:postName is locn:Address.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locn:postName</dcterms:identifier>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/ns/locn#adminUnitL2">
+    <rdfs:label xml:lang="en">admin unit level 2</rdfs:label>
+    <rdfs:comment xml:lang="en">The region of the address, usually a county, state or other such area that typically encompasses several localities. The domain of  locn:adminUnitL2 is locn:Address and the range is a literal, conceptually defined by the INSPIRE Geographical Name data type.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locn:adminUnitL2</dcterms:identifier>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/ns/locn#adminUnitL1">
+    <rdfs:label xml:lang="en">admin unit level 1</rdfs:label>
+    <rdfs:comment xml:lang="en">The uppermost administrative unit for the address, almost always a country. The domain of locn:adminUnitL1 is locn:Address and the range is a literal, conceptually defined by the INSPIRE Geographical Name data type.</rdfs:comment>
+    <vann:usageNote xml:lang="en">Best practice is to use the ISO 3166-1 code but if this is inappropriate for the context, country names should be provided in a consistent manner to reduce ambiguity. For example, either write 'United Kingdom' or 'UK' consistently throughout the data set and avoid mixing the two.</vann:usageNote>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locn:adminUnitL1</dcterms:identifier>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/ns/locn#postCode">
+    <rdfs:label xml:lang="en">post code</rdfs:label>
+    <rdfs:comment xml:lang="en">The post code (a.k.a postal code, zip code etc.). Post codes are common elements in many countries' postal address systems. The domain of locn:postCode is locn:Address.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locn:postCode</dcterms:identifier>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/ns/locn#addressId">
+    <rdfs:label xml:lang="en">address ID</rdfs:label>
+    <rdfs:comment xml:lang="en">The concept of adding a globally unique identifier for each instance of an address is a crucial part of the INSPIRE data spec. The domain of locn:addressId is locn:Address.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/locn#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locn:addressId</dcterms:identifier>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://www.w3.org/ns/locn#Geometry">
+    <rdfs:label xml:lang="en">Geometry</rdfs:label>
+    <rdfs:comment xml:lang="en">The locn:Geometry class provides the means to identify a location as a point, line, polygon, etc. expressed using coordinates in some coordinate reference system.</rdfs:comment>
+    <vann:usageNote xml:lang="en">This class defines the notion of "geometry" at the conceptual level, and it shall be encoded by using different formats (see usage note of the locn:geometry property).</vann:usageNote>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/locn"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locn:Geometry</dcterms:identifier>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+  </rdfs:Class>
+</rdf:RDF>
