@@ -13,14 +13,6 @@
 <http://www.w3.org/ns/locn#Geometry> a rdfs:Class;
   rdfs:label "Geometry"@en .
 
-<http://data.europa.eu/m8g/address> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> """Asserting the address relationship implies that the
- Resource has an Address."""@en;
-  rdfs:domain rdfs:Resource;
-  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range <http://www.w3.org/ns/locn#Address>;
-  rdfs:subPropertyOf <http://w3.org/ns/locn#address> .
-
 <http://data.europa.eu/m8g/code> a owl:ObjectProperty;
   rdfs:domain <http://data.europa.eu/m8g/AdminUnit>;
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
@@ -68,6 +60,12 @@
 
 <http://data.europa.eu/m8g/adminUnit> a rdf:Property;
   rdfs:label "administrative unit"@en .
+
+<http://data.europa.eu/m8g/registeredAddress> a rdf:Property;
+  rdfs:label "registered address"@en .
+
+<http://w3.org/ns/locn#address> a rdf:Property;
+  rdfs:label "address"@en .
 
 <http://www.opengis.net/ont/geosparql#asGML> a rdf:Property;
   rdfs:label "gml"@en .
@@ -143,6 +141,8 @@
     <http://www.w3.org/ns/locn#addressArea>,
     <http://www.opengis.net/ont/geosparql#asWKT>,
     <http://www.opengis.net/ont/geosparql#asGML>,
+    <http://w3.org/ns/locn#address>,
+    <http://data.europa.eu/m8g/registeredAddress>,
     <http://data.europa.eu/m8g/adminUnit>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
