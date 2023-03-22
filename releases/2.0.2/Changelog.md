@@ -1,8 +1,26 @@
 # Core Location Changelog
 
 ## Introduction
+## Detailed changes from v2.0.1 to v2.0.2
+This document describes the (major) changes to [the current version 2.0.1](https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/2.0.1) of the Core Location Vocabulary for which a new version is being proposed ([version 2.0.2](https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.2/)). The list of changes results in the new version to be considered as a major release.
 
-This document describes the (major) changes to [the current version 1.0.0](https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/1.00) of the Core Location Vocabulary for which a new version is being proposed ([version 2.0.0](https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/)). The list of changes results in the new version to be considered as a major release.
+The table below gives an overview of the classes (and their definitions) within both data models. Classes that are related are juxta-positioned.
+
+**C** stands for changes in classes
+
+**R** stands for changes in relationships
+
+**P** stands for changes in properties
+
+**D** stands for changes in data types
+### Terms
+
+| Nr | Core Location Vocabulary v2.0.1 2022 | Core Location Vocabulary v2.0.2 2022 | Rationale                                                                          | GitHub/Change                                                        |
+| -- | ------------------------------------ | ------------------------------------ | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| R1 | Resource.address		                | Resource.address					   | The URI was wrongly associated to m8g namespace									| [#29](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/29) |
+| R2 | Resource.location	                | Resource.location					   | The URI was wrongly associated to m8g namespace									| [#29](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/29) |
+
+
 
 ## Changes since December 2022
 
@@ -37,15 +55,8 @@ This document describes the (major) changes to [the current version 1.0.0](https
 
 ## Detailed changes from v1.0.0 to v2.0.0
 
-The table below gives an overview of the classes (and their definitions) within both data models. Classes that are related are juxta-positioned.
 
-**C** stands for changes in classes
-
-**R** stands for changes in relationships
-
-**P** stands for changes in properties
-
-**D** stands for changes in data types
+### Terms
 
 | Nr | Core Location Vocabulary v1.0.0 | Core Location Vocabulary v2.0.0 | Rationale | GitHub / Change |
 | --- | --- | --- | --- | --- |
