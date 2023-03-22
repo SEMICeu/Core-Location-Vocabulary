@@ -1,0 +1,986 @@
+{
+  "@context": {
+    "@vocab": "https://semiceu.github.io//doc/core-vocabulary/core-location",
+    "qb": "http://purl.org/linked-data/cube#",
+    "qb:codeList": {
+      "@id": "qb:codeList",
+      "@type": "@id"
+    },
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdf:first": {
+      "@type": "@id"
+    },
+    "rdf:rest": {
+      "@type": "@id"
+    },
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdfs:comment": {
+      "@id": "rdfs:comment"
+    },
+    "sh": "http://www.w3.org/ns/shacl#",
+    "sh:and": {
+      "@container": "@set",
+      "@id": "sh:and",
+      "@type": "@id"
+    },
+    "sh:class": {
+      "@id": "sh:class",
+      "@type": "@id"
+    },
+    "sh:datatype": {
+      "@id": "sh:datatype",
+      "@type": "@id"
+    },
+    "sh:description": {
+      "@container": "@language",
+      "@id": "sh:description"
+    },
+    "sh:hasValue": {
+      "@id": "sh:hasValue",
+      "@type": "@id"
+    },
+    "sh:in": {
+      "@container": "@set",
+      "@id": "sh:in",
+      "@type": "@id"
+    },
+    "sh:maxCount": {
+      "@id": "sh:maxCount",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "sh:minCount": {
+      "@id": "sh:minCount",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "sh:name": {
+      "@container": "@language",
+      "@id": "sh:name"
+    },
+    "sh:node": {
+      "@id": "sh:node",
+      "@type": "@id"
+    },
+    "sh:nodeKind": {
+      "@id": "sh:nodeKind",
+      "@type": "@id"
+    },
+    "sh:or": {
+      "@container": "@set",
+      "@id": "sh:or",
+      "@type": "@id"
+    },
+    "sh:path": {
+      "@id": "sh:path",
+      "@type": "@id"
+    },
+    "sh:property": {
+      "@id": "sh:property",
+      "@type": "@id"
+    },
+    "sh:severity": {
+      "@id": "sh:severity",
+      "@type": "@id"
+    },
+    "sh:targetClass": {
+      "@id": "sh:targetClass",
+      "@type": "@id"
+    },
+    "sh:uniqueLang": {
+      "@id": "sh:uniqueLang",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "shapes": {
+      "@id": "rdfs:member",
+      "@type": "@id"
+    },
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vl": "https://purl.eu/ns/shacl#",
+    "vl:message": {
+      "@container": "@language",
+      "@id": "vl:message"
+    }
+  },
+  "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location",
+  "shapes": [
+    {
+      "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AdminUnitShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AdminUnitShape/0624f53106f6c8e265a6637987aa84df1f51e3ec",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#AdminUnit%3Alevel",
+          "sh:description": {
+            "en": "The level of the administrative unit in the hierarchy."
+          },
+          "sh:name": {
+            "en": "level"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/m8g/level",
+          "vl:message": {
+            "en": "The expected value for level is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AdminUnitShape/34d95733daf7d992483c679b8caea965979b76a8",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#AdminUnit%3Acode",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The classification of the administrative unit."
+          },
+          "sh:name": {
+            "en": "code"
+          },
+          "sh:path": "http://data.europa.eu/m8g/code",
+          "vl:message": {
+            "en": "The range of code must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AdminUnitShape/77e1a71f3cfcae1acdb545a44042b811133bc6ee",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#AdminUnit%3Acode",
+          "sh:description": {
+            "en": "The classification of the administrative unit."
+          },
+          "sh:name": {
+            "en": "code"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/m8g/code",
+          "vl:message": {
+            "en": "The expected value for code is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AdminUnitShape/9b437af682d747dd61e73577261bf72c00014cc4",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#AdminUnit%3Alevel",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The level of the administrative unit in the hierarchy."
+          },
+          "sh:name": {
+            "en": "level"
+          },
+          "sh:path": "http://data.europa.eu/m8g/level",
+          "vl:message": {
+            "en": "The range of level must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/AdminUnit"
+    },
+    {
+      "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#LocationShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#LocationShape/2481cfd943c5249d2ca01949dc073a42a579a3ab",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Location%3Ageographic%20name",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A textual description for a Location."
+          },
+          "sh:name": {
+            "en": "geographic name"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#geographicName",
+          "vl:message": {
+            "en": "The range of geographic name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#LocationShape/33e381ee565d4967597190de5407462136b5201f",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Location%3Ageographic%20name",
+          "sh:description": {
+            "en": "A textual description for a Location."
+          },
+          "sh:name": {
+            "en": "geographic name"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#geographicName",
+          "vl:message": {
+            "en": "The expected value for geographic name is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#LocationShape/de64768127c2c96295191bbf7ced703cb1b65346",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Location%3Ageographic%20identifier",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "sh:description": {
+            "en": "A reference in the form of a Uniform Resource Identifier to the Location."
+          },
+          "sh:name": {
+            "en": "geographic identifier"
+          },
+          "sh:path": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "vl:message": {
+            "en": "The range of geographic identifier must be of type <http://www.w3.org/2001/XMLSchema#anyURI>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#LocationShape/e8ee1e84cb83b9448511b77b2105dcaebb8942df",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Location%3Ageographic%20identifier",
+          "sh:description": {
+            "en": "A reference in the form of a Uniform Resource Identifier to the Location."
+          },
+          "sh:name": {
+            "en": "geographic identifier"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "vl:message": {
+            "en": "The expected value for geographic identifier is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#LocationShape/f8c12ef1d65e2f95cdc24b099e3c0f5ac229e8fe",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Location%3Ageographic%20name",
+          "sh:description": {
+            "en": "A textual description for a Location."
+          },
+          "sh:name": {
+            "en": "geographic name"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#geographicName",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for geographic name"
+          }
+        }
+      ],
+      "sh:targetClass": "http://purl.org/dc/terms/Location"
+    },
+    {
+      "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#ResourceShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#ResourceShape/12e802b6051225ab908996eebb864ed4fb52e96c",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Resource%3Alocation",
+          "sh:description": {
+            "en": "Associates any Resource with the corresponding Location."
+          },
+          "sh:name": {
+            "en": "location"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/locn#location",
+          "vl:message": {
+            "en": "The expected value for location is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#ResourceShape/2c7d994dd540f92c116cac913e2aa5d588945f1f",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Resource%3Aaddress",
+          "sh:description": {
+            "en": "Associates any Resource with the corresponding Address."
+          },
+          "sh:name": {
+            "en": "address"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://w3.org/ns/locn#address",
+          "vl:message": {
+            "en": "The expected value for address is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#ResourceShape/48fd2b59954e54cc1eccd6d9ad700094a9348522",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Resource%3Aregistered%20address",
+          "sh:description": {
+            "en": "The registered address relationship links a Resource with the legally registered Address."
+          },
+          "sh:name": {
+            "en": "registered address"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/m8g/registeredAddress",
+          "vl:message": {
+            "en": "The expected value for registered address is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#ResourceShape/53c8e9f0fc79ab4ed706e31129a2b3e02f7edd22",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Resource%3Ageometry",
+          "sh:class": "http://www.w3.org/ns/locn#Geometry",
+          "sh:description": {
+            "en": "Associates any Resource with the corresponding Geometry."
+          },
+          "sh:name": {
+            "en": "geometry"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#geometry",
+          "vl:message": {
+            "en": "The range of geometry must be of type <http://www.w3.org/ns/locn#Geometry>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#ResourceShape/5de4ef5193a558e17a34633888421d09b957d267",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Resource%3Aaddress",
+          "sh:class": "http://www.w3.org/ns/locn#Address",
+          "sh:description": {
+            "en": "Associates any Resource with the corresponding Address."
+          },
+          "sh:name": {
+            "en": "address"
+          },
+          "sh:path": "http://w3.org/ns/locn#address",
+          "vl:message": {
+            "en": "The range of address must be of type <http://www.w3.org/ns/locn#Address>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#ResourceShape/a7760ef34c8bc85460f186072f4aaefd62ae6213",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Resource%3Alocation",
+          "sh:class": "http://purl.org/dc/terms/Location",
+          "sh:description": {
+            "en": "Associates any Resource with the corresponding Location."
+          },
+          "sh:name": {
+            "en": "location"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#location",
+          "vl:message": {
+            "en": "The range of location must be of type <http://purl.org/dc/terms/Location>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#ResourceShape/cf9602ea5422d929eccf1b7ba9f66046b2fce096",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Resource%3Aregistered%20address",
+          "sh:class": "http://www.w3.org/ns/locn#Address",
+          "sh:description": {
+            "en": "The registered address relationship links a Resource with the legally registered Address."
+          },
+          "sh:name": {
+            "en": "registered address"
+          },
+          "sh:path": "http://data.europa.eu/m8g/registeredAddress",
+          "vl:message": {
+            "en": "The range of registered address must be of type <http://www.w3.org/ns/locn#Address>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#ResourceShape/d0b958cd33e8ef1bc031edaf2859b44db128a644",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Resource%3Ageometry",
+          "sh:description": {
+            "en": "Associates any Resource with the corresponding Geometry."
+          },
+          "sh:name": {
+            "en": "geometry"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/locn#geometry",
+          "vl:message": {
+            "en": "The expected value for geometry is a rdfs:Resource (URI or blank node)"
+          }
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/2000/01/rdf-schema#Resource"
+    },
+    {
+      "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/006de06965023999963c4307153479c8629991d9",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Alocator%20name",
+          "sh:description": {
+            "en": "Proper noun(s) applied to the real world entity identified by the locator."
+          },
+          "sh:name": {
+            "en": "locator name"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#locatorName",
+          "vl:message": {
+            "en": "The expected value for locator name is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/03690748629ed1c685fc6a365780375be09bce76",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Aadministrative%20unit%20level%201",
+          "sh:description": {
+            "en": "The name of the uppermost level of the address, almost always a country."
+          },
+          "sh:name": {
+            "en": "administrative unit level 1"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#adminUnitL1",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for administrative unit level 1"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/17384dfa4a75117e7dd2bc0f2bbf61ac91fd8676",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Athoroughfare",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The name of a passage or way through from one location to another."
+          },
+          "sh:name": {
+            "en": "thoroughfare"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#thoroughfare",
+          "vl:message": {
+            "en": "The range of thoroughfare must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/256ffe464f9c7682e950f7853ef0b6060580435b",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Aadministrative%20unit%20level%202",
+          "sh:description": {
+            "en": "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."
+          },
+          "sh:name": {
+            "en": "administrative unit level 2"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#adminUnitL2",
+          "vl:message": {
+            "en": "The expected value for administrative unit level 2 is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/362b7c3261b1d5eb024e72e4868babc25ed0c7ce",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Aadministrative%20unit%20level%201",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The name of the uppermost level of the address, almost always a country."
+          },
+          "sh:name": {
+            "en": "administrative unit level 1"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#adminUnitL1",
+          "vl:message": {
+            "en": "The range of administrative unit level 1 must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/3a0fcecd9e5f4e8deb4d102b9d072a4b067b773e",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Afull%20address",
+          "sh:description": {
+            "en": "The complete address written as a string."
+          },
+          "sh:name": {
+            "en": "full address"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#fullAddress",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for full address"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/470060a15e97aeacd56fcc5beb701e647a6aa56e",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Aaddress%20area",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The name of a geographic area that groups Addresses."
+          },
+          "sh:name": {
+            "en": "address area"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#addressArea",
+          "vl:message": {
+            "en": "The range of address area must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/5d7f103641a62a590c3c6d874d2a14987e054924",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Aadministrative%20unit",
+          "sh:description": {
+            "en": "The adminUnit relationship links an Address with the Administrative Unit class."
+          },
+          "sh:name": {
+            "en": "administrative unit"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/m8g/adminUnit",
+          "vl:message": {
+            "en": "The expected value for administrative unit is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/60bff98f6076f0828e3b73d73fefc7b1eb56b93a",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Aadministrative%20unit",
+          "sh:class": "http://data.europa.eu/m8g/AdminUnit",
+          "sh:description": {
+            "en": "The adminUnit relationship links an Address with the Administrative Unit class."
+          },
+          "sh:name": {
+            "en": "administrative unit"
+          },
+          "sh:path": "http://data.europa.eu/m8g/adminUnit",
+          "vl:message": {
+            "en": "The range of administrative unit must be of type <http://data.europa.eu/m8g/AdminUnit>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/6f98d6d917a0e0b73d8614923f953e1ee2533918",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Alocator%20name",
+          "sh:description": {
+            "en": "Proper noun(s) applied to the real world entity identified by the locator."
+          },
+          "sh:name": {
+            "en": "locator name"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#locatorName",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for locator name"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/854a17171901a9c000eff34a7ccd77814891e3d5",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Aadministrative%20unit%20level%202",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."
+          },
+          "sh:name": {
+            "en": "administrative unit level 2"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#adminUnitL2",
+          "vl:message": {
+            "en": "The range of administrative unit level 2 must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/8b4c4bdd61e921f78483a3141338773693d4b2ef",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Aaddress%20ID",
+          "sh:description": {
+            "en": "A globally unique identifier for each instance of an Address."
+          },
+          "sh:name": {
+            "en": "address ID"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#addressId",
+          "vl:message": {
+            "en": "The expected value for address ID is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/9097b947404def8604330ec2fc5a0bd405128b35",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Alocator%20designator",
+          "sh:description": {
+            "en": "A number or sequence of characters that uniquely identifies the locator within the relevant scope."
+          },
+          "sh:name": {
+            "en": "locator designator"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#locatorDesignator",
+          "vl:message": {
+            "en": "The expected value for locator designator is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/98016263ed1fd03fc2066e397f3ae3343ce3bf79",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Apost%20name",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."
+          },
+          "sh:name": {
+            "en": "post name"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#postName",
+          "vl:message": {
+            "en": "The range of post name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/9aaaf1750887d905949d78ac718f18c02809a28e",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Aadministrative%20unit%20level%201",
+          "sh:description": {
+            "en": "The name of the uppermost level of the address, almost always a country."
+          },
+          "sh:name": {
+            "en": "administrative unit level 1"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#adminUnitL1",
+          "vl:message": {
+            "en": "The expected value for administrative unit level 1 is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/9c278b09ca17b0ef710224829c0354dc4c2f9a40",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Apost%20office%20box",
+          "sh:description": {
+            "en": "A location designator for a postal delivery point at a post office, usually a number."
+          },
+          "sh:name": {
+            "en": "post office box"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#poBox",
+          "vl:message": {
+            "en": "The expected value for post office box is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/9c2d6af39a55e5e6a76f6b852bbcbada029c21af",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Afull%20address",
+          "sh:description": {
+            "en": "The complete address written as a string."
+          },
+          "sh:name": {
+            "en": "full address"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#fullAddress",
+          "vl:message": {
+            "en": "The expected value for full address is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/a9a46434014b93624ab68c9a56a5bc66a38da9a4",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Apost%20name",
+          "sh:description": {
+            "en": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."
+          },
+          "sh:name": {
+            "en": "post name"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#postName",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for post name"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/aa9622c05f497ef1b06496716742dd5cbfc6f0c9",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Athoroughfare",
+          "sh:description": {
+            "en": "The name of a passage or way through from one location to another."
+          },
+          "sh:name": {
+            "en": "thoroughfare"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#thoroughfare",
+          "vl:message": {
+            "en": "The expected value for thoroughfare is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/ac2d62a08fd924f88a79f0e70cda9fca4d484fd2",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Athoroughfare",
+          "sh:description": {
+            "en": "The name of a passage or way through from one location to another."
+          },
+          "sh:name": {
+            "en": "thoroughfare"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#thoroughfare",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for thoroughfare"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/ae24e9fc95115753cabe5ad6bd3c05b9751cd13c",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Aadministrative%20unit%20level%202",
+          "sh:description": {
+            "en": "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."
+          },
+          "sh:name": {
+            "en": "administrative unit level 2"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#adminUnitL2",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for administrative unit level 2"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/b35e8c8ed2d85ea47f163d53cafca733ecb29389",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Aaddress%20area",
+          "sh:description": {
+            "en": "The name of a geographic area that groups Addresses."
+          },
+          "sh:name": {
+            "en": "address area"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#addressArea",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for address area"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/c0a2b78a80a731301e2f54d040ca9aa2c9b125b1",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Apost%20code",
+          "sh:description": {
+            "en": "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."
+          },
+          "sh:name": {
+            "en": "post code"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#postCode",
+          "vl:message": {
+            "en": "The expected value for post code is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/d75b5d4c221e6b0bf47c853c0be92d078c39e391",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Alocator%20name",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "Proper noun(s) applied to the real world entity identified by the locator."
+          },
+          "sh:name": {
+            "en": "locator name"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#locatorName",
+          "vl:message": {
+            "en": "The range of locator name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/dee03556e405a14f1e410c960b43b8eee149efe7",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Afull%20address",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The complete address written as a string."
+          },
+          "sh:name": {
+            "en": "full address"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#fullAddress",
+          "vl:message": {
+            "en": "The range of full address must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/f1144df3e852614939e86f2e427788162aa7cb72",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Aaddress%20area",
+          "sh:description": {
+            "en": "The name of a geographic area that groups Addresses."
+          },
+          "sh:name": {
+            "en": "address area"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#addressArea",
+          "vl:message": {
+            "en": "The expected value for address area is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#AddressShape/f8d38c3580ea5d4e47ea9e1ad447a47ebe91d5fa",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Address%3Apost%20name",
+          "sh:description": {
+            "en": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."
+          },
+          "sh:name": {
+            "en": "post name"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#postName",
+          "vl:message": {
+            "en": "The expected value for post name is a Literal"
+          }
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/locn#Address"
+    },
+    {
+      "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#GeometryShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#GeometryShape/03e8e047dceaf1c615ca9dcd51ef5a662ce2a535",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Geometry%3Agml",
+          "sh:description": {
+            "en": "The expression of the Geometry in Geography Markup Language."
+          },
+          "sh:name": {
+            "en": "gml"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.opengis.net/ont/geosparql#asGML",
+          "vl:message": {
+            "en": "The expected value for gml is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#GeometryShape/06d06feebc072daa649b8205dc16aeeaa91093c0",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Geometry%3Alatitude",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "sh:description": {
+            "en": "The geographic coordinate that specifies the north / south position of the Geomerty on the Earth's surface."
+          },
+          "sh:name": {
+            "en": "latitude"
+          },
+          "sh:path": "http://data.europa.eu/m8g/latitude",
+          "vl:message": {
+            "en": "The range of latitude must be of type <http://www.w3.org/2001/XMLSchema#string>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#GeometryShape/34ad32f5b7d11f20df810961c2bb99409f64c5c4",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Geometry%3Awkt",
+          "sh:description": {
+            "en": "An expression of the Geometry in WKT, the Well-Known Text markup language."
+          },
+          "sh:name": {
+            "en": "wkt"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.opengis.net/ont/geosparql#asWKT",
+          "vl:message": {
+            "en": "The expected value for wkt is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#GeometryShape/4703caa70988e668e6a8c93b5e670b5f436d4abc",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Geometry%3Alongitude",
+          "sh:description": {
+            "en": "The geographic coordinate that specifies the east / west position of the Geometry on the Earth's surface."
+          },
+          "sh:name": {
+            "en": "longitude"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://data.europa.eu/m8g/longitude",
+          "vl:message": {
+            "en": "The expected value for longitude is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#GeometryShape/476220a5f61cf3795f557dbbd3c33f167fb93ff1",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Geometry%3Alongitude",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "sh:description": {
+            "en": "The geographic coordinate that specifies the east / west position of the Geometry on the Earth's surface."
+          },
+          "sh:name": {
+            "en": "longitude"
+          },
+          "sh:path": "http://data.europa.eu/m8g/longitude",
+          "vl:message": {
+            "en": "The range of longitude must be of type <http://www.w3.org/2001/XMLSchema#string>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#GeometryShape/52000cf40fc62767642dc4f6dc2b59d0cacb027f",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Geometry%3Acrs",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "sh:description": {
+            "en": "An identifier for the coordinate reference system."
+          },
+          "sh:name": {
+            "en": "crs"
+          },
+          "sh:path": "http://data.europa.eu/m8g/crs",
+          "vl:message": {
+            "en": "The range of crs must be of type <http://www.w3.org/2001/XMLSchema#anyURI>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#GeometryShape/57b4a8d7fdbad957edc20ed043010d1c7dc60d6f",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Geometry%3Acoordinates",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "sh:description": {
+            "en": "\tA list of geographic coordinates that define the extent of the Geometry."
+          },
+          "sh:name": {
+            "en": "coordinates"
+          },
+          "sh:path": "http://data.europa.eu/m8g/coordinates",
+          "vl:message": {
+            "en": "The range of coordinates must be of type <http://www.w3.org/2001/XMLSchema#string>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#GeometryShape/75b6c20aa5a7516dbc025d5a22854bfc21752ed3",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Geometry%3Alatitude",
+          "sh:description": {
+            "en": "The geographic coordinate that specifies the north / south position of the Geomerty on the Earth's surface."
+          },
+          "sh:name": {
+            "en": "latitude"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://data.europa.eu/m8g/latitude",
+          "vl:message": {
+            "en": "The expected value for latitude is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#GeometryShape/8d529b75db03deb811ac31f306cf7506423bfdf5",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Geometry%3Ageometry%20type",
+          "sh:description": {
+            "en": "The classification of the Geometry."
+          },
+          "sh:name": {
+            "en": "geometry type"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/m8g/geometryType",
+          "vl:message": {
+            "en": "The expected value for geometry type is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#GeometryShape/c4d5e759aede0b853e82911b741808c955c419f1",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Geometry%3Acoordinates",
+          "sh:description": {
+            "en": "\tA list of geographic coordinates that define the extent of the Geometry."
+          },
+          "sh:name": {
+            "en": "coordinates"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://data.europa.eu/m8g/coordinates",
+          "vl:message": {
+            "en": "The expected value for coordinates is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#GeometryShape/dc8a8b294042087a6ee3ba319d1441ab045cf334",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Geometry%3Acrs",
+          "sh:description": {
+            "en": "An identifier for the coordinate reference system."
+          },
+          "sh:name": {
+            "en": "crs"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://data.europa.eu/m8g/crs",
+          "vl:message": {
+            "en": "The expected value for crs is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io//doc/core-vocabulary/core-location#GeometryShape/f60bfb563ce6b7e3e6e0da53601a109f44fa56e8",
+          "rdfs:seeAlso": "https://semiceu.github.io//doc/core-vocabulary/core-location#Geometry%3Ageometry%20type",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The classification of the Geometry."
+          },
+          "sh:name": {
+            "en": "geometry type"
+          },
+          "sh:path": "http://data.europa.eu/m8g/geometryType",
+          "vl:message": {
+            "en": "The range of geometry type must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/locn#Geometry"
+    }
+  ]
+}
