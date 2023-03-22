@@ -1,0 +1,11 @@
+# Core Location Vocabulary (CLV) - Version 2.00
+
+The version 2.00 of the Core Location Vocabulary (CLV) is available as: 
+
+*    [HTML as specification](https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/)
+*    [EAP as UML diagram](https://github.com/SEMICeu/Core-Location-Vocabulary/blob/master/releases/2.00/html/overview.jpg)
+*    You can access the previous version of Core Location v1.00 from [here](https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/1.00). 
+*    While going through the different documents, you will probably need to go back and forth, e.g. using the [changelog](https://github.com/SEMICeu/Core-Location-Vocabulary/blob/master/releases/2.00/Changelog.md) as a reference for navigating and comparing Core Location v1.00 and 2.00.
+
+If you have any comments on the Core Location v2.00, please open an issue from [here](https://github.com/SEMICeu/Core-Location-Vocabulary/issues). 
+
