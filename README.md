@@ -1,4 +1,4 @@
-# About the VocabularyAbout the Vocabulary
+## About the Vocabulary
 
 This is the issue tracker for the maintenance of the Core Location Vocabulary.
 
@@ -11,7 +11,7 @@ The current version of the Core Location Vocabulary can be downloaded from [http
 Any problems encountered, or suggestions for new functionalities can be submitted as issues on the Core Location Vocabulary repository on GitHub. A short guideline for submitting issues can be found at [https://github.com/SEMICeu/Core-Location-Vocabulary/wiki](https://github.com/SEMICeu/Core-Location-Vocabulary/wiki).
 
 ## Structure of the repository
-/releases: Core Person releases (1.00,2.00 etc), each release might have different distributions.
+/releases: Core Person releases (1.00, 2.00 etc), each release might have different distributions.
 
 ## License
 Copyright © 2021 European Union. All material in this repository is published under the license [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), unless explicitly otherwise mentioned.
