@@ -1,5 +1,3 @@
-# Core Location
-
 ## About the Vocabulary
 
 This is the issue tracker for the maintenance of the Core Location Vocabulary.
