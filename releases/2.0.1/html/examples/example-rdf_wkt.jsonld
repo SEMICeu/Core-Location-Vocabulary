@@ -1,0 +1,11 @@
+[
+	{"@id":"ex:a",
+	   "@type":["http://w3.org/ns/locn#Location"],
+	   "http://w3.org/ns/locn#geometry":[
+			{"@value":"<http://www.opengis.net/def/crs/OGC/1.3/CRS84> Point(-0.00147551.477811)",
+			 "@type":"http://www.opengis.net/ont/geosparql#wktLiteral"
+			}
+		]
+	},
+	{"@id":"http://w3.org/ns/locn#Location"}
+]

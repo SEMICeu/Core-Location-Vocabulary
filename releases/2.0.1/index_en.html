@@ -13,6 +13,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui.css" />
   <link rel="stylesheet" href="https://dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui-corporate.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
 
   <link rel="icon" sizes="192x192" href="/cms/icons/DUETLogo.jpg" />
   <link rel="apple-touch-icon" href="/cms/icons/DUETLogo.jpg" />
@@ -75,10 +77,16 @@
               <dt>Published at</dt><dd>2022-12-05</dd>
               <dt>This version</dt><dd>
                
-<a href="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.1">https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.1</a>
+<a href="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.2">https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.2</a>
 
               </dd>
               
+              
+              <dt>Previous version</dt><dd>
+               
+<a href="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.1">https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.1</a>
+
+              </dd>
               
               </dl>
               </div>
@@ -214,10 +222,10 @@
               <dl>
               <dt>Source</dt><dd>
 			   
-<a href="https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/2.0.1">https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/2.0.1</a>
+<a href="https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/2.0.2">https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/2.0.2</a>
 
 			  </dd>
-              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/c32f6b55883b86d91eeee8a73559c33c3fc91d7d/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/c32f6b55883b86d91eeee8a73559c33c3fc91d7d/CHANGELOG</a></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/9aca9e9f88dfa0b8ed54e165e69be573d0d7d8c7/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/9aca9e9f88dfa0b8ed54e165e69be573d0d7d8c7/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues">https://github.com/SEMICeu/Core-Location-Vocabulary/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="Core-Location-Vocabulary">Core-Location-Vocabulary</a></dd>-->
 
@@ -307,7 +315,7 @@
                       <br />
                       |
                       <a href="#Address">Address</a> |
-                      <a href="#Administrative Unit">Administrative Unit</a> |
+                      <a href="#AdministrativeUnit">Administrative Unit</a> |
                       <a href="#Geometry">Geometry</a> |
                       <a href="#Location">Location</a> |
                       <a href="#Resource">Resource</a> |
@@ -342,6 +350,7 @@ This specification was heavily based on the INSPIRE Address Representation data 
 <br/><br/>
 - full address (the complete address as a formatted string)<br/>
 - addressID (a unique identifier for the address).
+<br/><br/>
 The first of these allows publishers to simply provide the complete Address as one string, with or without formatting. This is analogous to <a href="https://www.w3.org/TR/vcard-rdf/#d4e953">vCard's label property</a>.
 <br/><br/>
 The addressID is part of the INSPIRE guidelines and provides a hook that can be used to link the Address to an alternative representation, such as vCard or OASIS xAL.
@@ -352,17 +361,17 @@ This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabular
                     <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
-                      <a href="#Address%3Aaddress%20area">address area</a>, 
-                      <a href="#Address%3Aaddress%20ID">address ID</a>, 
-                      <a href="#Address%3Aadministrative%20unit">administrative unit</a>, 
-                      <a href="#Address%3Aadministrative%20unit%20level%201">administrative unit level 1</a>, 
-                      <a href="#Address%3Aadministrative%20unit%20level%202">administrative unit level 2</a>, 
-                      <a href="#Address%3Afull%20address">full address</a>, 
-                      <a href="#Address%3Alocator%20designator">locator designator</a>, 
-                      <a href="#Address%3Alocator%20name">locator name</a>, 
-                      <a href="#Address%3Apost%20code">post code</a>, 
-                      <a href="#Address%3Apost%20name">post name</a>, 
-                      <a href="#Address%3Apost%20office%20box">post office box</a>, 
+                      <a href="#Address%3AaddressArea">address area</a>, 
+                      <a href="#Address%3AaddressId">address ID</a>, 
+                      <a href="#Address%3AadministrativeUnit">administrative unit</a>, 
+                      <a href="#Address%3AadministrativeUnitLevel1">administrative unit level 1</a>, 
+                      <a href="#Address%3AadministrativeUnitLevel2">administrative unit level 2</a>, 
+                      <a href="#Address%3AfullAddress">full address</a>, 
+                      <a href="#Address%3AlocatorDesignator">locator designator</a>, 
+                      <a href="#Address%3AlocatorName">locator name</a>, 
+                      <a href="#Address%3ApostCode">post code</a>, 
+                      <a href="#Address%3ApostName">post name</a>, 
+                      <a href="#Address%3ApostOfficeBox">post office box</a>, 
                       <a href="#Address%3Athoroughfare">thoroughfare</a>.</dd>
                     
                   </dl>
@@ -382,7 +391,7 @@ This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabular
 
                     <tbody class="supertype">
                     
-                      <tr id="Address%3Aaddress%20area" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#addressArea">
+                      <tr id="Address%3AaddressArea" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#addressArea">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#addressArea" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#addressArea" data-placement="right">
@@ -401,7 +410,7 @@ This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabular
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Aaddress%20ID" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#addressId">
+                      <tr id="Address%3AaddressId" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#addressId">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#addressId" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#addressId" data-placement="right">
@@ -423,13 +432,12 @@ The INSPIRE method of representing addresses is very detailed, designed primaril
 Many datasets that include address data as one piece of information about something else are likely to have that data in simpler formats. These might be tailored to the specific need of the dataset, follow a national norm, or make use of a standard like vCard.
 <br/><br/>
 To provide maximum flexibility in the Core Vocabulary, whilst remaining interoperable with INSPIRE Address Guidelines (which EU Member States are obliged to use), the  Core Location Vocabulary provides the extra property of full address and makes use of INSPIRE's addressID.
-<br/><br/>
-The datatype of addressID is indicated as Literal (keeping backward compatibility with the old W3C specification) that can be typed differently, see <a href="https://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal">more</a>.
+
 </td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Aadministrative%20unit" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/adminUnit">
+                      <tr id="Address%3AadministrativeUnit" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/adminUnit">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://data.europa.eu/m8g/adminUnit" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/adminUnit" data-placement="right">
@@ -448,7 +456,7 @@ The datatype of addressID is indicated as Literal (keeping backward compatibilit
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Aadministrative%20unit%20level%201" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#adminUnitL1">
+                      <tr id="Address%3AadministrativeUnitLevel1" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#adminUnitL1">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#adminUnitL1" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#adminUnitL1" data-placement="right">
@@ -467,7 +475,7 @@ The datatype of addressID is indicated as Literal (keeping backward compatibilit
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Aadministrative%20unit%20level%202" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#adminUnitL2">
+                      <tr id="Address%3AadministrativeUnitLevel2" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#adminUnitL2">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#adminUnitL2" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#adminUnitL2" data-placement="right">
@@ -486,7 +494,7 @@ The datatype of addressID is indicated as Literal (keeping backward compatibilit
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Afull%20address" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#fullAddress">
+                      <tr id="Address%3AfullAddress" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#fullAddress">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#fullAddress" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#fullAddress" data-placement="right">
@@ -505,7 +513,7 @@ The datatype of addressID is indicated as Literal (keeping backward compatibilit
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Alocator%20designator" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#locatorDesignator">
+                      <tr id="Address%3AlocatorDesignator" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#locatorDesignator">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#locatorDesignator" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#locatorDesignator" data-placement="right">
@@ -521,12 +529,12 @@ The datatype of addressID is indicated as Literal (keeping backward compatibilit
                         </td>
                         <td property="rdfs:comment">A number or sequence of characters that uniquely identifies the locator within the relevant scope.</td>
                         <td property="skos:scopeNote">In simpler terms, this is the building number, apartment number, etc. For an address such as "Flat 3, 17 Bridge Street", the locator is "flat 3, 17".
-<br/><br/>
-The datatype of locatorDesignator is indicated as Literal (keeping backward compatibility with the old W3C specification) that can be typed differently, see <a href="https://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal">more</a>.</td>
+
+</td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Alocator%20name" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#locatorName">
+                      <tr id="Address%3AlocatorName" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#locatorName">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#locatorName" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#locatorName" data-placement="right">
@@ -543,11 +551,11 @@ The datatype of locatorDesignator is indicated as Literal (keeping backward comp
                         <td property="rdfs:comment">Proper noun(s) applied to the real world entity identified by the locator.</td>
                         <td property="skos:scopeNote">The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building.
 <br/><br/>
-The key difference between a locator and a locator name is that the latter is a proper name and is unlikely to include digits. For example, "Shumann, Berlaymont" is a meeting room within the European Commission headquarters for which locator name is more appropriate than locator.</td>
+The key difference between a locator designator and a locator name is that the latter is a proper name and is unlikely to include digits. For example, "Shumann, Berlaymont" is a meeting room within the European Commission headquarters for which locator name is more appropriate than locator.</td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Apost%20code" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#postCode">
+                      <tr id="Address%3ApostCode" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#postCode">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#postCode" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#postCode" data-placement="right">
@@ -562,13 +570,11 @@ The key difference between a locator and a locator name is that the latter is a 
                           
                         </td>
                         <td property="rdfs:comment">The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.</td>
-                        <td property="skos:scopeNote">Post codes are common elements in many countries' postal address systems. One of the many post codes of Paris is for example "75000".
-
-The datatype of addressID is indicated as Literal (keeping backward compatibility with the old W3C specification) that can be typed differently, see <a href="https://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal">more</a>.</td>
+                        <td property="skos:scopeNote">Post codes are common elements in many countries' postal address systems. One of the many post codes of Paris is for example "75000".</td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Apost%20name" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#postName">
+                      <tr id="Address%3ApostName" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#postName">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#postName" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#postName" data-placement="right">
@@ -587,7 +593,7 @@ The datatype of addressID is indicated as Literal (keeping backward compatibilit
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Apost%20office%20box" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#poBox">
+                      <tr id="Address%3ApostOfficeBox" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#poBox">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#poBox" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#poBox" data-placement="right">
@@ -602,9 +608,7 @@ The datatype of addressID is indicated as Literal (keeping backward compatibilit
                           
                         </td>
                         <td property="rdfs:comment">A location designator for a postal delivery point at a post office, usually a number.</td>
-                        <td property="skos:scopeNote">INSPIRE's name for this is "postalDeliveryIdentifier" for which it uses the locator designator property with a type attribute of that name. This vocabulary separates out the Post Office Box for greater independence of technology. An example post office box number is "9383".
-<br/><br/>
-The datatype of poBox is indicated as Literal (keeping backward compatibility with the old W3C specification) that can be typed differently, see <a href="https://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal">more</a>.</td>
+                        <td property="skos:scopeNote">INSPIRE's name for this is "postalDeliveryIdentifier" for which it uses the locator designator property with a type attribute of that name. This vocabulary separates out the Post Office Box for greater independence of technology. An example post office box number is "9383".</td>
                         <td></td>
                       </tr>
                     
@@ -634,7 +638,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Administrative Unit"><a href="http://data.europa.eu/m8g/AdminUnit" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/AdminUnit" data-placement="right">Administrative Unit</a></h3>
+              <h3 class="h3" id="AdministrativeUnit"><a href="http://data.europa.eu/m8g/AdminUnit" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/AdminUnit" data-placement="right">Administrative Unit</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Description</dt><dd>A detailed administrative unit organized in a hierarchy.</dd>
@@ -645,8 +649,8 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                     <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
-                      <a href="#Administrative%20Unit%3Acode">code</a>, 
-                      <a href="#Administrative%20Unit%3Alevel">level</a>.</dd>
+                      <a href="#AdministrativeUnit%3Acode">code</a>, 
+                      <a href="#AdministrativeUnit%3Alevel">level</a>.</dd>
                     
                   </dl>
                 </div>
@@ -665,7 +669,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
 
                     <tbody class="supertype">
                     
-                      <tr id="Administrative%20Unit%3Acode" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/code">
+                      <tr id="AdministrativeUnit%3Acode" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/code">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://data.europa.eu/m8g/code" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/code" data-placement="right">
@@ -684,7 +688,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                         <td></td>
                       </tr>
                     
-                      <tr id="Administrative%20Unit%3Alevel" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/level">
+                      <tr id="AdministrativeUnit%3Alevel" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/level">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://data.europa.eu/m8g/level" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/level" data-placement="right">
@@ -723,7 +727,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                     <dd>For this entity the following properties are defined:
                       <a href="#Geometry%3Acoordinates">coordinates</a>, 
                       <a href="#Geometry%3Acrs">crs</a>, 
-                      <a href="#Geometry%3Ageometry%20type">geometry type</a>, 
+                      <a href="#Geometry%3AgeometryType">geometry type</a>, 
                       <a href="#Geometry%3Agml">gml</a>, 
                       <a href="#Geometry%3Alatitude">latitude</a>, 
                       <a href="#Geometry%3Alongitude">longitude</a>, 
@@ -784,7 +788,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                         <td></td>
                       </tr>
                     
-                      <tr id="Geometry%3Ageometry%20type" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/geometryType">
+                      <tr id="Geometry%3AgeometryType" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/geometryType">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://data.europa.eu/m8g/geometryType" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/geometryType" data-placement="right">
@@ -895,8 +899,8 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                     <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
-                      <a href="#Location%3Ageographic%20identifier">geographic identifier</a>, 
-                      <a href="#Location%3Ageographic%20name">geographic name</a>.</dd>
+                      <a href="#Location%3AgeographicIdentifier">geographic identifier</a>, 
+                      <a href="#Location%3AgeographicName">geographic name</a>.</dd>
                     
                   </dl>
                 </div>
@@ -915,7 +919,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
 
                     <tbody class="supertype">
                     
-                      <tr id="Location%3Ageographic%20identifier" typeof="rdfs:Property" resource="http://www.w3.org/2000/01/rdf-schema#seeAlso">
+                      <tr id="Location%3AgeographicIdentifier" typeof="rdfs:Property" resource="http://www.w3.org/2000/01/rdf-schema#seeAlso">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/2000/01/rdf-schema#seeAlso" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#seeAlso" data-placement="right">
@@ -940,7 +944,7 @@ even when the geographic name is given as EL or UK.</td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Location%3Ageographic%20name" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#geographicName">
+                      <tr id="Location%3AgeographicName" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#geographicName">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#geographicName" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#geographicName" data-placement="right">
@@ -995,7 +999,7 @@ In other data modelling languages, this class should be mapped to their correspo
                       <a href="#Resource%3Aaddress">address</a>, 
                       <a href="#Resource%3Ageometry">geometry</a>, 
                       <a href="#Resource%3Alocation">location</a>, 
-                      <a href="#Resource%3Aregistered%20address">registered address</a>.</dd>
+                      <a href="#Resource%3AregisteredAddress">registered address</a>.</dd>
                     
                   </dl>
                 </div>
@@ -1014,10 +1018,10 @@ In other data modelling languages, this class should be mapped to their correspo
 
                     <tbody class="supertype">
                     
-                      <tr id="Resource%3Aaddress" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/address">
+                      <tr id="Resource%3Aaddress" typeof="rdfs:Property" resource="http://w3.org/ns/locn#address">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/address" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/address" data-placement="right">
+                            <a href="http://w3.org/ns/locn#address" data-toggle="tooltip" data-content="http://w3.org/ns/locn#address" data-placement="right">
                             address</a>
                           </code>
                         </td>
@@ -1078,10 +1082,10 @@ For interoperability reasons, it is recommended using one of the following:
                         <td></td>
                       </tr>
                     
-                      <tr id="Resource%3Alocation" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/location">
+                      <tr id="Resource%3Alocation" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#location">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/location" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/location" data-placement="right">
+                            <a href="http://www.w3.org/ns/locn#location" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#location" data-placement="right">
                             location</a>
                           </code>
                         </td>
@@ -1097,7 +1101,7 @@ For interoperability reasons, it is recommended using one of the following:
                         <td></td>
                       </tr>
                     
-                      <tr id="Resource%3Aregistered%20address" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/registeredAddress">
+                      <tr id="Resource%3AregisteredAddress" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/registeredAddress">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://data.europa.eu/m8g/registeredAddress" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/registeredAddress" data-placement="right">
@@ -1126,8 +1130,10 @@ For interoperability reasons, it is recommended using one of the following:
 
             
 	    
-	    
-<h2 class="h2" id="examples">Examples</h2>
+	    <div class="region region--no-space-top" id="examples">
+                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Examples</h2>
+                
+<h3 class="h3" id="example-rdf_wkt">Example 1 - RDF+WKT (GeoSPARQL)</h3>
 
 <h3 class="h3">Geometry RDF examples</h3>
 
@@ -1174,13 +1180,16 @@ For interoperability reasons, it is recommended using one of the following:
 </div>
 
 
+		</div>
+	    
+
 	    
 	    <div class="region region--no-space-top" id="changelog">
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Changelog w.r.t. previous version</h2>
                 (non-normative)
                 
 <p>
-A changelog describing the (major) changes to the previous version (2.00) of the Core Location Vocabulary and the new version that is being proposed in this specification (2.0.1), can be found <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/blob/master/releases/2.0.1/Changelog.md">here</a>.
+A changelog describing the (major) changes to the previous version (2.0.1) of the Core Location Vocabulary and the new version that is being proposed in this specification (2.0.2), can be found <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/blob/master/releases/2.0.1/Changelog.md">here</a>.
 <p>
 
             </div>
@@ -1282,6 +1291,14 @@ A changelog describing the (major) changes to the previous version (2.00) of the
   </div>
 
   <script src="https://dij151upo6vad.cloudfront.net/2.latest/js/vlaanderen-ui.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/turtle/turtle.min.js"></script>
+  <script src="https://codemirror.net/5/mode/javascript/javascript.js"></script>
+  <script src="https://semiceu.github.io/MLDCAT-AP/releases/1.0.0/example.js"></script>
   <script type="text/javascript">
       function iframeLoaded() {
          var iFrameID = document.getElementById('exampleiframe');
@@ -1340,7 +1357,7 @@ A changelog describing the (major) changes to the previous version (2.00) of the
       min-height: 10px;
       position:absolute;
       top: 20px;
-      left: 20px;
+      right: 20px;
     }
     .header {
       margin: 0;
@@ -1350,6 +1367,28 @@ A changelog describing the (major) changes to the previous version (2.00) of the
     html, h1, h2, h3, h4, code {
       font-family: "Arial" !important;
     }
+	.buttonsample {
+		cursor: pointer;
+		margin-top: 10px;
+		margin-left: 10px;
+		font-weight: 700;
+		border:0 outset buttonface;
+		background: #F5F6F8;
+		background-image: linear-gradient(to bottom,#F5F6F8,#DBDCDE);
+		border-radius:4px;
+		box-shadow:0 1px 3px #666;
+		font-family: Arial;
+		color: grey;
+		font-size: 14px;
+		padding: 10px 5px;
+		text-decoration: none;
+		float: right
+	}
+	.buttonsample:hover {color:#2a70d3}
+	.tabsstyle {
+		padding: 10px;
+		overflow: hidden;
+	}
   </style>
 </body>
 </html>

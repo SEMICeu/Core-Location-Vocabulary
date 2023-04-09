@@ -122,7 +122,7 @@
     "Resource": "http://www.w3.org/2000/01/rdf-schema#Resource",
     "Resource.address": {
       "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/address",
+      "@id": "http://w3.org/ns/locn#address",
       "@type": "@id"
     },
     "Resource.geometry": {
@@ -132,7 +132,7 @@
     },
     "Resource.location": {
       "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/location",
+      "@id": "http://www.w3.org/ns/locn#location",
       "@type": "@id"
     },
     "Resource.registeredAddress": {
