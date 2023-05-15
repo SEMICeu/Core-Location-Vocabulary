@@ -14,47 +14,40 @@
   rdfs:label "Geometry"@en .
 
 <http://data.europa.eu/m8g/code> a owl:ObjectProperty;
-  rdfs:comment "The classification of the administrative unit."@en;
   rdfs:domain <http://data.europa.eu/m8g/AdminUnit>;
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
   rdfs:range skos:Concept .
 
 <http://data.europa.eu/m8g/coordinates> a owl:DatatypeProperty;
   <http://purl.org/vocab/vann/usageNote> "Can be expressed as longitude, latitude, elevation."@en;
-  rdfs:comment """	A list of geographic coordinates that define the extent of the Geometry."""@en;
   rdfs:domain <http://www.w3.org/ns/locn#Geometry>;
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
   rdfs:range xsd:string .
 
 <http://data.europa.eu/m8g/crs> a owl:DatatypeProperty;
   <http://purl.org/vocab/vann/usageNote> "Can be a coordinate-based local, regional or global system used to locate geographical entities."@en;
-  rdfs:comment "An identifier for the coordinate reference system."@en;
   rdfs:domain <http://www.w3.org/ns/locn#Geometry>;
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
   rdfs:range xsd:anyURI .
 
 <http://data.europa.eu/m8g/geometryType> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Can be a point, line or polygon."@en;
-  rdfs:comment "The classification of the Geometry."@en;
   rdfs:domain <http://www.w3.org/ns/locn#Geometry>;
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
   rdfs:range skos:Concept .
 
 <http://data.europa.eu/m8g/latitude> a owl:DatatypeProperty;
-  rdfs:comment "The geographic coordinate that specifies the north / south position of the Geomerty on the Earth's surface."@en;
   rdfs:domain <http://www.w3.org/ns/locn#Geometry>;
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
   rdfs:range xsd:string .
 
 <http://data.europa.eu/m8g/level> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Some recommended codelists from the EU Publications Office and Eurostat include: <a href=\"https://op.europa.eu/fr/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu\">Administrative Territorial Units (ATU)</a>, <a href=\"https://ec.europa.eu/eurostat/web/nuts/background\">NUTS</a> and <a href=\"https://ec.europa.eu/eurostat/web/nuts/local-administrative-units\">Local Administrative Units (LAU)</a>. The first arrondissement of Paris is for example expressed as \"http://publications.europa.eu/resource/authority/atu/FRA\\_AR\\_PAR01\" in the ATU controlled vocabulary."@en;
-  rdfs:comment "The level of the administrative unit in the hierarchy."@en;
   rdfs:domain <http://data.europa.eu/m8g/AdminUnit>;
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
   rdfs:range skos:Concept .
 
 <http://data.europa.eu/m8g/longitude> a owl:DatatypeProperty;
-  rdfs:comment "The geographic coordinate that specifies the east / west position of the Geometry on the Earth's surface."@en;
   rdfs:domain <http://www.w3.org/ns/locn#Geometry>;
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
   rdfs:range xsd:string .
@@ -115,7 +108,6 @@
 
 <http://data.europa.eu/m8g/AdminUnit> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "This class should be used whenever a classification mechanism is in place, in alternative to the properties adminUnitL1 and adminUnitL2 of the Address class which allow free text."@en;
-  rdfs:comment "A detailed administrative unit organized in a hierarchy."@en;
   rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 
 <http://data.europa.eu/m8g> a owl:Ontology;
@@ -136,48 +128,28 @@
   ];
   rdfs:seeAlso <http://www.w3.org/ns/locn#Address>,
     <http://www.w3.org/ns/locn#Geometry>,
-    <http://www.w3.org/ns/locn#thoroughfare>,
-    <http://www.w3.org/ns/locn#postName>,
-    <http://www.w3.org/ns/locn#postCode>,
-    <http://www.w3.org/ns/locn#poBox>,
-    <http://www.w3.org/ns/locn#locatorName>,
-    <http://www.w3.org/ns/locn#locatorDesignator>,
-    <http://www.w3.org/ns/locn#location>,
-    <http://www.w3.org/ns/locn#geometry>,
-    <http://www.w3.org/ns/locn#fullAddress>,
-    <http://www.w3.org/ns/locn#adminUnitL2>,
-    <http://www.w3.org/ns/locn#adminUnitL1>,
-    <http://www.w3.org/ns/locn#addressId>,
-    <http://www.w3.org/ns/locn#addressArea>,
-    <http://www.opengis.net/ont/geosparql#asWKT>,
-    <http://www.opengis.net/ont/geosparql#asGML>,
-    <http://w3.org/ns/locn#address>,
+    <http://data.europa.eu/m8g/adminUnit>,
     <http://data.europa.eu/m8g/registeredAddress>,
-    <http://data.europa.eu/m8g/adminUnit>;
+    <http://w3.org/ns/locn#address>,
+    <http://www.opengis.net/ont/geosparql#asGML>,
+    <http://www.opengis.net/ont/geosparql#asWKT>,
+    <http://www.w3.org/ns/locn#addressArea>,
+    <http://www.w3.org/ns/locn#addressId>,
+    <http://www.w3.org/ns/locn#adminUnitL1>,
+    <http://www.w3.org/ns/locn#adminUnitL2>,
+    <http://www.w3.org/ns/locn#fullAddress>,
+    <http://www.w3.org/ns/locn#geometry>,
+    <http://www.w3.org/ns/locn#location>,
+    <http://www.w3.org/ns/locn#locatorDesignator>,
+    <http://www.w3.org/ns/locn#locatorName>,
+    <http://www.w3.org/ns/locn#poBox>,
+    <http://www.w3.org/ns/locn#postCode>,
+    <http://www.w3.org/ns/locn#postName>,
+    <http://www.w3.org/ns/locn#thoroughfare>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
-    foaf:firstName "Bert";
-    foaf:lastName "Van Nuffelen";
-    schemas:affiliation [foaf:name "TenForce"]
-  ], [
-    a foaf:Person;
-    foaf:firstName "Emidio";
-    foaf:lastName "Stani";
-    schemas:affiliation [foaf:name "PwC EU Services"]
-  ], [
-    a foaf:Person;
-    foaf:firstName "Dimitri";
-    foaf:lastName "Schepers";
-    schemas:affiliation [foaf:name "PwC EU Services"]
-  ], [
-    a foaf:Person;
-    foaf:firstName "Pavlina";
-    foaf:lastName "Fragkou";
-    schemas:affiliation [foaf:name "European Commission"]
-  ], [
-    a foaf:Person;
-    foaf:firstName "Michiel";
-    foaf:lastName "De Keyzer";
+    foaf:firstName "Florian";
+    foaf:lastName "Barthelemy";
     schemas:affiliation [foaf:name "PwC EU Services"]
   ], [
     a foaf:Person;
@@ -186,9 +158,29 @@
     schemas:affiliation [foaf:name "PwC EU Services"]
   ], [
     a foaf:Person;
-    foaf:firstName "Florian";
-    foaf:lastName "Barthelemy";
+    foaf:firstName "Michiel";
+    foaf:lastName "De Keyzer";
     schemas:affiliation [foaf:name "PwC EU Services"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Pavlina";
+    foaf:lastName "Fragkou";
+    schemas:affiliation [foaf:name "European Commission"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Dimitri";
+    foaf:lastName "Schepers";
+    schemas:affiliation [foaf:name "PwC EU Services"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Emidio";
+    foaf:lastName "Stani";
+    schemas:affiliation [foaf:name "PwC EU Services"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Bert";
+    foaf:lastName "Van Nuffelen";
+    schemas:affiliation [foaf:name "TenForce"]
   ];
   foaf:maker [
     a foaf:Person;
