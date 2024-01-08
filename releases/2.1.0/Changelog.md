@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This document describes the (major) changes to [the current version 2.00](https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/2.00) of the Core Location Vocabulary for which a new version is being proposed ([version 2.1.0](https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/)). The list of changes results in the new version to be considered as a major release.
+This document describes the (major) changes to [the current version 2.00](https://github.com/SEMICeu/Core-Location-Vocabulary/tree/master/releases/2.00) of the Core Location Vocabulary for which a new version is being proposed ([version 2.1.0](https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/)). The list of changes results in the new version to be considered as a minor release.
 
 All of the changes were discussed and approved during the [webinar](https://joinup.ec.europa.eu/collection/semic-support-centre/event/webinar-review-core-vocabularies) of 27/10/2023.
 
