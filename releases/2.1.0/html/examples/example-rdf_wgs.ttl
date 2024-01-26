@@ -1,0 +1,12 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.com/> .
+@prefix locn: <http://w3.org/ns/locn#> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+ex:a a dct:Location ;
+  locn:geometry ex:b .
+
+ex:b a sf:Point;
+  wgs:lat "50.8614075" ;
+  wgs:long "4.359191" . 

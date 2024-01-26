@@ -1,0 +1,187 @@
+{
+  "@context": {
+    "Address": {
+      "@context": {
+        "addressArea": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#addressArea",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "addressId": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#addressId"
+        },
+        "administrativeUnit": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/adminUnit",
+          "@type": "@id"
+        },
+        "administrativeUnitLevel1": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#adminUnitL1",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "administrativeUnitLevel2": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#adminUnitL2",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "fullAddress": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#fullAddress",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "hasLocatorDesignator": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/hasLocatorDesignator",
+          "@type": "@id"
+        },
+        "locatorDesignator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#locatorDesignator"
+        },
+        "locatorName": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#locatorName",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "postCode": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#postCode"
+        },
+        "postName": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#postName",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "postOfficeBox": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#poBox"
+        },
+        "thoroughfare": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#thoroughfare",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://www.w3.org/ns/locn#Address"
+    },
+    "AdministrativeUnit": {
+      "@context": {
+        "code": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/code",
+          "@type": "@id"
+        },
+        "level": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/level",
+          "@type": "@id"
+        },
+        "name": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://data.europa.eu/m8g/AdminUnit"
+    },
+    "Code": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Geometry": {
+      "@context": {
+        "coordinates": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/coordinates",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "crs": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/crs",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        },
+        "geometryType": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/geometryType",
+          "@type": "@id"
+        },
+        "gml": {
+          "@container": "@set",
+          "@id": "http://www.opengis.net/ont/geosparql#asGML"
+        },
+        "latitude": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/latitude",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "longitude": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/longitude",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "wkt": {
+          "@container": "@set",
+          "@id": "http://www.opengis.net/ont/geosparql#asWKT"
+        }
+      },
+      "@id": "http://www.w3.org/ns/locn#Geometry"
+    },
+    "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "Location": {
+      "@context": {
+        "geographicIdentifier": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        },
+        "geographicName": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#geographicName",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://purl.org/dc/terms/Location"
+    },
+    "LocatorDesignator": {
+      "@context": {
+        "designator": {
+          "@container": "@set",
+          "@id": "http://inspire.ec.europa.eu/ont/ad#LocatorDesignator.designator"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://inspire.ec.europa.eu/ont/ad#LocatorDesignator.type",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://inspire.ec.europa.eu/ont/ad#LocatorDesignator"
+    },
+    "Resource": {
+      "@context": {
+        "address": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#address",
+          "@type": "@id"
+        },
+        "geometry": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#geometry",
+          "@type": "@id"
+        },
+        "location": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#location",
+          "@type": "@id"
+        },
+        "registeredAddress": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/registeredAddress",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Resource"
+    },
+    "String": "https://www.w3.org/2001/XMLSchema#string",
+    "Text": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+    "Uri": "http://www.w3.org/2001/XMLSchema#anyURI"
+  }
+}

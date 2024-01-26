@@ -1,0 +1,3250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+
+
+
+<head>
+    
+	
+    <meta charset="utf-8" />
+    <title>Core Location Vocabulary</title>
+    <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
+    <script class="remove">
+    // All config options at https://respec.org/docs/
+
+	var myeditors = [
+	
+	
+	
+	
+	    
+	    
+		
+		   {
+		    name: "Florian Barthelemy",
+		      
+		      
+		    company: "PwC EU Services",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Jitse De Cock",
+		      
+		      
+		    company: "PwC EU Services",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Emiel Dhondt",
+		      
+		      
+		    company: "PwC EU Services",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Pavlina Fragkou",
+		      
+		      
+		    company: "European Commission",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Arthur Schiltz",
+		      
+		      
+		    company: "PwC EU Services",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Anastasia Sofou",
+		      
+		      
+		    company: "Trasys International",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Emidio Stani",
+		      
+		      
+		    company: "PwC EU Services",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Bert Van Nuffelen",
+		      
+		      
+		      
+		    }
+		
+		
+             
+        
+	
+		]
+
+	var myauthors = [
+	
+	
+	    
+	    
+		
+		   {
+		    name: "Core Vocabularies Working Group ",
+		      
+		      
+		      
+		    }
+		
+		
+             
+        
+	
+	
+	
+		]
+		
+	function quickreference() {
+		$('#table-quickoverview').DataTable();
+	};
+	var shaclfilepath = "./shacl/core-location-ap-SHACL.ttl" ;
+
+   
+
+    var respecConfig = {
+      postProcess: [quickreference],
+      edDraftURI: "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0",
+      latestVersion: "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.2",
+      specStatus: "LD",
+      publishDate: "2024-01-31",
+      editors: myeditors,
+      authors: myauthors,
+      github: "SEMICeu/Core-Location-Vocabulary",
+      shortName: "Core Location Vocabulary",
+      xref: "web-platform",
+      doJsonLd: true,
+      logos: [{
+        src: "https://semiceu.github.io/CPOV/releases/2.1.0/html/semic-icon.png",
+        url: "https://semic.eu",
+        alt: "SEMIC",
+        width: 154,
+        height: 140,
+        id: "semic-logo",
+      },],
+      generatedSubtitle: "",
+      additionalCopyrightHolders: "",
+      localBiblio: {
+        "DXWG": {
+          "href" : "https://www.w3.org/2017/dxwg/wiki/Main_Page",
+          "title" : "Dataset Exchange Working Group",
+          "publisher" : "W3C"
+          },
+        "ISA":{
+           "href":"https://ec.europa.eu/isa/",
+           "title":"Interoperability Solutions for European Public Administrations (ISA)",
+           "publisher":"European Commission"
+          },
+        "ISA2":{
+          "href":"https://ec.europa.eu/isa2/",
+          "title":"Interoperability solutions for public administrations, businesses and citizens (ISA²)",
+          "publisher":"European Commission"
+        },
+        "SEMIC":{
+          "href":"https://joinup.ec.europa.eu/",
+          "title":"JoinUp welcomes Interoperable Europe",
+          "publisher":"European Commission"
+         },
+        "DEU" : {
+          "href":"https://data.europa.eu",
+          "title":"The official portal for European data",
+          "publisher":"European Commission"
+        },
+		"HVD" : {
+		  "href":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138",
+		  "title":"Implementing Regulation for High Value Datasets",
+		  "publisher":"European Union"
+		},
+		"DCAT-AP-HVD" : {
+		  "href":"https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/",
+		  "title":"Usage Guidelines of DCAT-AP for High-Value Datasets",
+		  "publisher":"European Commission"
+		},
+                "PSI" : {
+                  "href": "https://eur-lex.europa.eu/eli/dir/2019/1024/oj",
+                  "title" :  "Directive on open data and the re-use of public sector information (recast)",
+                  "publisher" : "European Union"
+                }
+      }
+    };
+
+
+
+    </script>
+    <style>
+      .figure img, .sidefigure img, figure img, .figure object, .sidefigure object, figure object, img, .img {
+      max-width: 100%;
+      margin: auto;
+      height: auto;
+      }
+    </style>
+     
+    <p class="copyright">
+        Copyright © 2024
+    </p>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="msapplication-TileColor" content="#7ED956" />
+</head>
+<body>
+    
+
+    <!-- Start page content -->
+
+
+
+
+<section id="abstract">
+    <h2>Abstract</h2>
+The Core Location Vocabulary is a simplified, reusable and extensible data model that captures the fundamental characteristics of a location, represented as an address, a geographic name, or a geometry.
+
+
+<section id="specintro">
+    <h2>
+        Introduction
+    </h2>
+    
+	Locations can be described in three principal ways: by using a place name, a geometry or an
+    address. The specific context will determine which method of describing a location is most
+    appropriate. The Core Location Vocabulary provides structure for all three.
+</p>
+<p>
+    <a href="https://www.iso.org/standard/70742.html">ISO 19112</a> defines a location as "an identifiable geographic place." With this in mind, "Eiffel
+    Tower", "Madrid" and "California" are all locations and this is a common way of representing
+    locations in public sector data, i.e. simply by using a recognised name. Such identifiers are
+    common although they can be highly ambiguous as many places share the same or similar names.
+</p>
+<p>
+    In addition to a simple (string) label or name for a Location, this vocabulary defines a property
+    that allows a Location to be defined by a URI, such as a <a href="https://www.geonames.org/ontology/documentation.html">GeoNames</a> or <a href="https://www.dbpedia.org">DBpedia</a> URI.
+</p>
+<p>
+    No cardinality constraints are placed on any property of the Location, Address or Geometry
+    classes in order to maximise flexibility. A single address may be defined in different ways, a
+    geometry may be defined using different coordinate reference systems and a single place may
+    have no recognised name or multiple names. The Core Location Vocabulary makes a minimum
+    number of assumptions about what data will be encoded. However, it clearly makes no sense to
+    define any of the location classes without any properties or to provide multiple instances of the
+    same property with conflicting values.
+</p>
+
+</section>
+
+
+
+<!--  should support https://www.w3.org/2021/Process-20211102/, mostly like https://www.w3.org/2021/Process-20211102/#maturity-levels -->
+<section id="specstatus">
+    <h2>Status</h2>
+        <p>
+            This Core Vocabulary has the status SEMIC Candidate Recommendation published at 2024-01-31.
+        </p>
+        <p>
+            Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/blob/master/releases/2.1.0/Changelog.md">Changelog</a>.
+        </p>
+</section>
+
+
+
+
+<section id="speclicence">
+    <h2>
+        License
+    </h2>
+    
+        <p>
+	<!--
+            <span rel="dct:type"
+                  property="dct:title"
+                  href="http://purl.org/dc/dcmitype/Text"
+                  xmlns:dct="http://purl.org/dc/terms/">
+		  This specification </span> of <a rel="cc:attributionURL" property="cc:attributionName" href="ORGANISATION" xmlns:cc="http://creativecommons.org/ns#">ORGANISATION </a> 
+	          is published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">"CC0"</a>.
+	-->
+             Copyright © 2024 European Union. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.
+        </p>
+    
+</section>
+
+
+
+<section id="conformance" class="informative">
+</section>
+
+
+
+
+<section id="specterminology">
+    <h2>
+        Terminology
+    </h2>
+        <p>
+            A Core Vocabulary (CV) is a basic, reusable and extensible data specification that captures the fundamental characteristics of an entity in a context-neutral fashion. Its main objective is to provide terms to be reused in the broadest possible context.
+            More information can be found on the <a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification">SEMIC Style Guide</a>.
+        </p>
+        
+This specification uses the following prefixes to shorten the URIs for readibility.
+
+        <table id="table-namespaces" class="simple">
+            <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
+            <tbody>
+            <tr><td><code>ad</code></td><td><code>http://inspire.ec.europa.eu/ont/ad#</code></td></tr>
+            <tr><td><code>cv</code></td><td><code>http://data.europa.eu/m8g/</code></td></tr>           
+            <tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
+            <tr><td><code>geo</code></td><td><code>http://www.opengis.net/ont/geosparql#</code></td></tr>
+            <tr><td><code>locn</code></td><td><code>http://www.w3.org/ns/locn#</code></td></tr>
+            <tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
+            <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
+            <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
+            <tr><td><code>xsd</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
+            </tbody>
+        </table>
+
+
+</section>
+
+
+
+<section id="specoverview">
+    <h2>Overview</h2>
+    
+    
+    <div id="overview">
+                
+                        <p>
+                            This document describes the usage of the following main entities for a correct usage of the Core Vocabulary:
+                            <br />
+                            |
+			      <a href="#Address">Address</a> |
+			      <a href="#AdministrativeUnit">Administrative Unit</a> |
+			      <a href="#Geometry">Geometry</a> |
+			      <a href="#Location">Location</a> |
+			      <a href="#LocatorDesignator">Locator Designator</a> |
+                        </p>
+                        <p>
+                            The main entities are supported by:
+                            <br />
+                            |
+			      <a href="#Resource">Resource</a> |
+                        </p>
+                
+                
+                        <p>
+                            And supported by these datatypes:
+                            <br />
+                            | <a href="#Code">Code</a> | <a href="#Literal">Literal</a> | <a href="#String">String</a> | <a href="#Text">Text</a> | <a href="#URI">URI</a> |
+                        </p>
+                
+    </div>
+    <div>
+        <a href="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/html/overview.jpg"
+           target="_blank">
+            <img src="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/html/overview.jpg"/>
+        </a>
+    </div>
+</section>
+
+
+<section>
+
+
+    
+
+<h2>
+   Main Entities
+</h2>
+The main entities are those that form the core of the Core Vocabulary.
+
+
+
+   
+        <section>
+            <h3 id="Address">
+                <a href="http://www.w3.org/ns/locn#Address"
+                   data-toggle="tooltip"
+                   data-content="http://www.w3.org/ns/locn#Address"
+                   data-placement="right">Address</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20Address&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A spatial object that in a human-readable way identifies a fixed location.
+                </dd>
+                
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        An "address representation" as conceptually defined by the <a href="https://inspire-regadmin.jrc.ec.europa.eu/dataspecification/ScopeObjectDetail.action?objectDetailId=9353">INSPIRE Address Representation data type</a>: "Representation of an address spatial object for use in external application schemas that need to include the basic, address information in a readable way.".
+<br/><br/>
+The representation of Addresses varies widely from one country's postal system to another. Even within countries, there are almost always examples of Addresses that do not conform to the stated national standard. However, <a href="https://www.iso.org/standard/61710.html">ISO 19160-1</a> provides a method through which different Addresses can be converted from one conceptual model to another.
+<br/><br/>
+This specification was heavily based on the INSPIRE Address Representation data type. It is noteworthy that if an Address is provided using the detailed breakdown suggested by the properties for this class, then it will be INSPIRE-conformant. To this very granular set of properties, we add two further properties:
+<br/><br/>
+- full address (the complete address as a formatted string)<br/>
+- addressID (a unique identifier for the address).
+<br/><br/>
+The first of these allows publishers to simply provide the complete Address as one string, with or without formatting. This is analogous to <a href="https://www.w3.org/TR/vcard-rdf/#d4e953">vCard's label property</a>.
+<br/><br/>
+The addressID is part of the <a href="https://knowledge-base.inspire.ec.europa.eu/index_en">INSPIRE guidelines</a> and provides a hook that can be used to link the Address to an alternative representation, such as <a href="https://www.w3.org/TR/vcard-rdf">vCard</a> or <a href="https://www.oasis-open.org/committees/ciq/ciq.html#6">OASIS xAL.</a>
+<br/><br/>
+This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabulary/">Core Location Vocabulary</a>
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Address.addressarea">address area</a>
+                            , <a href="#Address.addressID">address ID</a>
+                            , <a href="#Address.administrativeunit">administrative unit</a>
+                            , <a href="#Address.administrativeunitlevel1">administrative unit level 1</a>
+                            , <a href="#Address.administrativeunitlevel2">administrative unit level 2</a>
+                            , <a href="#Address.fulladdress">full address</a>
+                            , <a href="#Address.haslocatordesignator">has locator designator</a>
+                            , <a href="#Address.locatordesignator">locator designator</a>
+                            , <a href="#Address.locatorname">locator name</a>
+                            , <a href="#Address.postcode">post code</a>
+                            , <a href="#Address.postname">post name</a>
+                            , <a href="#Address.postofficebox">post office box</a>
+                            , <a href="#Address.thoroughfare">thoroughfare</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:14%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition 
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Usage
+                            </th>
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Codelist
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                                DCAT
+                            </th>
+			    -->
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Address.addressarea"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/locn#addressArea"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20address area%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.addressarea" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/locn#addressArea"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/locn#addressArea"
+                                           data-placement="right">
+                                        address area</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Text" data-placement="right">Text</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The name of a geographic area that groups Addresses.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    This would typically be part of a city, a neighbourhood or village, e.g. Montmartre. Address area is not an administrative unit.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Address.addressID"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/locn#addressId"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20address ID%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.addressID" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/locn#addressId"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/locn#addressId"
+                                           data-placement="right">
+                                        address ID</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Literal" data-placement="right">Literal</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    A globally unique identifier for each instance of an Address.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    The concept of adding a globally unique identifier for each instance of an address is a crucial part of the INSPIRE data spec. A number of EU countries have already implemented an ID (a UUID) in their Address Register/gazetteer, among them Denmark. OASIS xAL also includes an address identifier. It is the address Identifier that allows an address to be represented in a format other than INSPIRE whilst remaining conformant to the Core Vocabulary.
+<br/><br/>
+The <a href="https://knowledge-base.inspire.ec.europa.eu/index_en">INSPIRE</a> method of representing addresses is very detailed, designed primarily for use in databases of addresses. Whilst data that is published in full conformance with the INSPIRE data structure can be made available using the<a href="https://semiceu.github.io/Core-Location-Vocabulary/">Core Location Vocabulary</a> the reverse is not true since the Core Vocabulary allows much greater flexibility.
+<br/><br/>
+Many datasets that include address data as one piece of information about something else are likely to have that data in simpler formats. These might be tailored to the specific need of the dataset, follow a national norm, or make use of a standard like vCard.
+<br/><br/>
+To provide maximum flexibility in the Core Vocabulary, whilst remaining interoperable with INSPIRE Address Guidelines (which EU Member States are obliged to use), the  Core Location Vocabulary provides the extra property of full address and makes use of INSPIRE's addressID.
+
+
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Address.administrativeunit"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/m8g/adminUnit"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20administrative unit%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.administrativeunit" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/m8g/adminUnit"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/m8g/adminUnit"
+                                           data-placement="right">
+                                        administrative unit</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#AdministrativeUnit" data-placement="right">Administrative Unit</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The adminUnit relationship links an Address with the Administrative Unit class.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Address.administrativeunitlevel1"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/locn#adminUnitL1"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20administrative unit level 1%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.administrativeunitlevel1" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/locn#adminUnitL1"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/locn#adminUnitL1"
+                                           data-placement="right">
+                                        administrative unit level 1</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Text" data-placement="right">Text</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The name of the uppermost level of the address, almost always a country.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    Best practice is to use the <a href="https://www.iso.org/standard/72482.html">ISO 3166-1 code</a> but if this is inappropriate for the context, country names should be provided in a consistent manner to reduce ambiguity. For example, either write 'France' or 'FRA' consistently throughout the dataset and avoid mixing the two. The <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country">Country controlled vocabulary</a> from the Publications Office can be reused for this.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Address.administrativeunitlevel2"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/locn#adminUnitL2"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20administrative unit level 2%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.administrativeunitlevel2" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/locn#adminUnitL2"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/locn#adminUnitL2"
+                                           data-placement="right">
+                                        administrative unit level 2</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Text" data-placement="right">Text</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    Values could be a region or province, more granular than level 1.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Address.fulladdress"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/locn#fullAddress"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20full address%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.fulladdress" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/locn#fullAddress"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/locn#fullAddress"
+                                           data-placement="right">
+                                        full address</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Text" data-placement="right">Text</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The complete address written as a string.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    Use of this property is recommended as it will not suffer any misunderstandings that might arise through the breaking up of an address into its component parts. This property is analogous to vCard's label property but with two important differences: (1) formatting is not assumed so that, unlike vCard label, it may not be suitable to print this on an address label, (2) vCard's label property has a domain of vCard Address; the fullAddress property has no such restriction. An example of a full address is "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France".
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Address.haslocatordesignator"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/m8g/hasLocatorDesignator"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20has locator designator%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.haslocatordesignator" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/m8g/hasLocatorDesignator"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/m8g/hasLocatorDesignator"
+                                           data-placement="right">
+                                        has locator designator</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#LocatorDesignator" data-placement="right">Locator Designator</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    A number or a sequence of characters that uniquely identifies the locator within the relevant scope(s).
+                                </td>
+                                <td property="skos:scopeNote">
+                                    This relation can be used instead of Address.locatorDesignator if a structured representation is preferred over a Literal.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Address.locatordesignator"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/locn#locatorDesignator"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20locator designator%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.locatordesignator" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/locn#locatorDesignator"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/locn#locatorDesignator"
+                                           data-placement="right">
+                                        locator designator</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Literal" data-placement="right">Literal</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    A number or sequence of characters that uniquely identifies the locator within the relevant scope.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    In simpler terms, this is the building number, apartment number, etc. For an address such as "Flat 3, 17 Bridge Street", the locator is "flat 3, 17".
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Address.locatorname"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/locn#locatorName"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20locator name%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.locatorname" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/locn#locatorName"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/locn#locatorName"
+                                           data-placement="right">
+                                        locator name</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Text" data-placement="right">Text</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building.
+<br/><br/>
+The key difference between a locator designator and a locator name is that the latter is a proper name and is unlikely to include digits. For example, "Shumann, Berlaymont" is a meeting room within the European Commission headquarters for which locator name is more appropriate than locator.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Address.postcode"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/locn#postCode"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20post code%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.postcode" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/locn#postCode"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/locn#postCode"
+                                           data-placement="right">
+                                        post code</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Literal" data-placement="right">Literal</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    Post codes are common elements in many countries' postal address systems. One of the many post codes of Paris is for example "75000".
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Address.postname"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/locn#postName"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20post name%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.postname" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/locn#postName"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/locn#postName"
+                                           data-placement="right">
+                                        post name</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Text" data-placement="right">Text</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    Usually a city, for example "Paris".
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Address.postofficebox"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/locn#poBox"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20post office box%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.postofficebox" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/locn#poBox"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/locn#poBox"
+                                           data-placement="right">
+                                        post office box</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Literal" data-placement="right">Literal</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    A location designator for a postal delivery point at a post office, usually a number.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    INSPIRE's name for this is "postalDeliveryIdentifier" for which it uses the locator designator property with a type attribute of that name. This vocabulary separates out the Post Office Box for greater independence of technology. An example post office box number is "9383".
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Address.thoroughfare"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/locn#thoroughfare"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20thoroughfare%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.thoroughfare" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/locn#thoroughfare"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/locn#thoroughfare"
+                                           data-placement="right">
+                                        thoroughfare</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Text" data-placement="right">Text</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The name of a passage or way through from one location to another.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    A thoroughfare is usually a street, but it might be a waterway or some other feature. For example, "Avenue des Champs-Élysées".
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="AdministrativeUnit">
+                <a href="http://data.europa.eu/m8g/AdminUnit"
+                   data-toggle="tooltip"
+                   data-content="http://data.europa.eu/m8g/AdminUnit"
+                   data-placement="right">Administrative Unit</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20AdministrativeUnit&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A detailed administrative unit organized in a hierarchy.
+                </dd>
+                
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        This class should be used whenever a classification mechanism is in place, in alternative to the properties adminUnitL1 and adminUnitL2 of the Address class which allow free text.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#AdministrativeUnit.code">code</a>
+                            , <a href="#AdministrativeUnit.level">level</a>
+                            , <a href="#AdministrativeUnit.name">name</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:14%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition 
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Usage
+                            </th>
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Codelist
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                                DCAT
+                            </th>
+			    -->
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="AdministrativeUnit.code"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/m8g/code"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20code%20in%20Administrative Unit&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23AdministrativeUnit.code" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/m8g/code"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/m8g/code"
+                                           data-placement="right">
+                                        code</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Code" data-placement="right">Code</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The classification of the administrative unit.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="AdministrativeUnit.level"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/m8g/level"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20level%20in%20Administrative Unit&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23AdministrativeUnit.level" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/m8g/level"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/m8g/level"
+                                           data-placement="right">
+                                        level</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Code" data-placement="right">Code</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The level of the administrative unit in the hierarchy.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    The recommended code list to indicate the level of an Admin Unit is the <a href=https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu-type>Administrative territorial unit type</a> Controlled Vocabulary maintained by the Publications Office of the EU. 
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="AdministrativeUnit.name"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2000/01/rdf-schema#label"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20name%20in%20Administrative Unit&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23AdministrativeUnit.name" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2000/01/rdf-schema#label"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2000/01/rdf-schema#label"
+                                           data-placement="right">
+                                        name</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Text" data-placement="right">Text</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    Official, geographical name of the administrative unit, given in different languages where required.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Geometry">
+                <a href="http://www.w3.org/ns/locn#Geometry"
+                   data-toggle="tooltip"
+                   data-content="http://www.w3.org/ns/locn#Geometry"
+                   data-placement="right">Geometry</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20Geometry&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A shape or form of a Location.
+                </dd>
+                
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        This class defines the notion of "geometry" at the conceptual level, and it shall be encoded by using different formats (see usage note of the locn:geometry property). Can be a point, line or polygon, expressed using coordinates in some coordinate reference system. We also refer to the <a class="tocxref" href="#examples">Examples</a> section of this specification for a number of different geometry examples expressed in different formats.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Geometry.coordinates">coordinates</a>
+                            , <a href="#Geometry.crs">crs</a>
+                            , <a href="#Geometry.geometrytype">geometry type</a>
+                            , <a href="#Geometry.gml">gml</a>
+                            , <a href="#Geometry.latitude">latitude</a>
+                            , <a href="#Geometry.longitude">longitude</a>
+                            , <a href="#Geometry.wkt">wkt</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:14%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition 
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Usage
+                            </th>
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Codelist
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                                DCAT
+                            </th>
+			    -->
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Geometry.coordinates"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/m8g/coordinates"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20coordinates%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Geometry.coordinates" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/m8g/coordinates"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/m8g/coordinates"
+                                           data-placement="right">
+                                        coordinates</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#String" data-placement="right">String</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    	A list of geographic coordinates that define the extent of the Geometry.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    Can be expressed as longitude, latitude, elevation.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Geometry.crs"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/m8g/crs"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20crs%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Geometry.crs" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/m8g/crs"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/m8g/crs"
+                                           data-placement="right">
+                                        crs</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#URI" data-placement="right">URI</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    An identifier for the coordinate reference system.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    Can be a coordinate-based local, regional or global system used to locate geographical entities.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Geometry.geometrytype"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/m8g/geometryType"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20geometry type%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Geometry.geometrytype" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/m8g/geometryType"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/m8g/geometryType"
+                                           data-placement="right">
+                                        geometry type</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Code" data-placement="right">Code</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The classification of the Geometry.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    Can be a point, line or polygon.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Geometry.gml"
+                                typeof="rdfs:Property"
+                                resource="http://www.opengis.net/ont/geosparql#asGML"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20gml%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Geometry.gml" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.opengis.net/ont/geosparql#asGML"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.opengis.net/ont/geosparql#asGML"
+                                           data-placement="right">
+                                        gml</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Literal" data-placement="right">Literal</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The expression of the Geometry in Geography Markup Language.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    Use <a href="http://www.opengis.net/ont/geosparql#gmlLiteral">geo:gmlLiteral</a> as type for the literal.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Geometry.latitude"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/m8g/latitude"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20latitude%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Geometry.latitude" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/m8g/latitude"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/m8g/latitude"
+                                           data-placement="right">
+                                        latitude</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#String" data-placement="right">String</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The geographic coordinate that specifies the north / south position of the Geomerty on the Earth&#39;s surface.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Geometry.longitude"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/m8g/longitude"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20longitude%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Geometry.longitude" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/m8g/longitude"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/m8g/longitude"
+                                           data-placement="right">
+                                        longitude</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#String" data-placement="right">String</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The geographic coordinate that specifies the east / west position of the Geometry on the Earth&#39;s surface.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Geometry.wkt"
+                                typeof="rdfs:Property"
+                                resource="http://www.opengis.net/ont/geosparql#asWKT"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20wkt%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Geometry.wkt" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.opengis.net/ont/geosparql#asWKT"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.opengis.net/ont/geosparql#asWKT"
+                                           data-placement="right">
+                                        wkt</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Literal" data-placement="right">Literal</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    An expression of the Geometry in WKT, the Well-Known Text markup language.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    Use <a href="http://www.opengis.net/ont/geosparql#wktLiteral">geo:wktLiteral</a> as type for the literal.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Location">
+                <a href="http://purl.org/dc/terms/Location"
+                   data-toggle="tooltip"
+                   data-content="http://purl.org/dc/terms/Location"
+                   data-placement="right">Location</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20Location&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    An identifiable geographic place or named place.
+                </dd>
+                
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Location.geographicidentifier">geographic identifier</a>
+                            , <a href="#Location.geographicname">geographic name</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:14%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition 
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Usage
+                            </th>
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Codelist
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                                DCAT
+                            </th>
+			    -->
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Location.geographicidentifier"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20geographic identifier%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Location.geographicidentifier" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2000/01/rdf-schema#seeAlso"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2000/01/rdf-schema#seeAlso"
+                                           data-placement="right">
+                                        geographic identifier</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#URI" data-placement="right">URI</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    A reference in the form of a Uniform Resource Identifier to the Location.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    <a href="https://www.geonames.org/">GeoNames.org</a> provides stable, widely recognised identifiers for more than 10 million geographical names that can be used as links to further information. For example, http://sws.geonames.org/593116/ identifies the Lithuanian capital Vilnius. Unfortunately these URIs cannot easily be automatically deduced since the URI scheme uses simple numeric codes. Finding a GeoNames identifier for a Location is almost always a manual process. Where such identifiers are known or can be found, however, it is recommended that they be used.
+Where the Location Class is used to identify a country, if the geonames URI is not known, the recommendation is to use <a href="https://www.dbpedia.org">DBpedia</a> URIs of the form http://dbpedia.org/resource/ISO\_3166-1:XX where XX is the ISO 3166 two character code for the country.
+<br/><br/>
+The EU's Publication Office diverges from <a href="https://www.iso.org/standard/72482.html">ISO 3166-1</a> and uses EL and UK for Greece and the United Kingdom respectively. DBpedia sticks to the ISO codes and so the correct URIs for these countries are:
+- http://dbpedia.org/resource/ISO\_3166-1:GR
+- http://dbpedia.org/resource/ISO\_3166-1:GB
+even when the geographic name is given as EL or UK.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Location.geographicname"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/locn#geographicName"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20geographic name%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Location.geographicname" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/locn#geographicName"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/locn#geographicName"
+                                           data-placement="right">
+                                        geographic name</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Text" data-placement="right">Text</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    A textual description for a Location.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    The <a href="https://knowledge-base.inspire.ec.europa.eu/geographical-names_en">INSPIRE Data Specification on Geographical Names</a> provides a detailed model for describing a 'named place', including methods for providing multiple names in multiple scripts. INSPIRE's definition is the following: Names of areas, regions, localities, cities, suburbs, towns or settlements, or any geographical or topographical feature of public or historical interest. This is beyond what is necessary for the Core Location Vocabulary but, importantly, the concept of a geographic name used here is consistent.
+<br/><br/>
+A geographic name is a proper noun applied to a spatial object. Taking the example used in the <a href="https://knowledge-base.inspire.ec.europa.eu/publications/inspire-data-specification-geographical-names-technical-guidelines_en">INSPIRE document</a> (page 18), the following are all valid geographic names for the Greek capital:
+- "A&theta;n&nu;a"@gr-Grek (the Greek endonym written in the Greek script)
+- "Athína"@gr-Latn (the standard Romanisation of the endonym)
+- "Athens"@en (the English language exonym)
+INSPIRE has a detailed (XML-based) method of providing metadata about a geographic name and in XML-data sets that may be the most appropriate method to follow. When using the Core Location Vocabulary in data sets that are not focussed on environmental/geographical data (the use case for INSPIRE), the Code datatype or a simple language identifier may be used to provide such metadata.
+<br/><br/>
+The country codes defined in <a href="https://www.iso.org/iso-3166-country-codes.html">ISO 3166</a> may be used as geographic names and these are generally preferred over either the long form or short form of a country's name (as they are less error prone). The Publications Office of the European Union recommends the use of <a href="https://www.iso.org/standard/72482.html">ISO 3166-1</a> codes for countries in all cases except two:
+- use 'UK' in preference to the ISO 3166 code GB for the United Kingdom;
+- use 'EL' in preference to the ISO 3166 code GR for Greece.
+Where a country has changed its name or no longer exists (such as Czechoslovakia, Yugoslavia etc.) use the ISO 3166-3 code.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="LocatorDesignator">
+                <a href="http://inspire.ec.europa.eu/ont/ad#LocatorDesignator"
+                   data-toggle="tooltip"
+                   data-content="http://inspire.ec.europa.eu/ont/ad#LocatorDesignator"
+                   data-placement="right">Locator Designator</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20LocatorDesignator&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A number or a sequence of characters that uniquely identifies the locator within the relevant scope(s). The full identification of the locator could include one or more locator designators.
+                </dd>
+                
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        Locator designators are often assigned according to a set of commonly known rules which enables a user or application to "parse" the information: Address numbers are most often assigned in ascending order with odd and even numbers on each side of the thoroughfare. In a building, the floor identifier represents the level according to the traditions within the area, e.g., 1, 2, 3. <br/>
+Several types of locator designators exist, such as: Address number, address number suffix, building identifier, building name. A locator could be composed by an ordered set of these. <br/>
+EXAMPLE In Paris, France a locator could be composed by two locator designators: address number "18" and address number suffix: "BIS".
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#LocatorDesignator.designator">designator</a>
+                            , <a href="#LocatorDesignator.type">type</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:14%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition 
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Usage
+                            </th>
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Codelist
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                                DCAT
+                            </th>
+			    -->
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="LocatorDesignator.designator"
+                                typeof="rdfs:Property"
+                                resource="http://inspire.ec.europa.eu/ont/ad#LocatorDesignator.designator"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20designator%20in%20Locator Designator&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23LocatorDesignator.designator" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://inspire.ec.europa.eu/ont/ad#LocatorDesignator.designator"
+                                           data-toggle="tooltip"
+                                           data-content="http://inspire.ec.europa.eu/ont/ad#LocatorDesignator.designator"
+                                           data-placement="right">
+                                        designator</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Literal" data-placement="right">Literal</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The identifying part of the locator designator composed by one or more digits or other characters.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    NOTE The value is often a descriptive code assigned according to certain well known rules e.g. like ascending odd and even address numbers along the thoroughfare, or like floor identifiers: 0, 1, 2, 3. <br/>
+EXAMPLE Address number "2065", Address number suffix "B", Floor identifier "7" door identifier "B707" are all locator attribute values.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="LocatorDesignator.type"
+                                typeof="rdfs:Property"
+                                resource="http://inspire.ec.europa.eu/ont/ad#LocatorDesignator.type"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20type%20in%20Locator Designator&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23LocatorDesignator.type" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://inspire.ec.europa.eu/ont/ad#LocatorDesignator.type"
+                                           data-toggle="tooltip"
+                                           data-content="http://inspire.ec.europa.eu/ont/ad#LocatorDesignator.type"
+                                           data-placement="right">
+                                        type</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Code" data-placement="right">Code</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The type of locator value, which enables an application to interpret, parse or format it according to certain rules.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    The type enables a user or an application to understand if the value "A" is e.g. an identifier of a specific building, door, staircase or dwelling. The usage of INSPIRES' <a href=https://inspire.ec.europa.eu/codelist/LocatorDesignatorTypeValue>Locator Designator Type</a> code list is recommended.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+
+</section>
+
+<section>
+<h2>
+   Supportive Entities
+</h2>
+The supportive entities are supporting the main entities in the Core Vocabulary. 
+They are included in the Core Vocabulary because they form the range of properties.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+        <section>
+            <h3 id="Resource">
+                <a href="http://www.w3.org/2000/01/rdf-schema#Resource"
+                   data-toggle="tooltip"
+                   data-content="http://www.w3.org/2000/01/rdf-schema#Resource"
+                   data-placement="right">Resource</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20Resource&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    Anything that can be described.
+                </dd>
+                
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        Resource is an abstract, technical class used to describe anything in RDF, see <a href="https://www.w3.org/TR/rdf-schema/#ch_resource">RDF Schema Resource</a> for more details.
+<br/><br/>
+For example, in the context of Core Vocabularies, classes like Person or Legal Entity are resources.
+<br/><br/>
+In other data modelling languages, this class should be mapped to their corresponding generic element.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Resource.address">address</a>
+                            , <a href="#Resource.geometry">geometry</a>
+                            , <a href="#Resource.location">location</a>
+                            , <a href="#Resource.registeredaddress">registered address</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:14%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition 
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Usage
+                            </th>
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Codelist
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                                DCAT
+                            </th>
+			    -->
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Resource.address"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/locn#address"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20address%20in%20Resource&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Resource.address" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/locn#address"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/locn#address"
+                                           data-placement="right">
+                                        address</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Address" data-placement="right">Address</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    Associates any Resource with the corresponding Address.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    Asserting the address relationship implies that the
+ Resource has an Address.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Resource.geometry"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/locn#geometry"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20geometry%20in%20Resource&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Resource.geometry" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/locn#geometry"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/locn#geometry"
+                                           data-placement="right">
+                                        geometry</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Geometry" data-placement="right">Geometry</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    Associates any Resource with the corresponding Geometry.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    <p>Depending on how a geometry is encoded, the range of this property may be one of the following:
+<ul>
+  <li>a literal (e.g., <a href="https://libgeos.org/specifications/wkt/">WKT</a> - string literal -, <a href="https://www.ogc.org/standard/gml/">GML</a>, <a href="https://www.ogc.org/standard/kml/">KML</a> - XML literal)</li>
+  <li>a geometry class, as those defined in the OGC's <a href="https://www.ogc.org/standard/geosparql/">GeoSPARQL specification</a>, in the W3C's <a href="https://www.w3.org/2003/01/geo/">Basic Geo (WGS84 lat/long) vocabulary</a>, and at <a href="https://schema.org/">schema.org</a>;</li>
+  <li>geocoded URIs, as geo or GeoHash URIs, treated as URI references.</li>
+</ul>
+
+<p>
+For interoperability reasons, it is recommended using one of the following:
+<ul>
+  <li>Any geometry:
+    <ul>
+      <li>  <a href="https://libgeos.org/specifications/wkt/">WKT</a>, <a href="https://www.ogc.org/standard/gml/">GML</a>, and RDF+WKT/GML, as per the  <a href="https://www.ogc.org/standard/geosparql/">GeoSPARQL specification</a>.</li>
+      <li>  <a href="https://www.ogc.org/standard/kml/">KML</a> (Keyhole Markup Language) - note that KML supports the following geometries only: point, line string, linear ring, and polygon.
+      <li>  RDF as per the <a href="https://schema.org/">schema.org</a> vocabulary (see classes <a href="https://schema.org/GeoCoordinates">schema:GeoCoordinates</a> and <a href="https://schema.org/GeoShape">schema:GeoShape</a>).
+    </ul>
+  </li>
+  <li>Points: one of the above, or:
+    <ul>
+      <li>  RDF as per the W3C <a href="https://www.w3.org/2003/01/geo/">Basic Geo (WGS84 lat/long) vocabulary</a>.</li>
+      <li>  GeoHash URIs.</li>
+      <li>  geo URIs.</li>
+    </ul>
+  </li>
+</ul>
+</p>
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Resource.location"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/locn#location"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20location%20in%20Resource&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Resource.location" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/locn#location"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/locn#location"
+                                           data-placement="right">
+                                        location</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Location" data-placement="right">Location</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    Associates any Resource with the corresponding Location.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    Asserting the location relationship implies only that the domain has some connection to a Location in time or space. It does not imply that the Resource is necessarily at that Location at the time when the assertion is made.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Resource.registeredaddress"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/m8g/registeredAddress"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20registered address%20in%20Resource&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Resource.registeredaddress" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/m8g/registeredAddress"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/m8g/registeredAddress"
+                                           data-placement="right">
+                                        registered address</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Address" data-placement="right">Address</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The registered address relationship links a Resource with the legally registered Address.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    It is the address to which formal communications can be sent, such as the postal address.
+
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+</section>
+
+    <section>
+        <h2>
+            Datatypes
+        </h2>
+
+	The following datatypes are used within this specification.
+
+	<table class="data-table simple" id="table-mandatory-classes">
+	    <thead>
+		<tr class="data-table__header">
+		    <th class="data-table__header-title--sortable">
+		    </th>
+		    <th class="data-table__header-title--sortable data-table__header-title--sortable-active">
+			Class
+		    </th>
+		    <th class="data-table__header-title--sortable">
+			Definition
+		    </th>
+		</tr>
+	    </thead>
+	    <tbody class="supertype">
+            
+		<tr><td>
+                   <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20Code&body=Explain%20your%20issue"}}>
+                     <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
+		   </a>
+		</td><td>
+                
+                    <div id="Code">
+                        <a href="http://www.w3.org/2004/02/skos/core#Concept"
+                           data-toggle="tooltip"
+                           data-content="http://www.w3.org/2004/02/skos/core#Concept"
+                           data-placement="right">Code</a>
+                    </div>
+                
+		</td><td>
+                    An idea or notion; a unit of thought.
+		</td></tr>
+		<tr><td>
+                   <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20Literal&body=Explain%20your%20issue"}}>
+                     <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
+		   </a>
+		</td><td>
+                
+                    <div id="Literal">
+                        <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                           data-toggle="tooltip"
+                           data-content="http://www.w3.org/2000/01/rdf-schema#Literal"
+                           data-placement="right">Literal</a>
+                    </div>
+                
+		</td><td>
+                    The class of literal values, eg. textual strings and integers.
+		</td></tr>
+		<tr><td>
+                   <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20String&body=Explain%20your%20issue"}}>
+                     <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
+		   </a>
+		</td><td>
+                
+                    <div id="String">
+                        <a href="https://www.w3.org/2001/XMLSchema#string"
+                           data-toggle="tooltip"
+                           data-content="https://www.w3.org/2001/XMLSchema#string"
+                           data-placement="right">String</a>
+                    </div>
+                
+		</td><td>
+                    The string datatype represents character strings in XML.
+		</td></tr>
+		<tr><td>
+                   <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20Text&body=Explain%20your%20issue"}}>
+                     <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
+		   </a>
+		</td><td>
+                
+                    <div id="Text">
+                        <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+                           data-toggle="tooltip"
+                           data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+                           data-placement="right">Text</a>
+                    </div>
+                
+		</td><td>
+                    The text data type is a combination of a string and a language identifier.
+		</td></tr>
+		<tr><td>
+                   <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20Uri&body=Explain%20your%20issue"}}>
+                     <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
+		   </a>
+		</td><td>
+                
+                    <div id="URI">
+                        <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                           data-toggle="tooltip"
+                           data-content="http://www.w3.org/2001/XMLSchema#anyURI"
+                           data-placement="right">URI</a>
+                    </div>
+                
+		</td><td>
+                    anyURI represents an Internationalized Resource Identifier Reference (IRI).  An anyURI value can be absolute or relative, and may have an optional fragment identifier (i.e., it may be an IRI Reference).
+		</td></tr>
+            </tbody>
+	</table>
+
+
+</section>
+
+<!--
+<section class="informative">
+    <h2 aria-level="1" role="heading" id="h2_sotd">
+        JSON-LD context
+    </h2>
+    <div class="region region--no-space-top" id="jsonld">
+         (non normative)
+        
+            <p>
+                A reusable JSON-LD context definition for this Core Vocabulary is retrievable at: <a href="/Core-Location-Vocabulary/releases/2.1.0/context/core-location-ap.jsonld"
+    target="_blank">/Core-Location-Vocabulary/releases/2.1.0/context/core-location-ap.jsonld</a>
+            </p>
+        
+    </div>
+</section>
+<section class="informative">
+    <h2 aria-level="1" role="heading" id="h2_sotd">
+        SHACL template
+    </h2>
+    <div class="region region--no-space-top" id="shacl">
+         (non normative)
+        
+            <p>
+                A reusable SHACL template for this Core Vocabulary is retrievable at: <a href="/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl"
+    target="_blank">/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl</a>
+            </p>
+        
+    </div>
+</section>
+-->
+
+<section class="informative">
+    <h2> Examples </h2>
+        
+<div class="h3 examples" id="example-rdf_wkt">Example 1 - Location WKT (GeoSPARQL)</div>
+<div class="h3 examples" id="example-rdf_gml">Example 2 - Location GML (GeoSPARQL)</div>
+<div class="h3 examples" id="example-rdf_wgs">Example 3 - Location WGS84 lat/long</div>
+<div class="h3 examples" id="example-rdf_schema">Example 4 - Location schema.org</div>
+<div class="h3 examples" id="example-rdf_geohash">Example 5 - Location GeoHash</div>
+<div class="h3 examples" id="example-rdf_address">Example 6 - Address</div>
+
+</section>
+
+
+
+
+<section class="informative">
+	<h2>Usage Guidelines</h2>
+    <section class="informative">
+  <h2>Support for implementation</h2>
+
+The following section provides support for implementing the Core Location Vocabulary.
+<p/>
+
+<h3>JSON-LD context file</h3>
+
+One common technical question is the format in which the data is being exchanged. 
+For conformance with the Core Location Vocabulary, it is not mandatory that this happens in a RDF serialisation, but the exhanged format SHOULD be unambiguously be transformable into RDF.
+For the format JSON, a popular format to exchange data between systems, SEMIC provides a <a href="./context/core-location-ap.jsonld">JSON-LD context file</a>. 
+JSON-LD is a W3C Recommendation [[[json-ld11]]] that provided a standard approach to interpret JSON structures as RDF.
+The provided JSON-LD context file can be used by implementers.
+This JSON-LD context is not normative, i.e. other JSON-LD contexts are allowed.
+<p/>
+The JSON-LD context file downloadable <a href="./context/core-location-ap.jsonld">here</a>.
+<p/>
+
+<h3>Validation</h3>
+
+To verify if the data is (technically) conformant to the Core Location Vocabulary, the exchanged data can be validated using the provided SHACL shapes. 
+SHACL is a W3C Recommendation to express constraints on a RDF knowledge graph. 
+<p/>
+To support the check whether or not a catalogue satisfies the expressed constraints in this Core Vocabulary, the constraints in this specification are expressed using SHACL [[shacl]].
+Each constraint in this specification that could be converted into a SHACL expression has been included.
+As such this collection of SHACL expressions that can be used to build a validation check for data. 
+<p/>
+It is up to the implementers to define the validation they expect.
+Each implementation happens within a context, and that context is beyond the SHACL expressions here.
+<p/>
+The shapes can be found <a href="./shacl/core-location-ap-SHACL.ttl">here</a>.
+
+<!--
+<h3>Mapping</h3>
+A mapping towards Schema.org can be found <a href="https://github.com/SEMICeu/Semantic-Mappings/tree/main/Core%20Location">here</a>
+<p/>
+-->
+
+</section>
+    <section class="informative">
+<h2>Governance</h2>
+
+<h3>Versioning governance</h3>
+All specifications produced in SEMIC will follow the versioning rule described by the SEMIC Style Guide rule 
+<a href="https://semiceu.github.io/style-guide/1.0.0/gc-publication-conventions.html#sec:pc-r3">PC-R3</a>.
+In case a SEMIC asset is deprecated the asset will remain available through its PURI.
+<p/>
+The serialisation will have:
+<ul>
+<li>a dct:isReplacedBy referencing the new assets used instead and</li>
+<li> an adms:status  indicating its deprecated <a href="http://publications.europa.eu/resource/authority/concept-status/DEPRECATED">status</a>.</li>
+</ul>
+<p/>
+
+<h3>Governance requirements for re-used assets</h3>
+In order to adhere to the SEMIC Style Guide rule <a href="https://semiceu.github.io/style-guide/1.0.0/gc-general-conventions.html#sec:gc-r2">GC-R2</a>
+ a specification should have quality and governance standards for the assets that are being reused.
+<p/>
+In order for an asset to be considered for reuse within a SEMIC specification it can be requested by a community member or it requires to adhere to the following requirements:
+<ul>
+<li> The asset is part of a recommendation by a major standards body or an EU institution.</li>
+<li> The asset is actively being maintained.</li>
+</ul>
+<p/>
+
+After being taken into consideration the asset will be validated in three steps:
+<ul>
+<li> Syntax validation will be performed on the relevant artefacts.</li>
+<li> Constraint validation will be performed on the relevant artefacts.</li>
+<li> The PURI will be validated.</li>
+</ul>
+Once considered and validated an asset can be adopted if it is approved by the community.
+<p/>
+
+<h3>Lexicalisation rules</h3>
+
+In order to adhere to the SEMIC Style Guide rule <a href="https://semiceu.github.io/style-guide/1.0.0/gc-semantic-conventions.html#sec:sc-r3">SC-R3</a> a specification requires formal lexicalisation rules.
+The Style Guide proposes two options either by using RDFS or SKOS lexicalisation.
+<p/>
+SEMIC uses and will use the RDFS lexicalisation for all of its specifications. More specifically:
+<ul>
+<li> rdfs:label is used to provide a human-readable version of a resource's name.</li>
+<li> The usage of certain resource can be clarified in vann:usageNote.</li>
+</ul>
+
+</section>
+</section>
+ 
+
+
+<section class="informative">
+	<h2>Mappings</h2>
+    A mapping towards Schema.org can be found <a href="https://github.com/SEMICeu/Semantic-Mappings/tree/main/Core%20Location">here</a>
+</section>
+ 
+
+
+
+<section id="quick-reference" class="appendix">
+
+<h2>Quick Reference of Classes and Properties</h2>
+
+This section provides a condensed tabular overview of the mentioned classes and properties in this specification.
+The properties are indicated as <it>mandatory, recommended, optional</it> and <it>deprecated</it>. These terms have the following meaning.
+<ul>
+<li>Mandatory property: a receiver MUST be able to process the information for that property; a sender MUST provide the information for that property.</li>
+<li>Recommended property: a receiver MUST be able to process the information for that property; a sender SHOULD provide the information for that property if it is available.</li>
+<li>Optional property: a receiver MUST be able to process the information for that property; a sender MAY provide the information for that property but is not obliged to do so.</li>
+<li>Deprecated property: a receiver SHOULD be able to process information about instances of that property; a sender SHOULD NOT provide the information about instances of that property.</li>
+</ul>
+
+<table id="table-quickoverview" class="simple" style="width:100%; table-layout: fixed; word-wrap:break-word;">
+	<thead>
+		<tr><th>Class</th><th>Class IRI</th><th>Property Type</type><th>Property</th><th>Property IRI</th></tr>
+	</thead>
+	<tbody>
+		
+				
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#Address">Address</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
+								<td></td>
+								<td><a href="#Address.addressarea">address area </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#addressArea</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Address">Address</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
+								<td></td>
+								<td><a href="#Address.addressID">address ID </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#addressId</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Address">Address</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
+								<td></td>
+								<td><a href="#Address.administrativeunit">administrative unit </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/adminUnit</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Address">Address</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
+								<td></td>
+								<td><a href="#Address.administrativeunitlevel1">administrative unit level 1 </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#adminUnitL1</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Address">Address</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
+								<td></td>
+								<td><a href="#Address.administrativeunitlevel2">administrative unit level 2 </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#adminUnitL2</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Address">Address</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
+								<td></td>
+								<td><a href="#Address.fulladdress">full address </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#fullAddress</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Address">Address</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
+								<td></td>
+								<td><a href="#Address.haslocatordesignator">has locator designator </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/hasLocatorDesignator</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Address">Address</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
+								<td></td>
+								<td><a href="#Address.locatordesignator">locator designator </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#locatorDesignator</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Address">Address</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
+								<td></td>
+								<td><a href="#Address.locatorname">locator name </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#locatorName</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Address">Address</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
+								<td></td>
+								<td><a href="#Address.postcode">post code </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#postCode</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Address">Address</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
+								<td></td>
+								<td><a href="#Address.postname">post name </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#postName</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Address">Address</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
+								<td></td>
+								<td><a href="#Address.postofficebox">post office box </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#poBox</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Address">Address</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
+								<td></td>
+								<td><a href="#Address.thoroughfare">thoroughfare </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#thoroughfare</div></td>
+							</tr>
+						
+					
+				
+			</tr>
+		
+				
+					
+						
+					
+						
+					
+						
+					
+					
+						
+					
+						
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#AdministrativeUnit">Administrative Unit</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/AdminUnit</div></td>
+								<td></td>
+								<td><a href="#AdministrativeUnit.code">code </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/code</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#AdministrativeUnit">Administrative Unit</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/AdminUnit</div></td>
+								<td></td>
+								<td><a href="#AdministrativeUnit.level">level </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/level</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#AdministrativeUnit">Administrative Unit</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/AdminUnit</div></td>
+								<td></td>
+								<td><a href="#AdministrativeUnit.name">name </a></td>
+								<td><div class="shorten">http://www.w3.org/2000/01/rdf-schema#label</div></td>
+							</tr>
+						
+					
+				
+			</tr>
+		
+				
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#Geometry">Geometry</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Geometry</div></td>
+								<td></td>
+								<td><a href="#Geometry.coordinates">coordinates </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/coordinates</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Geometry">Geometry</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Geometry</div></td>
+								<td></td>
+								<td><a href="#Geometry.crs">crs </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/crs</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Geometry">Geometry</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Geometry</div></td>
+								<td></td>
+								<td><a href="#Geometry.geometrytype">geometry type </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/geometryType</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Geometry">Geometry</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Geometry</div></td>
+								<td></td>
+								<td><a href="#Geometry.gml">gml </a></td>
+								<td><div class="shorten">http://www.opengis.net/ont/geosparql#asGML</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Geometry">Geometry</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Geometry</div></td>
+								<td></td>
+								<td><a href="#Geometry.latitude">latitude </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/latitude</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Geometry">Geometry</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Geometry</div></td>
+								<td></td>
+								<td><a href="#Geometry.longitude">longitude </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/longitude</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Geometry">Geometry</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Geometry</div></td>
+								<td></td>
+								<td><a href="#Geometry.wkt">wkt </a></td>
+								<td><div class="shorten">http://www.opengis.net/ont/geosparql#asWKT</div></td>
+							</tr>
+						
+					
+				
+			</tr>
+		
+				
+					
+						
+					
+						
+					
+					
+						
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#Location">Location</a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/Location</div></td>
+								<td></td>
+								<td><a href="#Location.geographicidentifier">geographic identifier </a></td>
+								<td><div class="shorten">http://www.w3.org/2000/01/rdf-schema#seeAlso</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Location">Location</a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/Location</div></td>
+								<td></td>
+								<td><a href="#Location.geographicname">geographic name </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#geographicName</div></td>
+							</tr>
+						
+					
+				
+			</tr>
+		
+				
+					
+						
+					
+						
+					
+					
+						
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#LocatorDesignator">Locator Designator</a></td>
+								<td><div class="shorten">http://inspire.ec.europa.eu/ont/ad#LocatorDesignator</div></td>
+								<td></td>
+								<td><a href="#LocatorDesignator.designator">designator </a></td>
+								<td><div class="shorten">http://inspire.ec.europa.eu/ont/ad#LocatorDesignator.designator</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#LocatorDesignator">Locator Designator</a></td>
+								<td><div class="shorten">http://inspire.ec.europa.eu/ont/ad#LocatorDesignator</div></td>
+								<td></td>
+								<td><a href="#LocatorDesignator.type">type </a></td>
+								<td><div class="shorten">http://inspire.ec.europa.eu/ont/ad#LocatorDesignator.type</div></td>
+							</tr>
+						
+					
+				
+			</tr>
+		
+				
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#Resource">Resource</a></td>
+								<td><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></td>
+								<td></td>
+								<td><a href="#Resource.address">address </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#address</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Resource">Resource</a></td>
+								<td><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></td>
+								<td></td>
+								<td><a href="#Resource.geometry">geometry </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#geometry</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Resource">Resource</a></td>
+								<td><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></td>
+								<td></td>
+								<td><a href="#Resource.location">location </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#location</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Resource">Resource</a></td>
+								<td><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></td>
+								<td></td>
+								<td><a href="#Resource.registeredaddress">registered address </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/registeredAddress</div></td>
+							</tr>
+						
+					
+				
+			</tr>
+		
+	<tbody>
+</table>
+
+
+   
+   
+
+
+<!-- This must be at the end of the template, to ensure that the iterator properly works -->
+    <script defer>
+
+
+	    var prefixes = [ 
+{'pref':'adms:', 'ns': 'http://www.w3.org/ns/adms#'},
+{'pref':'dcat:', 'ns': 'http://www.w3.org/ns/dcat#'},
+{'pref':'dcatap:', 'ns': 'http://data.europa.eu/r5r/'},
+{'pref':'dct:', 'ns': 'http://purl.org/dc/terms/'},
+{'pref':'dctype:', 'ns': 'http://purl.org/dc/dcmitype/'},
+{'pref':'cpsv:', 'ns': 'http://purl.org/vocab/cpsv#'},
+{'pref':'foaf:', 'ns': 'http://xmlns.com/foaf/0.1/'},
+{'pref':'locn:', 'ns': 'http://www.w3.org/ns/locn#'},
+{'pref':'odrl:', 'ns': 'http://www.w3.org/ns/odrl/2/'},
+{'pref':'owl:', 'ns': 'http://www.w3.org/2002/07/owl#'},
+{'pref':'prov:', 'ns': 'http://www.w3.org/ns/prov#'},
+{'pref':'rdf:', 'ns': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'},
+{'pref':'rdfs:', 'ns': 'http://www.w3.org/2000/01/rdf-schema#'},
+{'pref':'skos:', 'ns': 'http://www.w3.org/2004/02/skos/core#'},
+{'pref':'spdx:', 'ns': 'http://spdx.org/rdf/terms#'},
+{'pref':'time:', 'ns': 'http://www.w3.org/2006/time#'},
+{'pref':'vcard:', 'ns': 'http://www.w3.org/2006/vcard/ns#'},
+{'pref':'eli:', 'ns' : 'http://data.europa.eu/eli/ontology#'},
+{'pref':'xsd:', 'ns': 'http://www.w3.org/2001/XMLSchema#'},
+{'pref':'ad:', 'ns': 'http://inspire.ec.europa.eu/ont/ad#'},
+{'pref':'cv:', 'ns': 'http://data.europa.eu/m8g/'},
+{'pref':'geo:', 'ns': 'http://www.opengis.net/ont/geosparql#'},
+{'pref':'schema:', 'ns': 'https://schema.org/'},
+{'pref':'org:', 'ns': 'http://www.w3.org/ns/org#'},
+{'pref':'person:', 'ns': 'http://www.w3.org/ns/person#'},
+{'pref':'legal:', 'ns': 'http://www.w3.org/ns/legal#'},
+{'pref':'atu:', 'ns': 'http://data.europa.eu/88u/dataset/'},
+{'pref':'xhv:', 'ns': 'http://www.w3.org/1999/xhtml/vocab#'},
+
+
+				];
+
+	    function shorturl (url) {
+				var short = url;
+				for (e in prefixes) {
+				   var elem = prefixes[e];
+				   if (short.startsWith(elem.ns)) {
+  					short = elem.pref + short.slice(elem.ns.length);
+					}
+				};
+				return short;
+			};
+
+	    var shorten = document.getElementsByClassName("shorten");
+	    for (k=0;k < shorten.length ; k++){
+			var selem = shorten[k];	
+	                selem.innerHTML = shorturl(selem.innerHTML.trim());
+			}
+    </script>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.css" />
+	<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"> 
+	<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js" ></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js" ></script>
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" ></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/javascript/javascript.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/turtle/turtle.min.js" ></script>
+    <script src="https://codemirror.net/5/mode/javascript/javascript.js" ></script>
+    <!--    <script src="https://semiceu.github.io/MLDCAT-AP/releases/1.0.0/example.js" ></script> -->
+    <script src="./html/example.js" ></script>
+	<script type="text/javascript">
+		function elementInView(elem){
+				goesIn = ($(window).height() + $(window).scrollTop()) > $(elem).offset().top;
+				goesOut = ($(window).scrollTop()) > ($(elem).offset().top + $(elem).height());
+				if (goesIn && !goesOut)
+					return 1;
+				else
+					return 0;
+			};
+
+		$(window).scroll(function(){
+			$('.CodeMirror').each(function(){
+				if (elementInView($(this))){
+					$(this).each(function(i, el){
+						el.CodeMirror.refresh();
+					});
+				}
+			});
+			
+		});
+	</script>
+	<style>
+		.CodeMirror {
+		  border: 1px solid #eee;
+		  height: auto;
+		}
+		.buttonsample {
+		cursor: pointer;
+		margin-top: 10px;
+		margin-left: 10px;
+		font-weight: 700;
+		border:0 outset buttonface;
+		background: #F5F6F8;
+		background-image: linear-gradient(to bottom,#F5F6F8,#DBDCDE);
+		border-radius:4px;
+		box-shadow:0 1px 3px #666;
+		font-family: Arial;
+		color: grey;
+		font-size: 14px;
+		padding: 10px 5px;
+		text-decoration: none;
+		float: right
+	}
+	.buttonsample:hover {color:#2a70d3}
+	.tabsstyle {
+		padding: 10px;
+		overflow: hidden;
+	}
+	li.ui-tabs-tab > a:hover {
+		background-color:dodgerblue;
+		color:white;
+	}
+  </style>
+
+    	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+</html>
