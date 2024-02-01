@@ -22,5 +22,5 @@ The table below gives an overview of the classes (and their definitions) within 
 | --- | --- | --- | --- | --- |
 | - | - | ReSpec Styling has been applied to the specification.| - | - |
 | C1 | AdminUnit.code | AdminUnit.code | Create clarity on which codelist to use. | [#36](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/36) |
-| C2 | - | AdminUnit.name | Add property to align with SINPIE. | [#25](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/25) |
+| C2 | - | AdminUnit.name | Add property to align with INSPIRE. | [#25](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/25) |
 | C3 | - | LocatorDesignator | Create a more structural way to represent address supplements. | [#37](https://github.com/SEMICeu/Core-Location-Vocabulary/issues/37) |
