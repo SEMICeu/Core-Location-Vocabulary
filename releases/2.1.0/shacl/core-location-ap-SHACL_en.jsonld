@@ -1,6 +1,6 @@
 {
   "@context": {
-    "@vocab": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0",
+    "@vocab": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl",
     "qb": "http://purl.org/linked-data/cube#",
     "qb:codeList": {
       "@id": "qb:codeList",
@@ -100,15 +100,15 @@
       "@id": "vl:message"
     }
   },
-  "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0",
+  "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl",
   "shapes": [
     {
-      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#AdminUnitShape",
+      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#AdminUnitShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#AdminUnitShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#AdminUnitShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#AdministrativeUnit.name",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -120,7 +120,7 @@
           "sh:path": "http://www.w3.org/2000/01/rdf-schema#label"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#AdminUnitShape/34d95733daf7d992483c679b8caea965979b76a8",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#AdminUnitShape/34d95733daf7d992483c679b8caea965979b76a8",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#AdministrativeUnit.code",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -132,7 +132,7 @@
           "sh:path": "http://data.europa.eu/m8g/code"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#AdminUnitShape/9b437af682d747dd61e73577261bf72c00014cc4",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#AdminUnitShape/9b437af682d747dd61e73577261bf72c00014cc4",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#AdministrativeUnit.level",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -147,12 +147,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/AdminUnit"
     },
     {
-      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#LocatorDesignatorShape",
+      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#LocatorDesignatorShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#LocatorDesignatorShape/322371a77364a50f049d46180f6192532eea26dc",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#LocatorDesignatorShape/322371a77364a50f049d46180f6192532eea26dc",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#LocatorDesignator.type",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -167,12 +167,12 @@
       "sh:targetClass": "http://inspire.ec.europa.eu/ont/ad#LocatorDesignator"
     },
     {
-      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#LocationShape",
+      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#LocationShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#LocationShape/2481cfd943c5249d2ca01949dc073a42a579a3ab",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#LocationShape/2481cfd943c5249d2ca01949dc073a42a579a3ab",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Location.geographicname",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -184,7 +184,7 @@
           "sh:path": "http://www.w3.org/ns/locn#geographicName"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#LocationShape/de64768127c2c96295191bbf7ced703cb1b65346",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#LocationShape/de64768127c2c96295191bbf7ced703cb1b65346",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Location.geographicidentifier",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
           "sh:description": {
@@ -199,26 +199,26 @@
       "sh:targetClass": "http://purl.org/dc/terms/Location"
     },
     {
-      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#TextShape",
+      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#TextShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     {
-      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#LiteralShape",
+      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#LiteralShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     {
-      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#ResourceShape",
+      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#ResourceShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#ResourceShape/53c8e9f0fc79ab4ed706e31129a2b3e02f7edd22",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#ResourceShape/53c8e9f0fc79ab4ed706e31129a2b3e02f7edd22",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Resource.geometry",
           "sh:class": "http://www.w3.org/ns/locn#Geometry",
           "sh:description": {
@@ -230,7 +230,7 @@
           "sh:path": "http://www.w3.org/ns/locn#geometry"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#ResourceShape/5de4ef5193a558e17a34633888421d09b957d267",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#ResourceShape/5de4ef5193a558e17a34633888421d09b957d267",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Resource.address",
           "sh:class": "http://www.w3.org/ns/locn#Address",
           "sh:description": {
@@ -242,7 +242,7 @@
           "sh:path": "http://www.w3.org/ns/locn#address"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#ResourceShape/a7760ef34c8bc85460f186072f4aaefd62ae6213",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#ResourceShape/a7760ef34c8bc85460f186072f4aaefd62ae6213",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Resource.location",
           "sh:class": "http://purl.org/dc/terms/Location",
           "sh:description": {
@@ -254,7 +254,7 @@
           "sh:path": "http://www.w3.org/ns/locn#location"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#ResourceShape/cf9602ea5422d929eccf1b7ba9f66046b2fce096",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#ResourceShape/cf9602ea5422d929eccf1b7ba9f66046b2fce096",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Resource.registeredaddress",
           "sh:class": "http://www.w3.org/ns/locn#Address",
           "sh:description": {
@@ -269,26 +269,26 @@
       "sh:targetClass": "http://www.w3.org/2000/01/rdf-schema#Resource"
     },
     {
-      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#URIShape",
+      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#URIShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2001/XMLSchema#anyURI"
     },
     {
-      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#CodeShape",
+      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#CodeShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     {
-      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#AddressShape",
+      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#AddressShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#AddressShape/17384dfa4a75117e7dd2bc0f2bbf61ac91fd8676",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#AddressShape/17384dfa4a75117e7dd2bc0f2bbf61ac91fd8676",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Address.thoroughfare",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -300,7 +300,7 @@
           "sh:path": "http://www.w3.org/ns/locn#thoroughfare"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#AddressShape/362b7c3261b1d5eb024e72e4868babc25ed0c7ce",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#AddressShape/362b7c3261b1d5eb024e72e4868babc25ed0c7ce",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Address.administrativeunitlevel1",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -312,7 +312,7 @@
           "sh:path": "http://www.w3.org/ns/locn#adminUnitL1"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#AddressShape/470060a15e97aeacd56fcc5beb701e647a6aa56e",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#AddressShape/470060a15e97aeacd56fcc5beb701e647a6aa56e",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Address.addressarea",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -324,7 +324,7 @@
           "sh:path": "http://www.w3.org/ns/locn#addressArea"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#AddressShape/5e74b1f81658b4853e5c7d39eafa35926bcc4117",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#AddressShape/5e74b1f81658b4853e5c7d39eafa35926bcc4117",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Address.haslocatordesignator",
           "sh:class": "http://inspire.ec.europa.eu/ont/ad#LocatorDesignator",
           "sh:description": {
@@ -336,7 +336,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasLocatorDesignator"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#AddressShape/60bff98f6076f0828e3b73d73fefc7b1eb56b93a",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#AddressShape/60bff98f6076f0828e3b73d73fefc7b1eb56b93a",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Address.administrativeunit",
           "sh:class": "http://data.europa.eu/m8g/AdminUnit",
           "sh:description": {
@@ -348,7 +348,7 @@
           "sh:path": "http://data.europa.eu/m8g/adminUnit"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#AddressShape/854a17171901a9c000eff34a7ccd77814891e3d5",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#AddressShape/854a17171901a9c000eff34a7ccd77814891e3d5",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Address.administrativeunitlevel2",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -360,7 +360,7 @@
           "sh:path": "http://www.w3.org/ns/locn#adminUnitL2"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#AddressShape/98016263ed1fd03fc2066e397f3ae3343ce3bf79",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#AddressShape/98016263ed1fd03fc2066e397f3ae3343ce3bf79",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Address.postname",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -372,7 +372,7 @@
           "sh:path": "http://www.w3.org/ns/locn#postName"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#AddressShape/d75b5d4c221e6b0bf47c853c0be92d078c39e391",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#AddressShape/d75b5d4c221e6b0bf47c853c0be92d078c39e391",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Address.locatorname",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -384,7 +384,7 @@
           "sh:path": "http://www.w3.org/ns/locn#locatorName"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#AddressShape/dee03556e405a14f1e410c960b43b8eee149efe7",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#AddressShape/dee03556e405a14f1e410c960b43b8eee149efe7",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Address.fulladdress",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -399,12 +399,12 @@
       "sh:targetClass": "http://www.w3.org/ns/locn#Address"
     },
     {
-      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#GeometryShape",
+      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#GeometryShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#GeometryShape/06d06feebc072daa649b8205dc16aeeaa91093c0",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#GeometryShape/06d06feebc072daa649b8205dc16aeeaa91093c0",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Geometry.latitude",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:description": {
@@ -416,7 +416,7 @@
           "sh:path": "http://data.europa.eu/m8g/latitude"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#GeometryShape/476220a5f61cf3795f557dbbd3c33f167fb93ff1",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#GeometryShape/476220a5f61cf3795f557dbbd3c33f167fb93ff1",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Geometry.longitude",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:description": {
@@ -428,7 +428,7 @@
           "sh:path": "http://data.europa.eu/m8g/longitude"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#GeometryShape/52000cf40fc62767642dc4f6dc2b59d0cacb027f",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#GeometryShape/52000cf40fc62767642dc4f6dc2b59d0cacb027f",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Geometry.crs",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
           "sh:description": {
@@ -440,7 +440,7 @@
           "sh:path": "http://data.europa.eu/m8g/crs"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#GeometryShape/57b4a8d7fdbad957edc20ed043010d1c7dc60d6f",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#GeometryShape/57b4a8d7fdbad957edc20ed043010d1c7dc60d6f",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Geometry.coordinates",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
           "sh:description": {
@@ -452,7 +452,7 @@
           "sh:path": "http://data.europa.eu/m8g/coordinates"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#GeometryShape/f60bfb563ce6b7e3e6e0da53601a109f44fa56e8",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#GeometryShape/f60bfb563ce6b7e3e6e0da53601a109f44fa56e8",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#Geometry.geometrytype",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -467,7 +467,7 @@
       "sh:targetClass": "http://www.w3.org/ns/locn#Geometry"
     },
     {
-      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0#StringShape",
+      "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl#StringShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
