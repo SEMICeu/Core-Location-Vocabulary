@@ -44,7 +44,7 @@
 		    name: "Emiel Dhondt",
 		      
 		      
-		    company: "PwC EU Services",
+		    company: "Digital Flanders",
 		      
 		      
 		    }
@@ -55,6 +55,16 @@
 		      
 		      
 		    company: "European Commission",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Faruk Karabulut",
+		      
+		      
+		    company: "PwC EU Services",
 		      
 		      
 		    }
@@ -74,7 +84,7 @@
 		    name: "Anastasia Sofou",
 		      
 		      
-		    company: "Trasys International",
+		    company: "European Commission",
 		      
 		      
 		    }
@@ -93,6 +103,8 @@
 		   {
 		    name: "Bert Van Nuffelen",
 		      
+		      
+		    company: "Digital Flanders",
 		      
 		      
 		    }
@@ -126,17 +138,26 @@
 		
 	function quickreference() {
 		$('#table-quickoverview').DataTable();
-	};
-	var shaclfilepath = "./shacl/core-location-ap-SHACL.ttl" ;
+    };
+	var shaclfilepath = "shacl/core-location-ap-SHACL.ttl" ;
+	var folder = "./html/examples/";
+	var model = "any" ;
+	var version_list = [
+		{
+		"type": "Core Vocabularies",
+		"description": "Core Vocabularies"
+		},
+	] ;
+	var linkinfo = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1" + "#validation" ;
 
    
 
     var respecConfig = {
       postProcess: [quickreference],
-      edDraftURI: "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0",
-      latestVersion: "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.2",
+      edDraftURI: "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1",
+      latestVersion: "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0",
       specStatus: "LD",
-      publishDate: "2024-01-31",
+      publishDate: "2026-05-05",
       editors: myeditors,
       authors: myauthors,
       github: "SEMICeu/Core-Location-Vocabulary",
@@ -268,10 +289,10 @@ The Core Location Vocabulary is a simplified, reusable and extensible data model
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This Core Vocabulary has the status SEMIC Candidate Recommendation published at 2024-01-31.
+            This Core Vocabulary has the status SEMIC Candidate Recommendation published at 2026-05-05.
         </p>
         <p>
-            Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/blob/master/releases/2.1.0/Changelog.md">Changelog</a>.
+            Information about the process and the decisions involved in the creation of this specification can be found at the <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/blob/master/releases/2.1.1/Changelog.md">Changelog</a>.
         </p>
 </section>
 
@@ -299,7 +320,7 @@ The Core Location Vocabulary is a simplified, reusable and extensible data model
 
 
 
-<section id="conformance" class="informative">
+<section id="conformance">
 </section>
 
 
@@ -313,8 +334,9 @@ The Core Location Vocabulary is a simplified, reusable and extensible data model
             A Core Vocabulary (CV) is a basic, reusable and extensible data specification that captures the fundamental characteristics of an entity in a context-neutral fashion. Its main objective is to provide terms to be reused in the broadest possible context.
             More information can be found on the <a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification">SEMIC Style Guide</a>.
         </p>
+    <h3>Used Prefixes</h3>
         
-This specification uses the following prefixes to shorten the URIs for readibility.
+This specification uses the following prefixes to shorten the URIs for readability.
 
         <table id="table-namespaces" class="simple">
             <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
@@ -322,7 +344,7 @@ This specification uses the following prefixes to shorten the URIs for readibili
             <tr><td><code>ad</code></td><td><code>http://inspire.ec.europa.eu/ont/ad#</code></td></tr>
             <tr><td><code>cv</code></td><td><code>http://data.europa.eu/m8g/</code></td></tr>           
             <tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
-            <tr><td><code>geo</code></td><td><code>http://www.opengis.net/ont/geosparql#</code></td></tr>
+            <tr><td><code>geosparql</code></td><td><code>http://www.opengis.net/ont/geosparql#</code></td></tr>
             <tr><td><code>locn</code></td><td><code>http://www.w3.org/ns/locn#</code></td></tr>
             <tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
             <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
@@ -368,9 +390,9 @@ This specification uses the following prefixes to shorten the URIs for readibili
                 
     </div>
     <div>
-        <a href="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/html/overview.jpg"
+        <a href="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1/html/overview.jpg"
            target="_blank">
-            <img src="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/html/overview.jpg"/>
+            <img src="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1/html/overview.jpg"/>
         </a>
     </div>
 </section>
@@ -416,7 +438,7 @@ The main entities are those that form the core of the Core Vocabulary.
                         Usage Note
                     </dt>
                     <dd>
-                        An "address representation" as conceptually defined by the <a href="https://inspire-regadmin.jrc.ec.europa.eu/dataspecification/ScopeObjectDetail.action?objectDetailId=9353">INSPIRE Address Representation data type</a>: "Representation of an address spatial object for use in external application schemas that need to include the basic, address information in a readable way.".
+                        An "address representation" as conceptually defined by the <a href="https://knowledge-base.inspire.ec.europa.eu/publications/inspire-data-specification-addresses-technical-guidelines_en">INSPIRE Address Representation data type</a>: "Representation of an address spatial object for use in external application schemas that need to include the basic, address information in a readable way.".
 <br/><br/>
 The representation of Addresses varies widely from one country's postal system to another. Even within countries, there are almost always examples of Addresses that do not conform to the stated national standard. However, <a href="https://www.iso.org/standard/61710.html">ISO 19160-1</a> provides a method through which different Addresses can be converted from one conceptual model to another.
 <br/><br/>
@@ -440,7 +462,7 @@ This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabular
                         <dd>
                             For this entity the following properties are defined: <a href="#Address.addressarea">address area</a>
                             , <a href="#Address.addressID">address ID</a>
-                            , <a href="#Address.administrativeunit">administrative unit</a>
+                            , <a href="#Address.AdministrativeUnit">Administrative Unit</a>
                             , <a href="#Address.administrativeunitlevel1">administrative unit level 1</a>
                             , <a href="#Address.administrativeunitlevel2">administrative unit level 2</a>
                             , <a href="#Address.fulladdress">full address</a>
@@ -491,11 +513,11 @@ This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabular
                     <tbody class="supertype">
                         
                             <tr id="Address.addressarea"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/locn#addressArea"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20address area%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.addressarea" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20address area%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Address.addressarea" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -534,11 +556,11 @@ This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabular
                             </tr>
                         
                             <tr id="Address.addressID"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/locn#addressId"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20address ID%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.addressID" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20address ID%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Address.addressID" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -566,7 +588,7 @@ This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabular
                                 <td property="skos:scopeNote">
                                     The concept of adding a globally unique identifier for each instance of an address is a crucial part of the INSPIRE data spec. A number of EU countries have already implemented an ID (a UUID) in their Address Register/gazetteer, among them Denmark. OASIS xAL also includes an address identifier. It is the address Identifier that allows an address to be represented in a format other than INSPIRE whilst remaining conformant to the Core Vocabulary.
 <br/><br/>
-The <a href="https://knowledge-base.inspire.ec.europa.eu/index_en">INSPIRE</a> method of representing addresses is very detailed, designed primarily for use in databases of addresses. Whilst data that is published in full conformance with the INSPIRE data structure can be made available using the<a href="https://semiceu.github.io/Core-Location-Vocabulary/">Core Location Vocabulary</a> the reverse is not true since the Core Vocabulary allows much greater flexibility.
+The <a href="https://knowledge-base.inspire.ec.europa.eu/index_en">INSPIRE</a> method of representing addresses is very detailed, designed primarily for use in databases of addresses. Whilst data that is published in full conformance with the INSPIRE data structure can be made available using the <a href="https://semiceu.github.io/Core-Location-Vocabulary/">Core Location Vocabulary</a> the reverse is not true since the Core Vocabulary allows much greater flexibility.
 <br/><br/>
 Many datasets that include address data as one piece of information about something else are likely to have that data in simpler formats. These might be tailored to the specific need of the dataset, follow a national norm, or make use of a standard like vCard.
 <br/><br/>
@@ -584,22 +606,22 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                                 </td>
                             </tr>
                         
-                            <tr id="Address.administrativeunit"
-                                typeof="rdfs:Property"
-                                resource="http://data.europa.eu/m8g/adminUnit"
+                            <tr id="Address.AdministrativeUnit"
+                                typeof="rdf:Property"
+                                resource="http://data.europa.eu/m8g/AdminUnit"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20administrative unit%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.administrativeunit" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20Administrative Unit%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Address.AdministrativeUnit" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="http://data.europa.eu/m8g/adminUnit"
+                                        <a href="http://data.europa.eu/m8g/AdminUnit"
                                            data-toggle="tooltip"
-                                           data-content="http://data.europa.eu/m8g/adminUnit"
+                                           data-content="http://data.europa.eu/m8g/AdminUnit"
                                            data-placement="right">
-                                        administrative unit</a>
+                                        Administrative Unit</a>
                                 </td>
                                 <td>
                                     
@@ -612,7 +634,7 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    The adminUnit relationship links an Address with the Administrative Unit class.
+                                    A detailed administrative unit organized in a hierarchy.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -628,11 +650,11 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                             </tr>
                         
                             <tr id="Address.administrativeunitlevel1"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/locn#adminUnitL1"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20administrative unit level 1%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.administrativeunitlevel1" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20administrative unit level 1%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Address.administrativeunitlevel1" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -671,11 +693,11 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                             </tr>
                         
                             <tr id="Address.administrativeunitlevel2"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/locn#adminUnitL2"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20administrative unit level 2%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.administrativeunitlevel2" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20administrative unit level 2%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Address.administrativeunitlevel2" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -714,11 +736,11 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                             </tr>
                         
                             <tr id="Address.fulladdress"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/locn#fullAddress"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20full address%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.fulladdress" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20full address%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Address.fulladdress" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -757,11 +779,11 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                             </tr>
                         
                             <tr id="Address.haslocatordesignator"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/hasLocatorDesignator"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20has locator designator%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.haslocatordesignator" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20has locator designator%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Address.haslocatordesignator" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -800,11 +822,11 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                             </tr>
                         
                             <tr id="Address.locatordesignator"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/locn#locatorDesignator"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20locator designator%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.locatordesignator" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20locator designator%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Address.locatordesignator" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -843,11 +865,11 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                             </tr>
                         
                             <tr id="Address.locatorname"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/locn#locatorName"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20locator name%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.locatorname" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20locator name%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Address.locatorname" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -888,11 +910,11 @@ The key difference between a locator designator and a locator name is that the l
                             </tr>
                         
                             <tr id="Address.postcode"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/locn#postCode"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20post code%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.postcode" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20post code%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Address.postcode" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -931,11 +953,11 @@ The key difference between a locator designator and a locator name is that the l
                             </tr>
                         
                             <tr id="Address.postname"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/locn#postName"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20post name%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.postname" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20post name%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Address.postname" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -974,11 +996,11 @@ The key difference between a locator designator and a locator name is that the l
                             </tr>
                         
                             <tr id="Address.postofficebox"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/locn#poBox"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20post office box%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.postofficebox" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20post office box%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Address.postofficebox" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1017,11 +1039,11 @@ The key difference between a locator designator and a locator name is that the l
                             </tr>
                         
                             <tr id="Address.thoroughfare"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/locn#thoroughfare"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20thoroughfare%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Address.thoroughfare" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20thoroughfare%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Address.thoroughfare" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1150,11 +1172,11 @@ The key difference between a locator designator and a locator name is that the l
                     <tbody class="supertype">
                         
                             <tr id="AdministrativeUnit.code"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/code"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20code%20in%20Administrative Unit&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23AdministrativeUnit.code" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20code%20in%20Administrative Unit&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23AdministrativeUnit.code" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1193,11 +1215,11 @@ The key difference between a locator designator and a locator name is that the l
                             </tr>
                         
                             <tr id="AdministrativeUnit.level"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/level"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20level%20in%20Administrative Unit&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23AdministrativeUnit.level" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20level%20in%20Administrative Unit&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23AdministrativeUnit.level" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1236,11 +1258,11 @@ The key difference between a locator designator and a locator name is that the l
                             </tr>
                         
                             <tr id="AdministrativeUnit.name"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/2000/01/rdf-schema#label"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20name%20in%20Administrative Unit&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23AdministrativeUnit.name" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20name%20in%20Administrative Unit&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23AdministrativeUnit.name" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1373,11 +1395,11 @@ The key difference between a locator designator and a locator name is that the l
                     <tbody class="supertype">
                         
                             <tr id="Geometry.coordinates"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/coordinates"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20coordinates%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Geometry.coordinates" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20coordinates%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Geometry.coordinates" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1416,11 +1438,11 @@ The key difference between a locator designator and a locator name is that the l
                             </tr>
                         
                             <tr id="Geometry.crs"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/crs"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20crs%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Geometry.crs" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20crs%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Geometry.crs" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1459,11 +1481,11 @@ The key difference between a locator designator and a locator name is that the l
                             </tr>
                         
                             <tr id="Geometry.geometrytype"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/geometryType"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20geometry type%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Geometry.geometrytype" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20geometry type%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Geometry.geometrytype" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1502,11 +1524,11 @@ The key difference between a locator designator and a locator name is that the l
                             </tr>
                         
                             <tr id="Geometry.gml"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.opengis.net/ont/geosparql#asGML"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20gml%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Geometry.gml" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20gml%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Geometry.gml" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1545,11 +1567,11 @@ The key difference between a locator designator and a locator name is that the l
                             </tr>
                         
                             <tr id="Geometry.latitude"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/latitude"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20latitude%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Geometry.latitude" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20latitude%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Geometry.latitude" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1572,7 +1594,7 @@ The key difference between a locator designator and a locator name is that the l
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    The geographic coordinate that specifies the north / south position of the Geomerty on the Earth&#39;s surface.
+                                    The geographic coordinate that specifies the north / south position of the geometry on the Earth&#39;s surface.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -1588,11 +1610,11 @@ The key difference between a locator designator and a locator name is that the l
                             </tr>
                         
                             <tr id="Geometry.longitude"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/longitude"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20longitude%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Geometry.longitude" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20longitude%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Geometry.longitude" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1631,11 +1653,11 @@ The key difference between a locator designator and a locator name is that the l
                             </tr>
                         
                             <tr id="Geometry.wkt"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.opengis.net/ont/geosparql#asWKT"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20wkt%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Geometry.wkt" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20wkt%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Geometry.wkt" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1756,11 +1778,11 @@ The key difference between a locator designator and a locator name is that the l
                     <tbody class="supertype">
                         
                             <tr id="Location.geographicidentifier"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20geographic identifier%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Location.geographicidentifier" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20geographic identifier%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Location.geographicidentifier" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1805,11 +1827,11 @@ even when the geographic name is given as EL or UK.
                             </tr>
                         
                             <tr id="Location.geographicname"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/locn#geographicName"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20geographic name%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Location.geographicname" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20geographic name%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Location.geographicname" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1950,11 +1972,11 @@ EXAMPLE In Paris, France a locator could be composed by two locator designators:
                     <tbody class="supertype">
                         
                             <tr id="LocatorDesignator.designator"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://inspire.ec.europa.eu/ont/ad#LocatorDesignator.designator"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20designator%20in%20Locator Designator&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23LocatorDesignator.designator" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20designator%20in%20Locator Designator&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23LocatorDesignator.designator" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -1994,11 +2016,11 @@ EXAMPLE Address number "2065", Address number suffix "B", Floor identifier "7" d
                             </tr>
                         
                             <tr id="LocatorDesignator.type"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://inspire.ec.europa.eu/ont/ad#LocatorDesignator.type"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20type%20in%20Locator Designator&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23LocatorDesignator.type" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20type%20in%20Locator Designator&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23LocatorDesignator.type" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2155,11 +2177,11 @@ In other data modelling languages, this class should be mapped to their correspo
                     <tbody class="supertype">
                         
                             <tr id="Resource.address"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/locn#address"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20address%20in%20Resource&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Resource.address" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20address%20in%20Resource&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Resource.address" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2199,11 +2221,11 @@ In other data modelling languages, this class should be mapped to their correspo
                             </tr>
                         
                             <tr id="Resource.geometry"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/locn#geometry"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20geometry%20in%20Resource&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Resource.geometry" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20geometry%20in%20Resource&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Resource.geometry" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2267,11 +2289,11 @@ For interoperability reasons, it is recommended using one of the following:
                             </tr>
                         
                             <tr id="Resource.location"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/locn#location"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20location%20in%20Resource&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Resource.location" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20location%20in%20Resource&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Resource.location" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2310,11 +2332,11 @@ For interoperability reasons, it is recommended using one of the following:
                             </tr>
                         
                             <tr id="Resource.registeredaddress"
-                                typeof="rdfs:Property"
+                                typeof="rdf:Property"
                                 resource="http://data.europa.eu/m8g/registeredAddress"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20registered address%20in%20Resource&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0%23Resource.registeredaddress" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20registered address%20in%20Resource&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Resource.registeredaddress" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
@@ -2427,9 +2449,9 @@ For interoperability reasons, it is recommended using one of the following:
 		</td><td>
                 
                     <div id="String">
-                        <a href="https://www.w3.org/2001/XMLSchema#string"
+                        <a href="http://www.w3.org/2001/XMLSchema#string"
                            data-toggle="tooltip"
-                           data-content="https://www.w3.org/2001/XMLSchema#string"
+                           data-content="http://www.w3.org/2001/XMLSchema#string"
                            data-placement="right">String</a>
                     </div>
                 
@@ -2483,8 +2505,8 @@ For interoperability reasons, it is recommended using one of the following:
          (non normative)
         
             <p>
-                A reusable JSON-LD context definition for this Core Vocabulary is retrievable at: <a href="/Core-Location-Vocabulary/releases/2.1.0/context/core-location-ap.jsonld"
-    target="_blank">/Core-Location-Vocabulary/releases/2.1.0/context/core-location-ap.jsonld</a>
+                A reusable JSON-LD context definition for this Core Vocabulary is retrievable at: <a href="/Core-Location-Vocabulary/releases/2.1.1/context/core-location-ap.jsonld"
+    target="_blank">/Core-Location-Vocabulary/releases/2.1.1/context/core-location-ap.jsonld</a>
             </p>
         
     </div>
@@ -2497,8 +2519,8 @@ For interoperability reasons, it is recommended using one of the following:
          (non normative)
         
             <p>
-                A reusable SHACL template for this Core Vocabulary is retrievable at: <a href="/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl"
-    target="_blank">/Core-Location-Vocabulary/releases/2.1.0/shacl/core-location-ap-SHACL.ttl</a>
+                A reusable SHACL template for this Core Vocabulary is retrievable at: <a href="/Core-Location-Vocabulary/releases/2.1.1/shacl/core-location-ap-SHACL.ttl"
+    target="_blank">/Core-Location-Vocabulary/releases/2.1.1/shacl/core-location-ap-SHACL.ttl</a>
             </p>
         
     </div>
@@ -2508,12 +2530,12 @@ For interoperability reasons, it is recommended using one of the following:
 <section class="informative">
     <h2> Examples </h2>
         
-<div class="h3 examples" id="example-rdf_wkt">Example 1 - Location WKT (GeoSPARQL)</div>
-<div class="h3 examples" id="example-rdf_gml">Example 2 - Location GML (GeoSPARQL)</div>
-<div class="h3 examples" id="example-rdf_wgs">Example 3 - Location WGS84 lat/long</div>
-<div class="h3 examples" id="example-rdf_schema">Example 4 - Location schema.org</div>
-<div class="h3 examples" id="example-rdf_geohash">Example 5 - Location GeoHash</div>
-<div class="h3 examples" id="example-rdf_address">Example 6 - Address</div>
+<h3 class="h3 examples" id="example-rdf_wkt">Example 1 - Location WKT (GeoSPARQL)</h3>
+<h3 class="h3 examples" id="example-rdf_gml">Example 2 - Location GML (GeoSPARQL)</h3>
+<h3 class="h3 examples" id="example-rdf_wgs">Example 3 - Location WGS84 lat/long</h3>
+<h3 class="h3 examples" id="example-rdf_schema">Example 4 - Location schema.org</h3>
+<h3 class="h3 examples" id="example-rdf_geohash">Example 5 - Location GeoHash</h3>
+<h3 class="h3 examples" id="example-rdf_address">Example 6 - Address</h3>
 
 </section>
 
@@ -2531,19 +2553,19 @@ The following section provides support for implementing the Core Location Vocabu
 <h3>JSON-LD context file</h3>
 
 One common technical question is the format in which the data is being exchanged. 
-For conformance with the Core Location Vocabulary, it is not mandatory that this happens in a RDF serialisation, but the exhanged format SHOULD be unambiguously be transformable into RDF.
+For conformance with the Core Location Vocabulary, it is not mandatory that this happens in an RDF serialisation, but the exchanged format SHOULD be unambiguously transformable into RDF.
 For the format JSON, a popular format to exchange data between systems, SEMIC provides a <a href="./context/core-location-ap.jsonld">JSON-LD context file</a>. 
 JSON-LD is a W3C Recommendation [[[json-ld11]]] that provided a standard approach to interpret JSON structures as RDF.
 The provided JSON-LD context file can be used by implementers.
 This JSON-LD context is not normative, i.e. other JSON-LD contexts are allowed.
 <p/>
-The JSON-LD context file downloadable <a href="./context/core-location-ap.jsonld">here</a>.
+The JSON-LD context file is downloadable <a href="./context/core-location-ap.jsonld">here</a>.
 <p/>
 
 <h3>Validation</h3>
 
 To verify if the data is (technically) conformant to the Core Location Vocabulary, the exchanged data can be validated using the provided SHACL shapes. 
-SHACL is a W3C Recommendation to express constraints on a RDF knowledge graph. 
+SHACL is a W3C Recommendation to express constraints on an RDF knowledge graph. 
 <p/>
 To support the check whether or not a catalogue satisfies the expressed constraints in this Core Vocabulary, the constraints in this specification are expressed using SHACL [[shacl]].
 Each constraint in this specification that could be converted into a SHACL expression has been included.
@@ -2553,6 +2575,12 @@ It is up to the implementers to define the validation they expect.
 Each implementation happens within a context, and that context is beyond the SHACL expressions here.
 <p/>
 The shapes can be found <a href="./shacl/core-location-ap-SHACL.ttl">here</a>.
+
+<h3>RDF representation</h3>
+The RDF representation of the Core Location Vocabulary is available <a href="./voc/core-location-ap.ttl">here</a>.
+
+<h3>UML representation</h3>
+The UML representation from which the Core Location Vocabulary has been build is available <a href="./uml">here</a>.
 
 <!--
 <h3>Mapping</h3>
@@ -2607,7 +2635,7 @@ SEMIC uses and will use the RDFS lexicalisation for all of its specifications. M
 <li> The usage of certain resource can be clarified in a skos:usageNote.</li>
 </ul>
 
-</section>
+</section>    
 </section>
  
 
@@ -2720,8 +2748,8 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#Address">Address</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
 								<td></td>
-								<td><a href="#Address.administrativeunit">administrative unit </a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/adminUnit</div></td>
+								<td><a href="#Address.AdministrativeUnit">Administrative Unit </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/AdminUnit</div></td>
 							</tr>
 						
 					
@@ -3128,36 +3156,36 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 
 
 	    var prefixes = [ 
+{'pref':'ad:', 'ns': 'http://inspire.ec.europa.eu/ont/ad#'},
 {'pref':'adms:', 'ns': 'http://www.w3.org/ns/adms#'},
+{'pref':'atu:', 'ns': 'http://data.europa.eu/88u/dataset/'},
+{'pref':'cav:', 'ns': 'http://data.europa.eu/2sa/cav#'},
+{'pref':'cpsv:', 'ns': 'http://purl.org/vocab/cpsv#'},
+{'pref':'cv:', 'ns': 'http://data.europa.eu/m8g/'},
 {'pref':'dcat:', 'ns': 'http://www.w3.org/ns/dcat#'},
 {'pref':'dcatap:', 'ns': 'http://data.europa.eu/r5r/'},
 {'pref':'dct:', 'ns': 'http://purl.org/dc/terms/'},
 {'pref':'dctype:', 'ns': 'http://purl.org/dc/dcmitype/'},
-{'pref':'cpsv:', 'ns': 'http://purl.org/vocab/cpsv#'},
+{'pref':'eli:', 'ns' : 'http://data.europa.eu/eli/ontology#'},
 {'pref':'foaf:', 'ns': 'http://xmlns.com/foaf/0.1/'},
+{'pref':'frbr:', 'ns': 'http://iflastandards.info/ns/fr/frbr/frbroo/'},
+{'pref':'geosparql:', 'ns': 'http://www.opengis.net/ont/geosparql#'},
+{'pref':'legal:', 'ns': 'http://www.w3.org/ns/legal#'},
 {'pref':'locn:', 'ns': 'http://www.w3.org/ns/locn#'},
 {'pref':'odrl:', 'ns': 'http://www.w3.org/ns/odrl/2/'},
+{'pref':'org:', 'ns': 'http://www.w3.org/ns/org#'},
 {'pref':'owl:', 'ns': 'http://www.w3.org/2002/07/owl#'},
+{'pref':'person:', 'ns': 'http://www.w3.org/ns/person#'},
 {'pref':'prov:', 'ns': 'http://www.w3.org/ns/prov#'},
 {'pref':'rdf:', 'ns': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'},
 {'pref':'rdfs:', 'ns': 'http://www.w3.org/2000/01/rdf-schema#'},
+{'pref':'schema:', 'ns': 'https://schema.org/'},
 {'pref':'skos:', 'ns': 'http://www.w3.org/2004/02/skos/core#'},
 {'pref':'spdx:', 'ns': 'http://spdx.org/rdf/terms#'},
 {'pref':'time:', 'ns': 'http://www.w3.org/2006/time#'},
 {'pref':'vcard:', 'ns': 'http://www.w3.org/2006/vcard/ns#'},
-{'pref':'eli:', 'ns' : 'http://data.europa.eu/eli/ontology#'},
-{'pref':'xsd:', 'ns': 'http://www.w3.org/2001/XMLSchema#'},
-{'pref':'ad:', 'ns': 'http://inspire.ec.europa.eu/ont/ad#'},
-{'pref':'cv:', 'ns': 'http://data.europa.eu/m8g/'},
-{'pref':'geo:', 'ns': 'http://www.opengis.net/ont/geosparql#'},
-{'pref':'schema:', 'ns': 'https://schema.org/'},
-{'pref':'org:', 'ns': 'http://www.w3.org/ns/org#'},
-{'pref':'person:', 'ns': 'http://www.w3.org/ns/person#'},
-{'pref':'legal:', 'ns': 'http://www.w3.org/ns/legal#'},
-{'pref':'atu:', 'ns': 'http://data.europa.eu/88u/dataset/'},
 {'pref':'xhv:', 'ns': 'http://www.w3.org/1999/xhtml/vocab#'},
-
-
+{'pref':'xsd:', 'ns': 'http://www.w3.org/2001/XMLSchema#'}
 				];
 
 	    function shorturl (url) {
@@ -3191,6 +3219,8 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/turtle/turtle.min.js" ></script>
     <script src="https://codemirror.net/5/mode/javascript/javascript.js" ></script>
     <!--    <script src="https://semiceu.github.io/MLDCAT-AP/releases/1.0.0/example.js" ></script> -->
+	<script src="https://unpkg.com/n3@1.14.0/browser/n3.min.js"></script>
+	<script src="https://rdf.js.org/comunica-browser/versions/v4/engines/query-sparql/comunica-browser.js"></script>
     <script src="./html/example.js" ></script>
 	<script type="text/javascript">
 		function elementInView(elem){
@@ -3215,37 +3245,98 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 	</script>
 	<style>
 		.CodeMirror {
-		  border: 1px solid #eee;
-		  height: auto;
+			border: 1px solid #eee;
+			height: auto;
 		}
 		.buttonsample {
-		cursor: pointer;
-		margin-top: 10px;
-		margin-left: 10px;
-		font-weight: 700;
-		border:0 outset buttonface;
-		background: #F5F6F8;
-		background-image: linear-gradient(to bottom,#F5F6F8,#DBDCDE);
-		border-radius:4px;
-		box-shadow:0 1px 3px #666;
-		font-family: Arial;
-		color: grey;
-		font-size: 14px;
-		padding: 10px 5px;
-		text-decoration: none;
-		float: right
-	}
-	.buttonsample:hover {color:#2a70d3}
-	.tabsstyle {
-		padding: 10px;
-		overflow: hidden;
-	}
-	li.ui-tabs-tab > a:hover {
-		background-color:dodgerblue;
-		color:white;
-	}
-  </style>
+			cursor: pointer;
+			margin-top: 10px;
+			margin-left: 10px;
+			font-weight: 700;
+			border:0 outset buttonface;
+			background: #F5F6F8;
+			background-image: linear-gradient(to bottom,#F5F6F8,#DBDCDE);
+			border-radius:4px;
+			box-shadow:0 1px 3px #666;
+			font-family: Arial;
+			color: grey;
+			font-size: 13px !important;
+			padding: 10px 5px;
+			text-decoration: none;
+			float: right
+		}
+		.chooseVersion {
+			cursor: pointer;
+			margin-top: 10px;
+			margin-left: 10px;
+			font-weight: 700;
+			border:0 outset buttonface;
+			background: #F5F6F8;
+			background-image: linear-gradient(to bottom,#F5F6F8,#DBDCDE);
+			border-radius:4px;
+			box-shadow:0 1px 3px #666;
+			font-family: Arial;
+			color: grey;
+			font-size: 13px !important;
+			padding: 10px 5px;
+			text-decoration: none;
+			float: right
+		}
+		.infosample {
+			cursor: pointer;
+			margin-top: 10px;
+			font-weight: 700;
+			border:0 outset buttonface;
+			border-radius:4px;
+			font-family: Arial;
+			color: grey;
+			font-size: 14px;
+			padding: 10px 0px;
+			text-decoration: none;
+			float: right
+		}
+		.buttonsample:hover {color:#2a70d3}
+		.tabsstyle {
+			padding: 10px;
+			overflow: hidden;
+		}
+		li.ui-tabs-tab > a:hover {
+			background-color:dodgerblue;
+			color:white;
+		}
+		table.simple {
+			font-size: small;
+			border-spacing:0;
+			border-collapse:collapse;
+			border-bottom:3px solid #005a9c
+		}
+		.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+		.simple th a{color:#fff;padding:3px 5px;text-align:left}
+		.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+		.simple td{padding:3px 10px;border-top:1px solid #ddd}
+		.simple tr:nth-child(even){background:#f0f6ff}
+		body.darkmode .simple th{background:#005a9c94;color:#ddd}
+		body.darkmode .simple th a{color:#ddd}
+		body.darkmode .simple tr:nth-child(even){background:#f0f6ff26}
+		body.darkmode :is(h4,h5,h6)+a.self-link::before {
+			color: var(--heading-text);
+		}
+		body.darkmode img {
+			background: none;
+		}
+		body.darkmode section#references :target {
+			background: #04162d;
+		}
+	</style>
 
-    	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/3.2.2/css/buttons.dataTables.min.css">
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/3.2.2/js/dataTables.buttons.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/3.2.2/js/buttons.dataTables.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.html5.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.print.min.js"></script>
 </html>

@@ -1,0 +1,163 @@
+{
+  "@context": {
+    "Address": "http://www.w3.org/ns/locn#Address",
+    "AdminUnit": "http://data.europa.eu/m8g/AdminUnit",
+    "Code": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Geometry": "http://www.w3.org/ns/locn#Geometry",
+    "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "Location": "http://purl.org/dc/terms/Location",
+    "LocatorDesignator": "http://inspire.ec.europa.eu/ont/ad#LocatorDesignator",
+    "Resource": "http://www.w3.org/2000/01/rdf-schema#Resource",
+    "String": "http://www.w3.org/2001/XMLSchema#string",
+    "Text": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+    "URI": "http://www.w3.org/2001/XMLSchema#anyURI",
+    "address": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#address",
+      "@type": "@id"
+    },
+    "addressArea": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#addressArea",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "addressID": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#addressId"
+    },
+    "adminUnit": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/AdminUnit",
+      "@type": "@id"
+    },
+    "adminUnitL1": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#adminUnitL1",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "adminUnitL2": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#adminUnitL2",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "code": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/code",
+      "@type": "@id"
+    },
+    "coordinates": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/coordinates",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "crs": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/crs",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "designator": {
+      "@container": "@set",
+      "@id": "http://inspire.ec.europa.eu/ont/ad#LocatorDesignator.designator"
+    },
+    "fullAddress": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#fullAddress",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "geographicIdentifier": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "geographicName": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#geographicName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "geometry": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type": "@id"
+    },
+    "geometryType": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/geometryType",
+      "@type": "@id"
+    },
+    "gml": {
+      "@container": "@set",
+      "@id": "http://www.opengis.net/ont/geosparql#asGML"
+    },
+    "hasLocatorDesignator": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasLocatorDesignator",
+      "@type": "@id"
+    },
+    "latitude": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/latitude",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "level": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/level",
+      "@type": "@id"
+    },
+    "location": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#location",
+      "@type": "@id"
+    },
+    "locatorDesignator": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#locatorDesignator"
+    },
+    "locatorName": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#locatorName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "longitude": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/longitude",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "name": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "poBox": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#poBox"
+    },
+    "postCode": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#postCode"
+    },
+    "postName": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#postName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "registeredAddress": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/registeredAddress",
+      "@type": "@id"
+    },
+    "thoroughfare": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#thoroughfare",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "type": {
+      "@container": "@set",
+      "@id": "http://inspire.ec.europa.eu/ont/ad#LocatorDesignator.type",
+      "@type": "@id"
+    },
+    "wkt": {
+      "@container": "@set",
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT"
+    }
+  }
+}
