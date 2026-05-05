@@ -1,0 +1,12 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.com/> .
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
+@prefix locn: <http://w3.org/ns/locn#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+
+ex:a a dct:Location ;
+  locn:geometry ex:b .
+
+ex:b a sf:Point;
+  geosparql:asGML "<gml:Point srsName=\"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"><gml:coordinates>4.359191, 50.8614075</gml:coordinates></gml:Point>"^^geosparql:gmlLiteral .

@@ -1,0 +1,7 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.com/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:a a dct:Location ;
+  locn:geometry <http://geohash.org/u15175n30t8k> .

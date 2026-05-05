@@ -1,0 +1,40 @@
+{
+  "@context": [
+    "https://semiceu.github.io/uri.semic.eu-generated/Core-Location-Vocabulary/releases/2.1.0/context/core-location-ap.jsonld",
+    {"ex": "http://example.com/" ,
+     "locn": "http://www.w3.org/ns/locn#"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ex:a",
+      "@type": "Address",
+      "locn:addressArea" : {
+       "@value": "Quartier Nord",
+       "@language": "fr"
+      },
+      "locn:adminUnitL1" : {
+       "@value": "Belgique",
+       "@language": "fr"
+      },
+      "locn:adminUnitL2" : {
+       "@value": "Région de Bruxelles-Capitale",
+       "@language": "fr"
+      },
+      "locn:fullAddress" : {
+       "@value": "Boulevard du Roi Albert II 33 1030 Bruxelles, Belgique",
+       "@language": "fr"
+      },
+      "locn:locatorDesignator" : "33",
+      "locn:postCode" : "1030",
+      "locn:postName" : {
+       "@value": "Bruxelles",
+       "@language": "fr"
+      },
+      "locn:thoroughfare" : {
+       "@value": "Boulevard du Roi Albert II",
+       "@language": "fr"
+      }
+    }
+  ]
+}

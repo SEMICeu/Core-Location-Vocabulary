@@ -1,0 +1,17 @@
+{
+  "@context": [
+    "https://semiceu.github.io/uri.semic.eu-generated/Core-Location-Vocabulary/releases/2.1.0/context/core-location-ap.jsonld",
+    {"ex": "http://example.com/",
+     "locn": "http://www.w3.org/ns/locn#" 
+    }
+   ],
+  "@graph": [
+    {
+      "@id": "ex:a",
+      "@type": "Location",
+      "locn:geometry": {
+        "@id": "http://geohash.org/u15175n30t8k"
+      }
+    }
+  ]
+}
