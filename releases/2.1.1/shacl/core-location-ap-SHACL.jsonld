@@ -499,18 +499,6 @@
           "sh:path": "http://www.w3.org/ns/locn#adminUnitL2"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/32d0f083cc6f82b1b3a07e0715739869e4b65721",
-          "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#Address.AdministrativeUnit",
-          "sh:class": "http://data.europa.eu/m8g/AdminUnit",
-          "sh:description": {
-            "en": "A detailed administrative unit organized in a hierarchy."
-          },
-          "sh:name": {
-            "en": "Administrative Unit"
-          },
-          "sh:path": "http://data.europa.eu/m8g/AdminUnit"
-        },
-        {
           "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/362b7c3261b1d5eb024e72e4868babc25ed0c7ce",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#Address.administrativeunitlevel1",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
@@ -547,16 +535,16 @@
           "sh:path": "http://www.w3.org/ns/locn#addressArea"
         },
         {
-          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/5de04ca3dfefdf7a52be368a3b55044ba0b56fe7",
-          "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#Address.AdministrativeUnit",
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/5d7f103641a62a590c3c6d874d2a14987e054924",
+          "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#Address.administrativeunit",
           "sh:description": {
             "en": "A detailed administrative unit organized in a hierarchy."
           },
           "sh:name": {
-            "en": "Administrative Unit"
+            "en": "administrative unit"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "http://data.europa.eu/m8g/AdminUnit"
+          "sh:path": "http://data.europa.eu/m8g/adminUnit"
         },
         {
           "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/5e74b1f81658b4853e5c7d39eafa35926bcc4117",
@@ -569,6 +557,18 @@
             "en": "has locator designator"
           },
           "sh:path": "http://data.europa.eu/m8g/hasLocatorDesignator"
+        },
+        {
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/60bff98f6076f0828e3b73d73fefc7b1eb56b93a",
+          "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#Address.administrativeunit",
+          "sh:class": "http://data.europa.eu/m8g/AdminUnit",
+          "sh:description": {
+            "en": "A detailed administrative unit organized in a hierarchy."
+          },
+          "sh:name": {
+            "en": "administrative unit"
+          },
+          "sh:path": "http://data.europa.eu/m8g/adminUnit"
         },
         {
           "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/6f98d6d917a0e0b73d8614923f953e1ee2533918",
@@ -775,6 +775,18 @@
           "sh:path": "http://www.w3.org/ns/locn#fullAddress"
         },
         {
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/e7a338c887b80429b787dcd36542f80eca4139e7",
+          "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#Address.http%3A%2F%2Fdata.europa.eu%2Fm8g%2FadminUnit",
+          "sh:description": {
+            "en": "The adminUnit relationship links an Address with the Administrative Unit class.The adminUnit relationship links an Address with the Administrative Unit class."
+          },
+          "sh:name": {
+            "en": "http://data.europa.eu/m8g/adminUnit"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/m8g/adminUnit"
+        },
+        {
           "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/f1144df3e852614939e86f2e427788162aa7cb72",
           "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#Address.addressarea",
           "sh:description": {
@@ -785,6 +797,18 @@
           },
           "sh:nodeKind": "sh:Literal",
           "sh:path": "http://www.w3.org/ns/locn#addressArea"
+        },
+        {
+          "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/f2902f698e24b503d7adf51581b603f1acbc23d9",
+          "rdfs:seeAlso": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#Address.http%3A%2F%2Fdata.europa.eu%2Fm8g%2FadminUnit",
+          "sh:class": "http://data.europa.eu/m8g/AdminUnit",
+          "sh:description": {
+            "en": "The adminUnit relationship links an Address with the Administrative Unit class.The adminUnit relationship links an Address with the Administrative Unit class."
+          },
+          "sh:name": {
+            "en": "http://data.europa.eu/m8g/adminUnit"
+          },
+          "sh:path": "http://data.europa.eu/m8g/adminUnit"
         },
         {
           "@id": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/f8d38c3580ea5d4e47ea9e1ad447a47ebe91d5fa",

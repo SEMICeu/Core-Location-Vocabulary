@@ -23,12 +23,12 @@
     <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/03690748629ed1c685fc6a365780375be09bce76>,
     <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/17384dfa4a75117e7dd2bc0f2bbf61ac91fd8676>,
     <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/256ffe464f9c7682e950f7853ef0b6060580435b>,
-    <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/32d0f083cc6f82b1b3a07e0715739869e4b65721>,
     <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/362b7c3261b1d5eb024e72e4868babc25ed0c7ce>,
     <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/3a0fcecd9e5f4e8deb4d102b9d072a4b067b773e>,
     <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/470060a15e97aeacd56fcc5beb701e647a6aa56e>,
-    <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/5de04ca3dfefdf7a52be368a3b55044ba0b56fe7>,
+    <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/5d7f103641a62a590c3c6d874d2a14987e054924>,
     <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/5e74b1f81658b4853e5c7d39eafa35926bcc4117>,
+    <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/60bff98f6076f0828e3b73d73fefc7b1eb56b93a>,
     <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/6f98d6d917a0e0b73d8614923f953e1ee2533918>,
     <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/854a17171901a9c000eff34a7ccd77814891e3d5>,
     <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/8b4c4bdd61e921f78483a3141338773693d4b2ef>,
@@ -46,7 +46,9 @@
     <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/c0a2b78a80a731301e2f54d040ca9aa2c9b125b1>,
     <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/d75b5d4c221e6b0bf47c853c0be92d078c39e391>,
     <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/dee03556e405a14f1e410c960b43b8eee149efe7>,
+    <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/e7a338c887b80429b787dcd36542f80eca4139e7>,
     <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/f1144df3e852614939e86f2e427788162aa7cb72>,
+    <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/f2902f698e24b503d7adf51581b603f1acbc23d9>,
     <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/f8d38c3580ea5d4e47ea9e1ad447a47ebe91d5fa>;
   shacl:targetClass <http://www.w3.org/ns/locn#Address> .
 
@@ -74,12 +76,6 @@
   shacl:nodeKind shacl:Literal;
   shacl:path <http://www.w3.org/ns/locn#adminUnitL2> .
 
-<https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/32d0f083cc6f82b1b3a07e0715739869e4b65721> rdfs:seeAlso "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#Address.AdministrativeUnit";
-  shacl:class <http://data.europa.eu/m8g/AdminUnit>;
-  shacl:description "A detailed administrative unit organized in a hierarchy."@en;
-  shacl:name "Administrative Unit"@en;
-  shacl:path <http://data.europa.eu/m8g/AdminUnit> .
-
 <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/362b7c3261b1d5eb024e72e4868babc25ed0c7ce> rdfs:seeAlso "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#Address.administrativeunitlevel1";
   shacl:datatype rdf:langString;
   shacl:description "The name of the uppermost level of the address, almost always a country."@en;
@@ -98,17 +94,23 @@
   shacl:name "address area"@en;
   shacl:path <http://www.w3.org/ns/locn#addressArea> .
 
-<https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/5de04ca3dfefdf7a52be368a3b55044ba0b56fe7> rdfs:seeAlso "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#Address.AdministrativeUnit";
+<https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/5d7f103641a62a590c3c6d874d2a14987e054924> rdfs:seeAlso "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#Address.administrativeunit";
   shacl:description "A detailed administrative unit organized in a hierarchy."@en;
-  shacl:name "Administrative Unit"@en;
+  shacl:name "administrative unit"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <http://data.europa.eu/m8g/AdminUnit> .
+  shacl:path <http://data.europa.eu/m8g/adminUnit> .
 
 <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/5e74b1f81658b4853e5c7d39eafa35926bcc4117> rdfs:seeAlso "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#Address.haslocatordesignator";
   shacl:class <http://inspire.ec.europa.eu/ont/ad#LocatorDesignator>;
   shacl:description "A number or a sequence of characters that uniquely identifies the locator within the relevant scope(s)."@en;
   shacl:name "has locator designator"@en;
   shacl:path <http://data.europa.eu/m8g/hasLocatorDesignator> .
+
+<https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/60bff98f6076f0828e3b73d73fefc7b1eb56b93a> rdfs:seeAlso "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#Address.administrativeunit";
+  shacl:class <http://data.europa.eu/m8g/AdminUnit>;
+  shacl:description "A detailed administrative unit organized in a hierarchy."@en;
+  shacl:name "administrative unit"@en;
+  shacl:path <http://data.europa.eu/m8g/adminUnit> .
 
 <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/6f98d6d917a0e0b73d8614923f953e1ee2533918> rdfs:seeAlso "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#Address.locatorname";
   shacl:description "Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building."@en;
@@ -212,11 +214,23 @@
   shacl:name "full address"@en;
   shacl:path <http://www.w3.org/ns/locn#fullAddress> .
 
+<https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/e7a338c887b80429b787dcd36542f80eca4139e7> rdfs:seeAlso "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#Address.http%3A%2F%2Fdata.europa.eu%2Fm8g%2FadminUnit";
+  shacl:description "The adminUnit relationship links an Address with the Administrative Unit class.The adminUnit relationship links an Address with the Administrative Unit class."@en;
+  shacl:name "http://data.europa.eu/m8g/adminUnit"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/m8g/adminUnit> .
+
 <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/f1144df3e852614939e86f2e427788162aa7cb72> rdfs:seeAlso "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#Address.addressarea";
   shacl:description "The name of a geographic area that groups Addresses."@en;
   shacl:name "address area"@en;
   shacl:nodeKind shacl:Literal;
   shacl:path <http://www.w3.org/ns/locn#addressArea> .
+
+<https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/f2902f698e24b503d7adf51581b603f1acbc23d9> rdfs:seeAlso "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#Address.http%3A%2F%2Fdata.europa.eu%2Fm8g%2FadminUnit";
+  shacl:class <http://data.europa.eu/m8g/AdminUnit>;
+  shacl:description "The adminUnit relationship links an Address with the Administrative Unit class.The adminUnit relationship links an Address with the Administrative Unit class."@en;
+  shacl:name "http://data.europa.eu/m8g/adminUnit"@en;
+  shacl:path <http://data.europa.eu/m8g/adminUnit> .
 
 <https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#AddressShape/f8d38c3580ea5d4e47ea9e1ad447a47ebe91d5fa> rdfs:seeAlso "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1#Address.postname";
   shacl:description "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."@en;

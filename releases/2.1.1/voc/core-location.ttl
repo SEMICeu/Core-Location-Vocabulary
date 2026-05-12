@@ -7,6 +7,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://data.europa.eu/m8g/adminUnit> a owl:ObjectProperty;
+  rdfs:label "administrative unit"@en;
+  rdfs:comment "A detailed administrative unit organized in a hierarchy."@en;
+  rdfs:domain <http://www.w3.org/ns/locn#Address>;
+  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
+  rdfs:range <http://data.europa.eu/m8g/AdminUnit> .
+
 <http://data.europa.eu/m8g/code> a owl:ObjectProperty;
   rdfs:label "code"@en;
   rdfs:comment "The classification of the administrative unit."@en;
@@ -40,7 +47,7 @@
 
 <http://data.europa.eu/m8g/latitude> a owl:DatatypeProperty;
   rdfs:label "latitude"@en;
-  rdfs:comment "The geographic coordinate that specifies the north / south position of the Geomerty on the Earth's surface."@en;
+  rdfs:comment "The geographic coordinate that specifies the north / south position of the geometry on the Earth's surface."@en;
   rdfs:domain <http://www.w3.org/ns/locn#Geometry>;
   rdfs:isDefinedBy <http://data.europa.eu/m8g>;
   rdfs:range xsd:string .
@@ -69,7 +76,7 @@
 <http://data.europa.eu/m8g> a owl:Ontology;
   rdfs:label "core-location"@en,
     "core-location"@nl;
-  dc:issued "2024-01-31";
+  dc:issued "2026-05-12";
   dc:license <https://creativecommons.org/licenses/by/4.0>;
   dc:mediator [
     foaf:homepage <https://semic.eu>;
@@ -89,12 +96,17 @@
     a foaf:Person;
     foaf:firstName "Emiel";
     foaf:lastName "Dhondt";
-    schemas:affiliation [foaf:name "PwC EU Services"]
+    schemas:affiliation [foaf:name "Digital Flanders"]
   ], [
     a foaf:Person;
     foaf:firstName "Pavlina";
     foaf:lastName "Fragkou";
     schemas:affiliation [foaf:name "European Commission"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Faruk";
+    foaf:lastName "Karabulut";
+    schemas:affiliation [foaf:name "PwC EU Services"]
   ], [
     a foaf:Person;
     foaf:firstName "Arthur";
@@ -104,7 +116,7 @@
     a foaf:Person;
     foaf:firstName "Anastasia";
     foaf:lastName "Sofou";
-    schemas:affiliation [foaf:name "Trasys International"]
+    schemas:affiliation [foaf:name "European Commission"]
   ], [
     a foaf:Person;
     foaf:firstName "Emidio";
@@ -113,7 +125,8 @@
   ], [
     a foaf:Person;
     foaf:firstName "Bert";
-    foaf:lastName "Van Nuffelen"
+    foaf:lastName "Van Nuffelen";
+    schemas:affiliation [foaf:name "Digital Flanders"]
   ];
   foaf:maker [
     a foaf:Person;
