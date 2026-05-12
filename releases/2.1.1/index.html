@@ -157,7 +157,7 @@
       edDraftURI: "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1",
       latestVersion: "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0",
       specStatus: "LD",
-      publishDate: "2026-05-05",
+      publishDate: "2026-05-12",
       editors: myeditors,
       authors: myauthors,
       github: "SEMICeu/Core-Location-Vocabulary",
@@ -237,6 +237,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="msapplication-TileColor" content="#7ED956" />
+    
+    
 </head>
 <body>
     
@@ -289,7 +291,7 @@ The Core Location Vocabulary is a simplified, reusable and extensible data model
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This Core Vocabulary has the status SEMIC Candidate Recommendation published at 2026-05-05.
+            This Core Vocabulary has the status SEMIC Candidate Recommendation published at 2026-05-12.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification can be found at the <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/blob/master/releases/2.1.1/Changelog.md">Changelog</a>.
@@ -313,7 +315,7 @@ The Core Location Vocabulary is a simplified, reusable and extensible data model
 		  This specification </span> of <a rel="cc:attributionURL" property="cc:attributionName" href="ORGANISATION" xmlns:cc="http://creativecommons.org/ns#">ORGANISATION </a> 
 	          is published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">"CC0"</a>.
 	-->
-             Copyright © 2024 European Union. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.
+             Copyright © 2026 European Union. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.
         </p>
     
 </section>
@@ -462,11 +464,12 @@ This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabular
                         <dd>
                             For this entity the following properties are defined: <a href="#Address.addressarea">address area</a>
                             , <a href="#Address.addressID">address ID</a>
-                            , <a href="#Address.AdministrativeUnit">Administrative Unit</a>
+                            , <a href="#Address.administrativeunit">administrative unit</a>
                             , <a href="#Address.administrativeunitlevel1">administrative unit level 1</a>
                             , <a href="#Address.administrativeunitlevel2">administrative unit level 2</a>
                             , <a href="#Address.fulladdress">full address</a>
                             , <a href="#Address.haslocatordesignator">has locator designator</a>
+                            , <a href="#Address.http%3A%2F%2Fdata.europa.eu%2Fm8g%2FadminUnit">http://data.europa.eu/m8g/adminUnit</a>
                             , <a href="#Address.locatordesignator">locator designator</a>
                             , <a href="#Address.locatorname">locator name</a>
                             , <a href="#Address.postcode">post code</a>
@@ -606,22 +609,22 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                                 </td>
                             </tr>
                         
-                            <tr id="Address.AdministrativeUnit"
+                            <tr id="Address.administrativeunit"
                                 typeof="rdf:Property"
-                                resource="http://data.europa.eu/m8g/AdminUnit"
+                                resource="http://data.europa.eu/m8g/adminUnit"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20Administrative Unit%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Address.AdministrativeUnit" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20administrative unit%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Address.administrativeunit" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="http://data.europa.eu/m8g/AdminUnit"
+                                        <a href="http://data.europa.eu/m8g/adminUnit"
                                            data-toggle="tooltip"
-                                           data-content="http://data.europa.eu/m8g/AdminUnit"
+                                           data-content="http://data.europa.eu/m8g/adminUnit"
                                            data-placement="right">
-                                        Administrative Unit</a>
+                                        administrative unit</a>
                                 </td>
                                 <td>
                                     
@@ -810,6 +813,49 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                                 </td>
                                 <td property="skos:scopeNote">
                                     This relation can be used instead of Address.locatorDesignator if a structured representation is preferred over a Literal.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Address.http%3A%2F%2Fdata.europa.eu%2Fm8g%2FadminUnit"
+                                typeof="rdf:Property"
+                                resource="http://data.europa.eu/m8g/adminUnit"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/Core-Location-Vocabulary/issues/new?title=Issue%20for%20http://data.europa.eu/m8g/adminUnit%20in%20Address&body=Explain%20your%20issue%20for%20https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1%23Address.http%3A%2F%2Fdata.europa.eu%2Fm8g%2FadminUnit" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/m8g/adminUnit"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/m8g/adminUnit"
+                                           data-placement="right">
+                                        http://data.europa.eu/m8g/adminUnit</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#AdministrativeUnit" data-placement="right">Administrative Unit</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The adminUnit relationship links an Address with the Administrative Unit class.The adminUnit relationship links an Address with the Administrative Unit class.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
                                 </td>
 				<!--
                                 <td>
@@ -2647,7 +2693,6 @@ SEMIC uses and will use the RDFS lexicalisation for all of its specifications. M
  
 
 
-
 <section id="quick-reference" class="appendix">
 
 <h2>Quick Reference of Classes and Properties</h2>
@@ -2695,6 +2740,10 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+					
+						
 					
 						
 					
@@ -2748,8 +2797,8 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#Address">Address</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
 								<td></td>
-								<td><a href="#Address.AdministrativeUnit">Administrative Unit </a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/AdminUnit</div></td>
+								<td><a href="#Address.administrativeunit">administrative unit </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/adminUnit</div></td>
 							</tr>
 						
 					
@@ -2790,6 +2839,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#Address.haslocatordesignator">has locator designator </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/hasLocatorDesignator</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Address">Address</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Address</div></td>
+								<td></td>
+								<td><a href="#Address.http%3A%2F%2Fdata.europa.eu%2Fm8g%2FadminUnit">http://data.europa.eu/m8g/adminUnit </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/adminUnit</div></td>
 							</tr>
 						
 					
@@ -3158,6 +3217,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 	    var prefixes = [ 
 {'pref':'ad:', 'ns': 'http://inspire.ec.europa.eu/ont/ad#'},
 {'pref':'adms:', 'ns': 'http://www.w3.org/ns/adms#'},
+{'pref':'a4g:', 'ns': 'https://publications.europa.eu/resource/authority/a4g##'},
 {'pref':'atu:', 'ns': 'http://data.europa.eu/88u/dataset/'},
 {'pref':'cav:', 'ns': 'http://data.europa.eu/2sa/cav#'},
 {'pref':'cpsv:', 'ns': 'http://purl.org/vocab/cpsv#'},
