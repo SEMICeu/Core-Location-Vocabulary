@@ -29,14 +29,6 @@ The table below shows webinars and events related to **latest version of the Cor
 <td>  
 <p><strong>Date</strong></p>  
 </td>  
-</tr>
-<tr>  
-<td>  
-<p><strong>Title</strong></p>  
-</td>  
-<td>  
-<p><strong>Date</strong></p>  
-</td>  
 </tr>  
 <tr>  
 <td>  
